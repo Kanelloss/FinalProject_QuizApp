@@ -1,6 +1,8 @@
 
 using Microsoft.EntityFrameworkCore;
 using QuizApp.Data;
+using QuizApp.Repositories;
+using QuizApp.Services;
 
 namespace QuizApp
 {
@@ -13,9 +15,16 @@ namespace QuizApp
             var connString = builder.Configuration.GetConnectionString("DefaultConnection");
             builder.Services.AddDbContext<QuizAppDbContext>(options => options.UseSqlServer(connString));
 
+
+
+
             // Add services to the container.
 
+            builder.Services.AddScoped<IUserRepository, UserRepository>(); // Register UserRepository
+            builder.Services.AddScoped<IUserService, UserService>(); // Register UserService
+
             builder.Services.AddControllers();
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

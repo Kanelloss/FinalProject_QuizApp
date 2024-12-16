@@ -168,3 +168,4 @@ C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp\obj\Debug\net8.0\r
 C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp\obj\Debug\net8.0\QuizApp.pdb
 C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp\obj\Debug\net8.0\QuizApp.genruntimeconfig.cache
 C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp\obj\Debug\net8.0\ref\QuizApp.dll
+C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp\bin\Debug\net8.0\BCrypt.Net-Core.dll
