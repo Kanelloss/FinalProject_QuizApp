@@ -1,4 +1,5 @@
-﻿using QuizApp.Data;
+﻿using QuizApp.Core.Enums;
+using QuizApp.Data;
 using QuizApp.DTO;
 
 namespace QuizApp.Services
@@ -9,6 +10,7 @@ namespace QuizApp.Services
         Task<UserReadOnlyDTO?> AuthenticateUserAsync(UserLoginDTO dto); // Authenticate user credentials
         Task<UserReadOnlyDTO?> GetUserByIdAsync(int id); // Get user by ID
         Task<bool> UpdateUserAsync(int userId, UserUpdateDTO dto); // Update user details
+        string CreateUserToken(int userId, string username, string email, UserRole? userRole, string appSecurityKey);
 
 
     }

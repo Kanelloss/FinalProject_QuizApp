@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using QuizApp.DTO;
 using QuizApp.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace QuizApp.Controllers
 {
@@ -9,11 +11,14 @@ namespace QuizApp.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
+        private readonly IConfiguration _configuration; 
 
-        public UserController(IUserService userService)
+        public UserController(IUserService userService, IConfiguration configuration)
         {
             _userService = userService;
+            _configuration = configuration; 
         }
+
 
         [HttpPost("signup")]
         public async Task<IActionResult> SignUp([FromBody] UserSignUpDTO dto)
@@ -36,7 +41,21 @@ namespace QuizApp.Controllers
                 return Unauthorized(new { Message = "Invalid credentials." });
             }
 
-            return Ok(user);
+            var userToken = _userService.CreateUserToken(
+                user.Id,
+                user.Username!,
+                user.Email!,
+                user.UserRole,
+                _configuration["Authentication:SecretKey"]!
+            );
+
+            // Επιστροφή token μέσω DTO
+            JwtTokenDTO token = new()
+            {
+                Token = userToken
+            };
+
+            return Ok(token);
         }
 
         [HttpGet("{id}")]
@@ -73,6 +92,13 @@ namespace QuizApp.Controllers
             {
                 return Conflict(new { Message = ex.Message });
             }
+        }
+
+        [Authorize]
+        [HttpGet("protected")]
+        public IActionResult TestProtectedEndpoint()
+        {
+            return Ok(new { Message = "You have accessed a protected endpoint!" });
         }
 
 

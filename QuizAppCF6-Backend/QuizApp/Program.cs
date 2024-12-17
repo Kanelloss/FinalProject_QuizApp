@@ -1,9 +1,12 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 using QuizApp.Data;
 using QuizApp.Repositories;
 using QuizApp.Services;
 using System.Text.Json;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace QuizApp
 {
@@ -22,6 +25,25 @@ namespace QuizApp
 
             // Services
             builder.Services.AddScoped<IUserService, UserService>();
+
+            var jwtKey = builder.Configuration["Authentication:SecretKey"];
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.IncludeErrorDetails = true;
+                    options.SaveToken = true;
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = false, // Ενεργοποίηση του Issuer Validation
+                        ValidIssuer = "http://localhost", // Χρησιμοποιούμε localhost
+                        ValidateAudience = false,
+                        ValidAudience = "http://localhost", // Το κοινό που θα επιτρέπεται
+                        ValidateLifetime = false,
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
+                    };
+                });
+
 
             // Add controllers with JSON options (case-insensitive Enums)
             builder.Services.AddControllers()

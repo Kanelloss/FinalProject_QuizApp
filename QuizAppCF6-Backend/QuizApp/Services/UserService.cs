@@ -1,6 +1,12 @@
-﻿using QuizApp.Data;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using QuizApp.Core.Enums;
+using QuizApp.Data;
 using QuizApp.DTO;
 using QuizApp.Repositories;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace QuizApp.Services
 {
@@ -106,5 +112,35 @@ namespace QuizApp.Services
         return await _userRepository.UpdateUserAsync(user);
     }
 
+        public string CreateUserToken(int userId, string username, string email, UserRole? userRole, string appSecurityKey)
+        {
+            var securityKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(appSecurityKey));
+            var signingCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+            // Claims: Οι πληροφορίες του χρήστη
+            var claimsInfo = new List<Claim>
+    {
+        new Claim(ClaimTypes.Name, username),
+        new Claim(ClaimTypes.NameIdentifier, userId.ToString()),
+        new Claim(ClaimTypes.Email, email),
+        new Claim(ClaimTypes.Role, userRole.ToString()!)
+    };
+
+            // Δημιουργία JWT Token
+            var jwtSecurityToken = new JwtSecurityToken(
+                issuer: "http://localhost",
+                audience: "http://localhost",
+                claims: claimsInfo,
+                notBefore: DateTime.UtcNow,
+                expires: DateTime.UtcNow.AddHours(3),
+                signingCredentials: signingCredentials
+            );
+
+            // Serialize το token
+            var userToken = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
+
+            return userToken;
+        }
     }
 }
+
