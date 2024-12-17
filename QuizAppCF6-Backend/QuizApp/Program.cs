@@ -1,8 +1,9 @@
-
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 using QuizApp.Data;
 using QuizApp.Repositories;
 using QuizApp.Services;
+using System.Text.Json;
 
 namespace QuizApp
 {
@@ -12,26 +13,30 @@ namespace QuizApp
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // Database connection
             var connString = builder.Configuration.GetConnectionString("DefaultConnection");
             builder.Services.AddDbContext<QuizAppDbContext>(options => options.UseSqlServer(connString));
 
+            // Repositories
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
 
+            // Services
+            builder.Services.AddScoped<IUserService, UserService>();
 
+            // Add controllers with JSON options (case-insensitive Enums)
+            builder.Services.AddControllers()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter(JsonNamingPolicy.CamelCase, allowIntegerValues: false));
+                });
 
-            // Add services to the container.
-
-            builder.Services.AddScoped<IUserRepository, UserRepository>(); // Register UserRepository
-            builder.Services.AddScoped<IUserService, UserService>(); // Register UserService
-
-            builder.Services.AddControllers();
-
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            // Swagger setup
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+            // Middleware
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -40,8 +45,8 @@ namespace QuizApp
 
             app.UseHttpsRedirection();
 
+            app.UseAuthentication();
             app.UseAuthorization();
-
 
             app.MapControllers();
 
