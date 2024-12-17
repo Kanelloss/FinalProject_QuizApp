@@ -59,14 +59,22 @@ namespace QuizApp.Controllers
                 return BadRequest(new { Message = "The dto field is required." });
             }
 
-            var result = await _userService.UpdateUserAsync(id, dto);
-            if (!result)
+            try
             {
-                return NotFound(new { Message = $"User with ID {id} not found." });
-            }
+                var result = await _userService.UpdateUserAsync(id, dto);
+                if (!result)
+                {
+                    return NotFound(new { Message = $"User with ID {id} not found." });
+                }
 
-            return Ok(new { Message = "User updated successfully." });
+                return Ok(new { Message = "User updated successfully." });
+            }
+            catch (InvalidOperationException ex)
+            {
+                return Conflict(new { Message = ex.Message });
+            }
         }
+
 
     }
 }

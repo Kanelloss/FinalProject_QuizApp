@@ -66,23 +66,44 @@ namespace QuizApp.Services
         }
 
         public async Task<bool> UpdateUserAsync(int userId, UserUpdateDTO dto)
+{
+    var user = await _userRepository.GetByIdAsync(userId);
+    if (user == null)
+    {
+        return false; // User not found
+    }
+
+    // Check if the new username already exists (excluding the current user)
+    if (!string.IsNullOrWhiteSpace(dto.Username))
+    {
+        var existingUser = await _userRepository.GetUserByUsernameAsync(dto.Username);
+        if (existingUser != null && existingUser.Id != userId)
         {
-            var user = await _userRepository.GetByIdAsync(userId);
-            if (user == null)
-            {
-                return false; // User not found
-            }
-
-            // Update fields
-            user.Username = dto.Username ?? user.Username;
-            user.Email = dto.Email ?? user.Email;
-
-            if (!string.IsNullOrWhiteSpace(dto.Password))
-            {
-                user.Password = BCrypt.Net.BCrypt.HashPassword(dto.Password); // Hash the new password
-            }
-
-            return await _userRepository.UpdateUserAsync(user);
+            throw new InvalidOperationException("Username already exists.");
         }
+    }
+
+    // Check if the new email already exists (excluding the current user)
+    if (!string.IsNullOrWhiteSpace(dto.Email))
+    {
+        var existingEmailUser = await _userRepository.GetUserByEmailAsync(dto.Email);
+        if (existingEmailUser != null && existingEmailUser.Id != userId)
+        {
+            throw new InvalidOperationException("Email already exists.");
+        }
+    }
+
+    // Update fields
+    user.Username = dto.Username ?? user.Username;
+    user.Email = dto.Email ?? user.Email;
+
+    if (!string.IsNullOrWhiteSpace(dto.Password))
+    {
+        user.Password = BCrypt.Net.BCrypt.HashPassword(dto.Password); // Hash the new password
+    }
+
+    return await _userRepository.UpdateUserAsync(user);
+}
+
     }
 }

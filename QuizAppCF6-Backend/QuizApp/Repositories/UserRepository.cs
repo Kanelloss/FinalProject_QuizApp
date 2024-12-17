@@ -43,5 +43,11 @@ namespace QuizApp.Repositories
             await SaveChangesAsync();
             return true; // Update successful
         }
+
+        public async Task<User?> GetUserByEmailAsync(string email)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+        }
+
     }
 }
