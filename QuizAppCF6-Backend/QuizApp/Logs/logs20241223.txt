@@ -2290,3 +2290,550 @@ ORDER BY [q1].[Id]"
 [23-12-2024 19:41:07022 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.GetQuestion (QuizApp)" in 6.9494ms
 [23-12-2024 19:41:07024 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
 [23-12-2024 19:41:07026 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/8/questions/3""" - 200 null "application/json; charset=utf-8" 18.4018ms
+[23-12-2024 19:53:43487 +02:00 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager ] User profile is available. Using '"C:\Users\Kanel\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+[23-12-2024 19:53:43570 +02:00 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:5001"
+[23-12-2024 19:53:43571 +02:00 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5000"
+[23-12-2024 19:53:43573 +02:00 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down.
+[23-12-2024 19:53:43574 +02:00 Microsoft.Hosting.Lifetime ] Hosting environment: "Development"
+[23-12-2024 19:53:43575 +02:00 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp"
+[23-12-2024 19:53:43888 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - null null
+[23-12-2024 19:53:44037 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 149.3897ms
+[23-12-2024 19:53:44051 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[23-12-2024 19:53:44057 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - 200 13750 "application/javascript; charset=utf-8" 5.5931ms
+[23-12-2024 19:53:44131 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - null null
+[23-12-2024 19:53:44163 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 32.1919ms
+[23-12-2024 19:53:44197 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - null null
+[23-12-2024 19:53:44271 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 73.1335ms
+[23-12-2024 19:54:01092 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/1/questions/3""" - null null
+[23-12-2024 19:54:01141 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 19:54:01156 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetQuestion\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32, Int32)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 19:54:01882 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("32"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 19:54:01949 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType4`3[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 19:54:01964 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.GetQuestion (QuizApp)" in 802.393ms
+[23-12-2024 19:54:01966 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 19:54:01973 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/1/questions/3""" - 200 null "application/json; charset=utf-8" 880.4741ms
+[23-12-2024 19:54:07018 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/6/questions/3""" - null null
+[23-12-2024 19:54:07025 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 19:54:07027 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetQuestion\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32, Int32)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 19:54:07069 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("2"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 19:54:07074 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType4`3[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 19:54:07077 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.GetQuestion (QuizApp)" in 46.6184ms
+[23-12-2024 19:54:07079 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 19:54:07081 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/6/questions/3""" - 200 null "application/json; charset=utf-8" 63.0954ms
+[23-12-2024 19:54:44149 +02:00 Microsoft.Hosting.Lifetime ] Application is shutting down...
+[23-12-2024 19:54:47581 +02:00 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager ] User profile is available. Using '"C:\Users\Kanel\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+[23-12-2024 19:54:47689 +02:00 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:5001"
+[23-12-2024 19:54:47690 +02:00 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5000"
+[23-12-2024 19:54:47692 +02:00 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down.
+[23-12-2024 19:54:47693 +02:00 Microsoft.Hosting.Lifetime ] Hosting environment: "Development"
+[23-12-2024 19:54:47694 +02:00 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp"
+[23-12-2024 19:54:48257 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - null null
+[23-12-2024 19:54:48376 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 119.2698ms
+[23-12-2024 19:54:48418 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[23-12-2024 19:54:48420 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - null null
+[23-12-2024 19:54:48423 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - 200 13750 "application/javascript; charset=utf-8" 4.4486ms
+[23-12-2024 19:54:48440 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 20.2059ms
+[23-12-2024 19:54:48535 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - null null
+[23-12-2024 19:54:48600 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 65.8477ms
+[23-12-2024 19:54:58575 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - null null
+[23-12-2024 19:54:58584 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 8.4824ms
+[23-12-2024 19:54:58598 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[23-12-2024 19:54:58602 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - 200 13750 "application/javascript; charset=utf-8" 4.3947ms
+[23-12-2024 19:54:58653 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - null null
+[23-12-2024 19:54:58664 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 11.0899ms
+[23-12-2024 19:54:58744 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - null null
+[23-12-2024 19:54:58754 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 9.7311ms
+[23-12-2024 19:55:04667 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/ping""" - null null
+[23-12-2024 19:55:04687 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.PingController.GetPing (QuizApp)"'
+[23-12-2024 19:55:04697 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetPing\", controller = \"Ping\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetPing()" on controller "QuizApp.Controllers.PingController" ("QuizApp").
+[23-12-2024 19:55:04702 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 19:55:04714 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.PingController.GetPing (QuizApp)" in 12.8922ms
+[23-12-2024 19:55:04716 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.PingController.GetPing (QuizApp)"'
+[23-12-2024 19:55:04717 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/ping""" - 200 null "application/json; charset=utf-8" 49.6149ms
+[23-12-2024 19:55:10475 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/User/protected""" - null null
+[23-12-2024 19:55:10511 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.UserController.TestProtectedEndpoint (QuizApp)"'
+[23-12-2024 19:55:10515 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"TestProtectedEndpoint\", controller = \"User\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult TestProtectedEndpoint()" on controller "QuizApp.Controllers.UserController" ("QuizApp").
+[23-12-2024 19:55:10867 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 19:55:10870 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.UserController.TestProtectedEndpoint (QuizApp)" in 351.4769ms
+[23-12-2024 19:55:10871 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.UserController.TestProtectedEndpoint (QuizApp)"'
+[23-12-2024 19:55:10875 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/User/protected""" - 200 null "application/json; charset=utf-8" 400.0837ms
+[23-12-2024 19:55:24081 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/1/questions/1""" - null null
+[23-12-2024 19:55:24088 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 19:55:24096 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetQuestion\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32, Int32)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 19:55:24480 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("30"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 19:55:24544 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType4`3[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 19:55:24549 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.GetQuestion (QuizApp)" in 449.5304ms
+[23-12-2024 19:55:24551 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 19:55:24554 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/1/questions/1""" - 200 null "application/json; charset=utf-8" 473.7576ms
+[23-12-2024 19:55:29647 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/6/questions/1""" - null null
+[23-12-2024 19:55:29652 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 19:55:29655 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetQuestion\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32, Int32)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 19:55:29671 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("2"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 19:55:29675 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType4`3[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 19:55:29677 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.GetQuestion (QuizApp)" in 19.1741ms
+[23-12-2024 19:55:29678 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 19:55:29680 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/6/questions/1""" - 200 null "application/json; charset=utf-8" 32.4296ms
+[23-12-2024 19:55:40505 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/7/questions/1""" - null null
+[23-12-2024 19:55:40509 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 19:55:40511 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetQuestion\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32, Int32)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 19:55:40529 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("12"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 19:55:40532 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType4`3[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 19:55:40534 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.GetQuestion (QuizApp)" in 21.2212ms
+[23-12-2024 19:55:40536 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 19:55:40537 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/7/questions/1""" - 200 null "application/json; charset=utf-8" 32.2887ms
+[23-12-2024 19:55:44042 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/8/questions/1""" - null null
+[23-12-2024 19:55:44048 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 19:55:44049 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetQuestion\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32, Int32)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 19:55:44055 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("1"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 19:55:44058 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType4`3[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 19:55:44061 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.GetQuestion (QuizApp)" in 7.6889ms
+[23-12-2024 19:55:44062 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 19:55:44064 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/8/questions/1""" - 200 null "application/json; charset=utf-8" 21.2329ms
+[23-12-2024 19:56:11274 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "DELETE" "https"://"localhost:5001""""/api/Quiz/7""" - null null
+[23-12-2024 19:56:11280 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.DeleteQuiz (QuizApp)"'
+[23-12-2024 19:56:11283 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"DeleteQuiz\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteQuiz(Int32)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 19:56:11298 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("3"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+FROM [Quizzes] AS [q]
+WHERE [q].[Id] = @__p_0"
+[23-12-2024 19:56:11356 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("11"ms) [Parameters=["@p0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Quizzes]
+OUTPUT 1
+WHERE [Id] = @p0;"
+[23-12-2024 19:56:11365 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 19:56:11366 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.DeleteQuiz (QuizApp)" in 81.0164ms
+[23-12-2024 19:56:11368 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.DeleteQuiz (QuizApp)"'
+[23-12-2024 19:56:11370 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "DELETE" "https"://"localhost:5001""""/api/Quiz/7""" - 200 null "application/json; charset=utf-8" 95.7267ms
+[23-12-2024 19:56:14374 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "DELETE" "https"://"localhost:5001""""/api/Quiz/1""" - null null
+[23-12-2024 19:56:14380 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.DeleteQuiz (QuizApp)"'
+[23-12-2024 19:56:14381 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"DeleteQuiz\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteQuiz(Int32)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 19:56:14385 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+FROM [Quizzes] AS [q]
+WHERE [q].[Id] = @__p_0"
+[23-12-2024 19:56:14393 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("4"ms) [Parameters=["@p0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Quizzes]
+OUTPUT 1
+WHERE [Id] = @p0;"
+[23-12-2024 19:56:14396 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 19:56:14397 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.DeleteQuiz (QuizApp)" in 14.431ms
+[23-12-2024 19:56:14399 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.DeleteQuiz (QuizApp)"'
+[23-12-2024 19:56:14400 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "DELETE" "https"://"localhost:5001""""/api/Quiz/1""" - 200 null "application/json; charset=utf-8" 25.4142ms
+[23-12-2024 19:58:58080 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/18/questions/1""" - null null
+[23-12-2024 19:58:58083 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 19:58:58086 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetQuestion\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32, Int32)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 19:58:58105 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("15"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 19:58:58107 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "NotFoundObjectResult", writing value of type '"<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 19:58:58109 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.GetQuestion (QuizApp)" in 21.2431ms
+[23-12-2024 19:58:58111 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 19:58:58112 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/18/questions/1""" - 404 null "application/json; charset=utf-8" 32.1262ms
+[23-12-2024 19:59:02402 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/8/questions/1""" - null null
+[23-12-2024 19:59:02406 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 19:59:02408 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetQuestion\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32, Int32)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 19:59:02413 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("1"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 19:59:02416 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType4`3[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 19:59:02418 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.GetQuestion (QuizApp)" in 7.9141ms
+[23-12-2024 19:59:02420 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 19:59:02421 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/8/questions/1""" - 200 null "application/json; charset=utf-8" 19.4786ms
+[23-12-2024 19:59:06374 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/8/questions/12""" - null null
+[23-12-2024 19:59:06379 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 19:59:06380 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetQuestion\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32, Int32)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 19:59:06385 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("1"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 19:59:06389 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "BadRequestObjectResult", writing value of type '"<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 19:59:06391 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.GetQuestion (QuizApp)" in 8.4608ms
+[23-12-2024 19:59:06393 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 19:59:06395 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/8/questions/12""" - 400 null "application/json; charset=utf-8" 20.5277ms
+[23-12-2024 19:59:09409 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/8/questions/1""" - null null
+[23-12-2024 19:59:09414 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 19:59:09414 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetQuestion\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32, Int32)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 19:59:09420 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("1"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 19:59:09424 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType4`3[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 19:59:09425 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.GetQuestion (QuizApp)" in 8.6576ms
+[23-12-2024 19:59:09427 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 19:59:09428 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/8/questions/1""" - 200 null "application/json; charset=utf-8" 18.8103ms
+[23-12-2024 20:00:07382 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/api/Quiz/6/submit""" - "application/json" 228
+[23-12-2024 20:00:07385 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.SubmitQuiz (QuizApp)"'
+[23-12-2024 20:00:07389 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"SubmitQuiz\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitQuiz(Int32, QuizApp.DTO.SubmitQuizDTO)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 20:00:07428 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("19"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 20:00:07432 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizApp.DTO.QuizResultDTO"'.
+[23-12-2024 20:00:07435 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.SubmitQuiz (QuizApp)" in 42.521ms
+[23-12-2024 20:00:07437 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.SubmitQuiz (QuizApp)"'
+[23-12-2024 20:00:07438 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/api/Quiz/6/submit""" - 200 null "application/json; charset=utf-8" 56.0548ms
+[23-12-2024 20:00:59685 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/api/Quiz/6/submit""" - "application/json" 228
+[23-12-2024 20:00:59689 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.SubmitQuiz (QuizApp)"'
+[23-12-2024 20:00:59691 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"SubmitQuiz\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitQuiz(Int32, QuizApp.DTO.SubmitQuizDTO)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 20:00:59696 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("1"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 20:00:59699 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizApp.DTO.QuizResultDTO"'.
+[23-12-2024 20:00:59701 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.SubmitQuiz (QuizApp)" in 7.9943ms
+[23-12-2024 20:00:59703 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.SubmitQuiz (QuizApp)"'
+[23-12-2024 20:00:59704 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/api/Quiz/6/submit""" - 200 null "application/json; charset=utf-8" 18.0825ms
+[23-12-2024 20:01:26956 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/6/questions/0""" - null null
+[23-12-2024 20:01:26961 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 20:01:26962 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetQuestion\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32, Int32)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 20:01:26974 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("7"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 20:01:26977 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType4`3[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 20:01:26979 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.GetQuestion (QuizApp)" in 13.864ms
+[23-12-2024 20:01:26980 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 20:01:26981 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/6/questions/0""" - 200 null "application/json; charset=utf-8" 25.0461ms
+[23-12-2024 20:01:32195 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/6/questions/1""" - null null
+[23-12-2024 20:01:32200 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 20:01:32201 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetQuestion\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32, Int32)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 20:01:32205 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("1"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 20:01:32208 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType4`3[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 20:01:32210 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.GetQuestion (QuizApp)" in 7.3248ms
+[23-12-2024 20:01:32211 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 20:01:32212 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/6/questions/1""" - 200 null "application/json; charset=utf-8" 16.6585ms
+[23-12-2024 20:01:34808 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/6/questions/2""" - null null
+[23-12-2024 20:01:34812 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 20:01:34814 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetQuestion\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32, Int32)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 20:01:34818 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("1"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 20:01:34821 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType4`3[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 20:01:34823 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.GetQuestion (QuizApp)" in 7.2119ms
+[23-12-2024 20:01:34824 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 20:01:34826 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/6/questions/2""" - 200 null "application/json; charset=utf-8" 17.8852ms
+[23-12-2024 20:01:36906 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/6/questions/3""" - null null
+[23-12-2024 20:01:36911 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 20:01:36913 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetQuestion\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32, Int32)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 20:01:36918 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("1"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 20:01:36920 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType4`3[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 20:01:36922 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.GetQuestion (QuizApp)" in 6.2226ms
+[23-12-2024 20:01:36923 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 20:01:36925 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/6/questions/3""" - 200 null "application/json; charset=utf-8" 18.5904ms
+[23-12-2024 20:06:43520 +02:00 Microsoft.Hosting.Lifetime ] Application is shutting down...
+[23-12-2024 20:06:51336 +02:00 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager ] User profile is available. Using '"C:\Users\Kanel\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+[23-12-2024 20:06:51424 +02:00 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:5001"
+[23-12-2024 20:06:51425 +02:00 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5000"
+[23-12-2024 20:06:51427 +02:00 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down.
+[23-12-2024 20:06:51428 +02:00 Microsoft.Hosting.Lifetime ] Hosting environment: "Development"
+[23-12-2024 20:06:51429 +02:00 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp"
+[23-12-2024 20:06:51999 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - null null
+[23-12-2024 20:06:52117 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 118.5938ms
+[23-12-2024 20:06:52261 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[23-12-2024 20:06:52261 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - null null
+[23-12-2024 20:06:52264 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - 200 13750 "application/javascript; charset=utf-8" 3.5508ms
+[23-12-2024 20:06:52282 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 20.6823ms
+[23-12-2024 20:06:52492 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - null null
+[23-12-2024 20:06:52560 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 67.685ms
+[23-12-2024 20:06:58651 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - null null
+[23-12-2024 20:06:58658 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 6.8438ms
+[23-12-2024 20:06:58675 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[23-12-2024 20:06:58675 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - null null
+[23-12-2024 20:06:58678 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - 200 13750 "application/javascript; charset=utf-8" 3.3993ms
+[23-12-2024 20:06:58688 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 12.9649ms
+[23-12-2024 20:06:58734 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - null null
+[23-12-2024 20:06:58744 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 9.7252ms
+[23-12-2024 20:07:09303 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/8/questions/1""" - null null
+[23-12-2024 20:07:09362 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 20:07:09379 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetQuestion\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32, Int32)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 20:07:10269 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("43"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 20:07:10358 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType4`3[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 20:07:10376 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.GetQuestion (QuizApp)" in 992.4054ms
+[23-12-2024 20:07:10379 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 20:07:10385 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/8/questions/1""" - 200 null "application/json; charset=utf-8" 1081.7358ms
+[23-12-2024 20:07:16556 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/6/questions/0""" - null null
+[23-12-2024 20:07:16562 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 20:07:16564 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetQuestion\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32, Int32)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 20:07:16612 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("2"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 20:07:16620 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType4`3[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 20:07:16623 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.GetQuestion (QuizApp)" in 56.2939ms
+[23-12-2024 20:07:16626 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 20:07:16627 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/6/questions/0""" - 200 null "application/json; charset=utf-8" 71.3489ms
+[23-12-2024 20:08:50935 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/api/Quiz/6/submit""" - "application/json" 227
+[23-12-2024 20:08:50943 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.SubmitQuiz (QuizApp)"'
+[23-12-2024 20:08:50948 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"SubmitQuiz\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitQuiz(Int32, QuizApp.DTO.SubmitQuizDTO)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 20:08:51000 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("14"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 20:08:51004 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizApp.DTO.QuizResultDTO"'.
+[23-12-2024 20:08:51007 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.SubmitQuiz (QuizApp)" in 55.7639ms
+[23-12-2024 20:08:51008 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.SubmitQuiz (QuizApp)"'
+[23-12-2024 20:08:51009 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/api/Quiz/6/submit""" - 200 null "application/json; charset=utf-8" 74.0426ms
+[23-12-2024 20:09:05915 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/api/Quiz/6/submit""" - "application/json" 222
+[23-12-2024 20:09:05920 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.SubmitQuiz (QuizApp)"'
+[23-12-2024 20:09:05921 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"SubmitQuiz\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitQuiz(Int32, QuizApp.DTO.SubmitQuizDTO)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 20:09:05932 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'.
+[23-12-2024 20:09:05955 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.SubmitQuiz (QuizApp)" in 32.373ms
+[23-12-2024 20:09:05958 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.SubmitQuiz (QuizApp)"'
+[23-12-2024 20:09:05959 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/api/Quiz/6/submit""" - 400 null "application/problem+json; charset=utf-8" 43.6219ms
+[23-12-2024 20:09:24530 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[23-12-2024 20:09:24535 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - 200 13750 "application/javascript; charset=utf-8" 4.8476ms
+[23-12-2024 20:09:50686 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/api/Quiz""" - "application/json" 442
+[23-12-2024 20:09:50693 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.CreateQuiz (QuizApp)"'
+[23-12-2024 20:09:50698 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"CreateQuiz\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateQuiz(QuizApp.DTO.QuizCreateDTO)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 20:09:50832 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("9"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Quizzes] ([Description], [Title])
+OUTPUT INSERTED.[Id], INSERTED.[InsertedAt], INSERTED.[ModifiedAt]
+VALUES (@p0, @p1);"
+[23-12-2024 20:09:50864 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("14"ms) [Parameters=["@p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Int32), @p11='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [Questions] USING (
+VALUES (@p2, @p3, @p4, @p5, @p6, 0),
+(@p7, @p8, @p9, @p10, @p11, 1)) AS i ([Category], [CorrectAnswer], [Options], [QuizId], [Text], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Category], [CorrectAnswer], [Options], [QuizId], [Text])
+VALUES (i.[Category], i.[CorrectAnswer], i.[Options], i.[QuizId], i.[Text])
+OUTPUT INSERTED.[Id], INSERTED.[InsertedAt], INSERTED.[ModifiedAt], i._Position;"
+[23-12-2024 20:09:50884 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "CreatedAtActionResult", writing value of type '"<>f__AnonymousType3`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[QuizApp.DTO.QuizReadOnlyDTO, QuizApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+[23-12-2024 20:09:50898 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.CreateQuiz (QuizApp)" in 198.6688ms
+[23-12-2024 20:09:50901 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.CreateQuiz (QuizApp)"'
+[23-12-2024 20:09:50902 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/api/Quiz""" - 201 null "application/json; charset=utf-8" 215.3686ms
+[23-12-2024 20:10:23832 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/9/questions/0""" - null null
+[23-12-2024 20:10:23838 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 20:10:23840 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetQuestion\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32, Int32)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 20:10:23850 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("7"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 20:10:23853 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType4`3[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 20:10:23855 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.GetQuestion (QuizApp)" in 13.3533ms
+[23-12-2024 20:10:23856 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 20:10:23857 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/9/questions/0""" - 200 null "application/json; charset=utf-8" 24.9257ms
+[23-12-2024 20:10:32665 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/api/Quiz/9/submit""" - "application/json" 121
+[23-12-2024 20:10:32669 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.SubmitQuiz (QuizApp)"'
+[23-12-2024 20:10:32670 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"SubmitQuiz\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitQuiz(Int32, QuizApp.DTO.SubmitQuizDTO)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 20:10:32676 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("1"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 20:10:32680 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizApp.DTO.QuizResultDTO"'.
+[23-12-2024 20:10:32681 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.SubmitQuiz (QuizApp)" in 7.7546ms
+[23-12-2024 20:10:32683 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.SubmitQuiz (QuizApp)"'
+[23-12-2024 20:10:32684 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/api/Quiz/9/submit""" - 200 null "application/json; charset=utf-8" 19.3547ms
+[23-12-2024 20:19:40067 +02:00 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager ] User profile is available. Using '"C:\Users\Kanel\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+[23-12-2024 20:19:40162 +02:00 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:5001"
+[23-12-2024 20:19:40165 +02:00 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5000"
+[23-12-2024 20:19:40167 +02:00 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down.
+[23-12-2024 20:19:40168 +02:00 Microsoft.Hosting.Lifetime ] Hosting environment: "Development"
+[23-12-2024 20:19:40169 +02:00 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp"
+[23-12-2024 20:19:40253 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - null null
+[23-12-2024 20:19:40369 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 116.9291ms
+[23-12-2024 20:19:40642 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - null null
+[23-12-2024 20:19:40642 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[23-12-2024 20:19:40650 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - 200 13750 "application/javascript; charset=utf-8" 7.8241ms
+[23-12-2024 20:19:40665 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 22.952ms
+[23-12-2024 20:19:40732 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - null null
+[23-12-2024 20:19:40812 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 80.2907ms
+[23-12-2024 20:19:47460 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - null null
+[23-12-2024 20:19:47469 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 8.6527ms
+[23-12-2024 20:19:47484 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - null null
+[23-12-2024 20:19:47484 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[23-12-2024 20:19:47491 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - 200 13750 "application/javascript; charset=utf-8" 7.475ms
+[23-12-2024 20:19:47493 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 9.7166ms
+[23-12-2024 20:19:47543 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - null null
+[23-12-2024 20:19:47552 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 9.5298ms
+[23-12-2024 20:19:58637 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/9/questions/0""" - null null
+[23-12-2024 20:19:58691 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 20:19:58707 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetQuestion\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32, Int32)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 20:19:59439 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("26"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 20:19:59532 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType4`3[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 20:19:59547 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.GetQuestion (QuizApp)" in 834.4227ms
+[23-12-2024 20:19:59550 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 20:19:59555 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/9/questions/0""" - 200 null "application/json; charset=utf-8" 917.9892ms
+[23-12-2024 20:20:30471 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/6/questions/0""" - null null
+[23-12-2024 20:20:30480 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 20:20:30482 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetQuestion\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32, Int32)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 20:20:30524 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("2"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 20:20:30529 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType4`3[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 20:20:30531 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.GetQuestion (QuizApp)" in 46.8178ms
+[23-12-2024 20:20:30533 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.GetQuestion (QuizApp)"'
+[23-12-2024 20:20:30534 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/Quiz/6/questions/0""" - 200 null "application/json; charset=utf-8" 63.055ms
+[23-12-2024 20:20:43148 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/api/Quiz/6/submit""" - "application/json" 231
+[23-12-2024 20:20:43153 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.QuizController.SubmitQuiz (QuizApp)"'
+[23-12-2024 20:20:43159 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"SubmitQuiz\", controller = \"Quiz\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitQuiz(Int32, QuizApp.DTO.SubmitQuizDTO)" on controller "QuizApp.Controllers.QuizController" ("QuizApp").
+[23-12-2024 20:20:43190 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("1"ms) [Parameters=["@__quizId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q1].[Id], [q1].[Description], [q1].[InsertedAt], [q1].[ModifiedAt], [q1].[Title], [q0].[Id], [q0].[Category], [q0].[CorrectAnswer], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Options], [q0].[QuizId], [q0].[Text]
+FROM (
+    SELECT TOP(1) [q].[Id], [q].[Description], [q].[InsertedAt], [q].[ModifiedAt], [q].[Title]
+    FROM [Quizzes] AS [q]
+    WHERE [q].[Id] = @__quizId_0
+) AS [q1]
+LEFT JOIN [Questions] AS [q0] ON [q1].[Id] = [q0].[QuizId]
+ORDER BY [q1].[Id]"
+[23-12-2024 20:20:43195 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"QuizApp.DTO.QuizResultDTO"'.
+[23-12-2024 20:20:43197 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.QuizController.SubmitQuiz (QuizApp)" in 35.4544ms
+[23-12-2024 20:20:43200 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.SubmitQuiz (QuizApp)"'
+[23-12-2024 20:20:43202 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/api/Quiz/6/submit""" - 200 null "application/json; charset=utf-8" 53.779ms
+[23-12-2024 20:43:36597 +02:00 Microsoft.Hosting.Lifetime ] Application is shutting down...

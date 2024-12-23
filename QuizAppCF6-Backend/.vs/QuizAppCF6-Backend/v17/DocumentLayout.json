@@ -7,8 +7,20 @@
       "RelativeMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|solutionrelative:quizapp\\services\\quizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|c:\\users\\kanel\\desktop\\quizapp cf6\\quizappcf6-backend\\quizapp\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|solutionrelative:quizapp\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|c:\\users\\kanel\\desktop\\quizapp cf6\\quizappcf6-backend\\quizapp\\controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|solutionrelative:quizapp\\controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|c:\\users\\kanel\\desktop\\quizapp cf6\\quizappcf6-backend\\quizapp\\dto\\quizresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|solutionrelative:quizapp\\dto\\quizresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|c:\\users\\kanel\\desktop\\quizapp cf6\\quizappcf6-backend\\quizapp\\dto\\submitquizdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|solutionrelative:quizapp\\dto\\submitquizdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|c:\\users\\kanel\\desktop\\quizapp cf6\\quizappcf6-backend\\quizapp\\services\\iquizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,14 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|c:\\users\\kanel\\desktop\\quizapp cf6\\quizappcf6-backend\\quizapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|solutionrelative:quizapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|c:\\users\\kanel\\desktop\\quizapp cf6\\quizappcf6-backend\\quizapp\\dto\\submitquizdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|solutionrelative:quizapp\\dto\\submitquizdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|c:\\users\\kanel\\desktop\\quizapp cf6\\quizappcf6-backend\\quizapp\\dto\\quizresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|solutionrelative:quizapp\\dto\\quizresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,47 +38,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "QuizResultDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\DTO\\QuizResultDTO.cs",
-              "RelativeDocumentMoniker": "QuizApp\\DTO\\QuizResultDTO.cs",
-              "ToolTip": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\DTO\\QuizResultDTO.cs",
-              "RelativeToolTip": "QuizApp\\DTO\\QuizResultDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T16:37:28.868Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SubmitQuizDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\DTO\\SubmitQuizDTO.cs",
-              "RelativeDocumentMoniker": "QuizApp\\DTO\\SubmitQuizDTO.cs",
-              "ToolTip": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\DTO\\SubmitQuizDTO.cs",
-              "RelativeToolTip": "QuizApp\\DTO\\SubmitQuizDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T16:36:58.584Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\Program.cs",
-              "RelativeDocumentMoniker": "QuizApp\\Program.cs",
-              "ToolTip": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\Program.cs",
-              "RelativeToolTip": "QuizApp\\Program.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAACQAAABEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T15:16:12.491Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -89,7 +54,58 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "QuizApp\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\Services\\UserService.cs",
+              "RelativeToolTip": "QuizApp\\Services\\UserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T18:18:10.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "QuizResultDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\DTO\\QuizResultDTO.cs",
+              "RelativeDocumentMoniker": "QuizApp\\DTO\\QuizResultDTO.cs",
+              "ToolTip": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\DTO\\QuizResultDTO.cs",
+              "RelativeToolTip": "QuizApp\\DTO\\QuizResultDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T16:37:28.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SubmitQuizDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\DTO\\SubmitQuizDTO.cs",
+              "RelativeDocumentMoniker": "QuizApp\\DTO\\SubmitQuizDTO.cs",
+              "ToolTip": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\DTO\\SubmitQuizDTO.cs",
+              "RelativeToolTip": "QuizApp\\DTO\\SubmitQuizDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T16:36:58.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\Program.cs",
+              "RelativeDocumentMoniker": "QuizApp\\Program.cs",
+              "ToolTip": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\Program.cs",
+              "RelativeToolTip": "QuizApp\\Program.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAACQAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T15:16:12.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "IQuizService.cs",
               "DocumentMoniker": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\Services\\IQuizService.cs",
               "RelativeDocumentMoniker": "QuizApp\\Services\\IQuizService.cs",
@@ -97,8 +113,7 @@
               "RelativeToolTip": "QuizApp\\Services\\IQuizService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T15:12:45.781Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T15:12:45.781Z"
             },
             {
               "$type": "Document",
@@ -108,24 +123,24 @@
               "RelativeDocumentMoniker": "QuizApp\\Services\\QuizService.cs",
               "ToolTip": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\Services\\QuizService.cs",
               "RelativeToolTip": "QuizApp\\Services\\QuizService.cs",
-              "ViewState": "AQIAAFYAAAAAAAAAAAAgwGsAAAAqAAAA",
+              "ViewState": "AQIAAIoAAAAAAAAAAAAAAJcAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-23T15:13:15.32Z",
               "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "QuizController.cs",
               "DocumentMoniker": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\Controllers\\QuizController.cs",
               "RelativeDocumentMoniker": "QuizApp\\Controllers\\QuizController.cs",
               "ToolTip": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\Controllers\\QuizController.cs",
               "RelativeToolTip": "QuizApp\\Controllers\\QuizController.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAAAHMAAAA7AAAA",
+              "ViewState": "AQIAAGwAAAAAAAAAAAAAAIYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-23T15:14:47.052Z",
               "EditorCaption": ""

@@ -115,18 +115,6 @@ namespace QuizApp.Controllers
 
             var question = quiz.Questions.ElementAt(index);
 
-            //// Deserialize το Options από JSON string σε List<string>
-            //List<string> options;
-            //try
-            //{
-            //    options = JsonSerializer.Deserialize<List<string>>(question.Options).ToList();
-            //}
-            //catch
-            //{
-            //    // Σε περίπτωση σφάλματος, επιστρέφει τα options ως έχουν
-            //    options = new List<string> { question.Options };
-            //}
-
             return Ok(new
             {
                 QuestionId = question.Id,
