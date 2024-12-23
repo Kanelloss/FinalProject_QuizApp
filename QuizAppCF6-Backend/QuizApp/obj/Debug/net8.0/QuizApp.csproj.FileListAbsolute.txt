@@ -169,3 +169,16 @@ C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp\obj\Debug\net8.0\Q
 C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp\obj\Debug\net8.0\QuizApp.genruntimeconfig.cache
 C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp\obj\Debug\net8.0\ref\QuizApp.dll
 C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp\bin\Debug\net8.0\BCrypt.Net-Core.dll
+C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp\bin\Debug\net8.0\Serilog.dll
+C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp\bin\Debug\net8.0\Serilog.Sinks.File.dll

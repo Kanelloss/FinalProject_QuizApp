@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using QuizApp.DTO;
 using QuizApp.Services;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace QuizApp.Controllers
 {
@@ -58,9 +59,22 @@ namespace QuizApp.Controllers
             return Ok(token);
         }
 
+        // Admin can see every user's info, User can see only his own.
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUserById(int id)
         {
+
+            // Retrieve information from JWT token
+            var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            var currentUserRole = User.FindFirst(ClaimTypes.Role)?.Value;
+
+            // Checks if Role is Admin or User is finding himself.
+            if (currentUserRole != "Admin" && currentUserId != id)
+            {
+                return Forbid("You are not authorized to access this resource.");
+            }
+
             var user = await _userService.GetUserByIdAsync(id);
             if (user == null)
             {
