@@ -2837,3 +2837,72 @@ ORDER BY [q1].[Id]"
 [23-12-2024 20:20:43200 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.QuizController.SubmitQuiz (QuizApp)"'
 [23-12-2024 20:20:43202 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/api/Quiz/6/submit""" - 200 null "application/json; charset=utf-8" 53.779ms
 [23-12-2024 20:43:36597 +02:00 Microsoft.Hosting.Lifetime ] Application is shutting down...
+[23-12-2024 21:03:48339 +02:00 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager ] User profile is available. Using '"C:\Users\Kanel\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+[23-12-2024 21:03:48425 +02:00 Microsoft.Hosting.Lifetime ] Now listening on: "https://localhost:5001"
+[23-12-2024 21:03:48427 +02:00 Microsoft.Hosting.Lifetime ] Now listening on: "http://localhost:5000"
+[23-12-2024 21:03:48430 +02:00 Microsoft.Hosting.Lifetime ] Application started. Press Ctrl+C to shut down.
+[23-12-2024 21:03:48431 +02:00 Microsoft.Hosting.Lifetime ] Hosting environment: "Development"
+[23-12-2024 21:03:48432 +02:00 Microsoft.Hosting.Lifetime ] Content root path: "C:\Users\Kanel\Desktop\QuizApp CF6\QuizAppCF6-Backend\QuizApp"
+[23-12-2024 21:03:48662 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - null null
+[23-12-2024 21:03:48802 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 140.7296ms
+[23-12-2024 21:03:48808 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[23-12-2024 21:03:48812 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - 200 13750 "application/javascript; charset=utf-8" 4.4333ms
+[23-12-2024 21:03:48897 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - null null
+[23-12-2024 21:03:48930 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 32.2224ms
+[23-12-2024 21:03:48959 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - null null
+[23-12-2024 21:03:49023 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 64.4612ms
+[23-12-2024 21:04:02564 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - null null
+[23-12-2024 21:04:02574 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 10.3838ms
+[23-12-2024 21:04:02592 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[23-12-2024 21:04:02596 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - 200 13750 "application/javascript; charset=utf-8" 3.8068ms
+[23-12-2024 21:04:02651 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - null null
+[23-12-2024 21:04:02658 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 7.7438ms
+[23-12-2024 21:04:02740 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - null null
+[23-12-2024 21:04:02752 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 11.9853ms
+[23-12-2024 21:04:04952 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - null null
+[23-12-2024 21:04:04958 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 5.8835ms
+[23-12-2024 21:04:04975 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[23-12-2024 21:04:04979 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - 200 13750 "application/javascript; charset=utf-8" 4.3126ms
+[23-12-2024 21:04:05035 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - null null
+[23-12-2024 21:04:05042 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 6.8709ms
+[23-12-2024 21:04:05122 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - null null
+[23-12-2024 21:04:05133 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 10.8104ms
+[23-12-2024 21:10:17274 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/User/1/history-and-highscores""" - null null
+[23-12-2024 21:10:17333 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.UserController.GetHistoryAndHighScores (QuizApp)"'
+[23-12-2024 21:10:17348 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetHistoryAndHighScores\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHistoryAndHighScores(Int32)" on controller "QuizApp.Controllers.UserController" ("QuizApp").
+[23-12-2024 21:10:18083 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("27"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[Id], [q].[InsertedAt], [q].[ModifiedAt], [q].[QuizId], [q].[Score], [q].[UserId], [q0].[Id], [q0].[Description], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Title], [u].[Id], [u].[Email], [u].[InsertedAt], [u].[ModifiedAt], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [QuizScores] AS [q]
+INNER JOIN [Quizzes] AS [q0] ON [q].[QuizId] = [q0].[Id]
+INNER JOIN [Users] AS [u] ON [q].[UserId] = [u].[Id]
+WHERE [q].[UserId] = @__userId_0"
+[23-12-2024 21:10:18161 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[QuizApp.DTO.UserQuizHistoryDTO, QuizApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+[23-12-2024 21:10:18175 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.UserController.GetHistoryAndHighScores (QuizApp)" in 821.3888ms
+[23-12-2024 21:10:18177 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.UserController.GetHistoryAndHighScores (QuizApp)"'
+[23-12-2024 21:10:18183 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/User/1/history-and-highscores""" - 200 null "application/json; charset=utf-8" 909.3146ms
+[23-12-2024 21:12:32419 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/User/5/history-and-highscores""" - null null
+[23-12-2024 21:12:32427 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.UserController.GetHistoryAndHighScores (QuizApp)"'
+[23-12-2024 21:12:32429 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetHistoryAndHighScores\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHistoryAndHighScores(Int32)" on controller "QuizApp.Controllers.UserController" ("QuizApp").
+[23-12-2024 21:12:32480 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("10"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[Id], [q].[InsertedAt], [q].[ModifiedAt], [q].[QuizId], [q].[Score], [q].[UserId], [q0].[Id], [q0].[Description], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Title], [u].[Id], [u].[Email], [u].[InsertedAt], [u].[ModifiedAt], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [QuizScores] AS [q]
+INNER JOIN [Quizzes] AS [q0] ON [q].[QuizId] = [q0].[Id]
+INNER JOIN [Users] AS [u] ON [q].[UserId] = [u].[Id]
+WHERE [q].[UserId] = @__userId_0"
+[23-12-2024 21:12:32485 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "NotFoundObjectResult", writing value of type '"<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[23-12-2024 21:12:32492 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.UserController.GetHistoryAndHighScores (QuizApp)" in 59.6856ms
+[23-12-2024 21:12:32494 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.UserController.GetHistoryAndHighScores (QuizApp)"'
+[23-12-2024 21:12:32495 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/User/5/history-and-highscores""" - 404 null "application/json; charset=utf-8" 76.148ms
+[23-12-2024 21:12:39819 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/User/2/history-and-highscores""" - null null
+[23-12-2024 21:12:39826 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executing endpoint '"QuizApp.Controllers.UserController.GetHistoryAndHighScores (QuizApp)"'
+[23-12-2024 21:12:39828 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Route matched with "{action = \"GetHistoryAndHighScores\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHistoryAndHighScores(Int32)" on controller "QuizApp.Controllers.UserController" ("QuizApp").
+[23-12-2024 21:12:39842 +02:00 Microsoft.EntityFrameworkCore.Database.Command ] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[Id], [q].[InsertedAt], [q].[ModifiedAt], [q].[QuizId], [q].[Score], [q].[UserId], [q0].[Id], [q0].[Description], [q0].[InsertedAt], [q0].[ModifiedAt], [q0].[Title], [u].[Id], [u].[Email], [u].[InsertedAt], [u].[ModifiedAt], [u].[Password], [u].[UserRole], [u].[Username]
+FROM [QuizScores] AS [q]
+INNER JOIN [Quizzes] AS [q0] ON [q].[QuizId] = [q0].[Id]
+INNER JOIN [Users] AS [u] ON [q].[UserId] = [u].[Id]
+WHERE [q].[UserId] = @__userId_0"
+[23-12-2024 21:12:39846 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor ] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[QuizApp.DTO.UserQuizHistoryDTO, QuizApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+[23-12-2024 21:12:39848 +02:00 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ] Executed action "QuizApp.Controllers.UserController.GetHistoryAndHighScores (QuizApp)" in 18.6831ms
+[23-12-2024 21:12:39851 +02:00 Microsoft.AspNetCore.Routing.EndpointMiddleware ] Executed endpoint '"QuizApp.Controllers.UserController.GetHistoryAndHighScores (QuizApp)"'
+[23-12-2024 21:12:39852 +02:00 Microsoft.AspNetCore.Hosting.Diagnostics ] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/User/2/history-and-highscores""" - 200 null "application/json; charset=utf-8" 32.4568ms

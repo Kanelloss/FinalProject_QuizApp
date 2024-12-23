@@ -12,12 +12,14 @@ namespace QuizApp.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
-        private readonly IConfiguration _configuration; 
+        private readonly IConfiguration _configuration;
+        private readonly IQuizScoreService _quizScoreService;
 
-        public UserController(IUserService userService, IConfiguration configuration)
+        public UserController(IUserService userService, IConfiguration configuration, IQuizScoreService quizScoreService)
         {
             _userService = userService;
-            _configuration = configuration; 
+            _configuration = configuration;
+            _quizScoreService = quizScoreService;
         }
 
 
@@ -114,6 +116,26 @@ namespace QuizApp.Controllers
         {
             return Ok(new { Message = "You have accessed a protected endpoint!" });
         }
+
+        [HttpGet("{userId}/history-and-highscores")]
+        [Authorize]
+        public async Task<IActionResult> GetHistoryAndHighScores(int userId)
+        {
+            try
+            {
+                var result = await _quizScoreService.GetUserHistoryAndHighScoresAsync(userId);
+                if (result == null || !result.Any())
+                {
+                    return NotFound(new { Message = "No quiz history found for the user." });
+                }
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = "An error occurred while retrieving quiz history.", Details = ex.Message });
+            }
+        }
+
 
 
     }

@@ -135,10 +135,5 @@ namespace QuizApp.Controllers
 
             return Ok(result);
         }
-
-
-
-
-
     }
 }
