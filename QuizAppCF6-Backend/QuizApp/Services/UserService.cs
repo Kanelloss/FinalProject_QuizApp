@@ -4,6 +4,7 @@ using QuizApp.Core.Enums;
 using QuizApp.Data;
 using QuizApp.DTO;
 using QuizApp.Repositories;
+using QuizApp.Security;
 using Serilog;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -15,11 +16,13 @@ namespace QuizApp.Services
     {
         private readonly IUserRepository _userRepository;
         private readonly ILogger<UserService> _logger;
+        private readonly QuizAppDbContext _context;
 
-        public UserService(IUserRepository userRepository)
+        public UserService(IUserRepository userRepository, QuizAppDbContext context)
         {
             _userRepository = userRepository;
             _logger = new LoggerFactory().AddSerilog().CreateLogger<UserService>();
+            _context = context; // Assign the context
         }
 
         public async Task<bool> RegisterUserAsync(UserSignUpDTO dto)
@@ -28,16 +31,17 @@ namespace QuizApp.Services
             var existingUser = await _userRepository.GetUserByUsernameAsync(dto.Username);
             if (existingUser != null)
             {
-                return false; // Username is taken
+                throw new InvalidOperationException("Username is already taken.");
             }
 
+            // Check if email already exists
             var existingEmailUser = await _userRepository.GetUserByEmailAsync(dto.Email);
             if (existingEmailUser != null)
             {
-                throw new InvalidOperationException("Email already exists."); // Email is taken
+                throw new InvalidOperationException("Email is already taken.");
             }
 
-            // Check if UserRole is null.
+            // Check if UserRole is null
             if (string.IsNullOrEmpty(dto.UserRole))
             {
                 throw new ArgumentException("UserRole is required.");
@@ -47,20 +51,19 @@ namespace QuizApp.Services
             var user = new User
             {
                 Username = dto.Username,
-                Password = BCrypt.Net.BCrypt.HashPassword(dto.Password), // Hash the password
+                Password = EncryptionUtil.Encrypt(dto.Password!), // Hash the password
                 Email = dto.Email,
-                UserRole = Enum.Parse<UserRole>(dto.UserRole)       //parse from String to UserRole
+                UserRole = Enum.Parse<UserRole>(dto.UserRole) // Parse from String to UserRole
             };
-
-            Console.WriteLine($"Mapped UserRole to User entity: {user.UserRole}");
 
             await _userRepository.AddAsync(user);
             return await _userRepository.SaveChangesAsync();
         }
 
+
         public async Task<UserReadOnlyDTO?> AuthenticateUserAsync(UserLoginDTO dto)
         {
-            var user = await _userRepository.GetUserAsync(dto.Username, dto.Password);
+            var user = await _userRepository.GetUserAsync(dto.Username!, dto.Password!);
             if (user == null) return null;
 
             // Map User entity to UserReadOnlyDTO
@@ -104,7 +107,6 @@ namespace QuizApp.Services
             };
         }
 
-
         public async Task<bool> UpdateUserAsync(int userId, UserUpdateDTO dto)
         {
             var user = await _userRepository.GetByIdAsync(userId);
@@ -113,51 +115,27 @@ namespace QuizApp.Services
                 return false; // User not found
             }
 
-            // Check if the new username already exists (excluding the current user)
-            if (!string.IsNullOrWhiteSpace(dto.Username))
-            {
-                var existingUser = await _userRepository.GetUserByUsernameAsync(dto.Username);
-                if (existingUser != null && existingUser.Id != userId)
-                {
-                    throw new InvalidOperationException("Username already exists.");
-                }
-            }
-
-            // Check if the new email already exists (excluding the current user)
-           _logger.LogInformation("Checking email: {Email} for user ID: {UserId}", dto.Email, userId);
-            var existingEmailUser = await _userRepository.GetUserByEmailAsync(dto.Email);
-            if (existingEmailUser != null)
-            {
-                _logger.LogInformation("Email {Email} belongs to user ID: {ExistingUserId}", dto.Email, existingEmailUser.Id);
-            }
-            if (existingEmailUser != null && existingEmailUser.Id != userId)
-            {
-                throw new InvalidOperationException("Email already exists.");
-}
-
-
             // Update fields
             user.Username = dto.Username ?? user.Username;
             user.Email = dto.Email ?? user.Email;
-            user.UserRole = dto.UserRole ?? user.UserRole;
+
             if (!string.IsNullOrWhiteSpace(dto.Password))
             {
-                var isSamePassword = BCrypt.Net.BCrypt.Verify(dto.Password, user.Password);
+                var isSamePassword = EncryptionUtil.IsValidPassword(dto.Password, user.Password);
                 if (!isSamePassword)
                 {
-                    _logger.LogInformation("Password for user ID {UserId} is being updated.", userId);
-                    user.Password = BCrypt.Net.BCrypt.HashPassword(dto.Password); // Hash το νέο password
+                    _logger.LogInformation("Updating password for user ID: {UserId}", userId);
+                    user.Password = EncryptionUtil.Encrypt(dto.Password);
                 }
                 else
                 {
-                    _logger.LogInformation("Password for user ID {UserId} is unchanged.", userId);
+                    _logger.LogInformation("Password for user ID: {UserId} remains unchanged.", userId);
                 }
             }
 
-
-
             return await _userRepository.UpdateUserAsync(user);
         }
+
 
 
 

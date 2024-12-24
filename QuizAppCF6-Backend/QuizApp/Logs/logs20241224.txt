@@ -1455,3 +1455,173 @@ System.InvalidOperationException: Email already exists.
    at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
    at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[24-12-2024 17:11:47543 +02:00 QuizApp.Controllers.UserController ] Signup failed: Username "KanellosTestUser" is already taken.
+[24-12-2024 17:18:12201 +02:00 QuizApp.Controllers.UserController ] SignUp attempt for username: "KanellosTestUser"
+[24-12-2024 17:18:12566 +02:00 QuizApp.Services.UserService ] Registration failed: Username "KanellosTestUser" is already taken.
+[24-12-2024 17:18:12570 +02:00 QuizApp.Controllers.UserController ] SignUp failed for username "KanellosTestUser": "Username is already taken."
+[24-12-2024 17:18:43174 +02:00 QuizApp.Controllers.UserController ] SignUp attempt for username: "KanellosTestUser111"
+[24-12-2024 17:18:43201 +02:00 QuizApp.Services.UserService ] Registration failed: Email "KanellosUser@example.com" is already taken.
+[24-12-2024 17:18:43204 +02:00 QuizApp.Controllers.UserController ] SignUp failed for username "KanellosTestUser111": "Email is already taken."
+[24-12-2024 17:18:55623 +02:00 QuizApp.Controllers.UserController ] SignUp attempt for username: "KanellosTestUser111"
+[24-12-2024 17:18:55748 +02:00 QuizApp.Services.UserService ] Mapped UserRole to User entity: User
+[24-12-2024 17:18:55860 +02:00 QuizApp.Controllers.UserController ] User "KanellosTestUser111" registered successfully.
+[24-12-2024 17:20:08529 +02:00 QuizApp.Controllers.UserController ] SignUp attempt for username: "KanellosTestUser111"
+[24-12-2024 17:20:08538 +02:00 QuizApp.Services.UserService ] Registration failed: Username "KanellosTestUser111" is already taken.
+[24-12-2024 17:20:08540 +02:00 QuizApp.Controllers.UserController ] SignUp failed for username "KanellosTestUser111": "Username is already taken."
+[24-12-2024 17:23:32617 +02:00 QuizApp.Controllers.UserController ] SignUp attempt for username: "KanellosTestUser"
+[24-12-2024 17:23:32978 +02:00 QuizApp.Controllers.UserController ] SignUp failed for username "KanellosTestUser": "Username is already taken."
+[24-12-2024 17:24:02524 +02:00 QuizApp.Controllers.UserController ] SignUp attempt for username: "1KanellosTestUser"
+[24-12-2024 17:24:02545 +02:00 QuizApp.Controllers.UserController ] SignUp failed for username "1KanellosTestUser": "Email is already taken."
+[24-12-2024 17:24:54242 +02:00 QuizApp.Controllers.UserController ] SignUp attempt for username: "1KanellosTestUser"
+[24-12-2024 17:24:54329 +02:00 QuizApp.Services.UserService ] Mapped UserRole to User entity: User
+[24-12-2024 17:24:54413 +02:00 QuizApp.Controllers.UserController ] User "1KanellosTestUser" registered successfully.
+[24-12-2024 17:26:33453 +02:00 QuizApp.Controllers.UserController ] User "1KanellosTestUser" logged in successfully.
+[24-12-2024 17:33:32743 +02:00 QuizApp.Controllers.UserController ] User "KanellosTestUser" logged in successfully.
+[24-12-2024 17:33:54271 +02:00 QuizApp.Controllers.UserController ] Unauthorized access attempt by user 21 with role "User". Attempted to access user 25.
+[24-12-2024 17:34:03494 +02:00 QuizApp.Controllers.UserController ] User with ID 21 retrieved successfully by user 21.
+[24-12-2024 17:34:17301 +02:00 QuizApp.Controllers.UserController ] Unauthorized access attempt by user 21 with role "User". Attempted to access user 20.
+[24-12-2024 17:34:21008 +02:00 QuizApp.Controllers.UserController ] Unauthorized access attempt by user 21 with role "User". Attempted to access user 26.
+[24-12-2024 17:34:24244 +02:00 QuizApp.Controllers.UserController ] Unauthorized access attempt by user 21 with role "User". Attempted to access user 29.
+[24-12-2024 17:34:44812 +02:00 QuizApp.Controllers.UserController ] User "KanellosTest" logged in successfully.
+[24-12-2024 17:35:04478 +02:00 QuizApp.Controllers.UserController ] User with ID 12 retrieved successfully by user 20.
+[24-12-2024 17:35:16106 +02:00 QuizApp.Controllers.UserController ] User with ID 21 retrieved successfully by user 20.
+[24-12-2024 17:35:21322 +02:00 QuizApp.Controllers.UserController ] User with ID 20 retrieved successfully by user 20.
+[24-12-2024 17:43:48609 +02:00 QuizApp.Services.UserService ] Update attempt for user ID: 1
+[24-12-2024 17:43:48991 +02:00 QuizApp.Services.UserService ] Update failed: Username "KanellosTestUser111" is already taken.
+[24-12-2024 17:43:48993 +02:00 QuizApp.Controllers.UserController ] Update failed for user ID 1: "Username already exists."
+[24-12-2024 17:43:54049 +02:00 QuizApp.Services.UserService ] Update attempt for user ID: 1
+[24-12-2024 17:43:54065 +02:00 QuizApp.Services.UserService ] Update failed: Email "KanellosUser@example.com" is already taken.
+[24-12-2024 17:43:54066 +02:00 QuizApp.Controllers.UserController ] Update failed for user ID 1: "Email already exists."
+[24-12-2024 17:43:58447 +02:00 QuizApp.Services.UserService ] Update attempt for user ID: 1
+[24-12-2024 17:43:58454 +02:00 QuizApp.Services.UserService ] No password provided for user ID: 1. Skipping password update.
+[24-12-2024 17:43:58604 +02:00 QuizApp.Services.UserService ] User with ID 1 updated successfully.
+[24-12-2024 17:43:58605 +02:00 QuizApp.Controllers.UserController ] User with ID 1 updated successfully.
+[24-12-2024 17:44:48537 +02:00 QuizApp.Services.UserService ] Update attempt for user ID: 1
+[24-12-2024 17:44:48552 +02:00 QuizApp.Services.UserService ] No password provided for user ID: 1. Skipping password update.
+[24-12-2024 17:44:48644 +02:00 QuizApp.Services.UserService ] User with ID 1 updated successfully.
+[24-12-2024 17:44:48646 +02:00 QuizApp.Controllers.UserController ] User with ID 1 updated successfully.
+[24-12-2024 17:45:02810 +02:00 QuizApp.Services.UserService ] Update attempt for user ID: 1
+[24-12-2024 17:45:02814 +02:00 QuizApp.Services.UserService ] No password provided for user ID: 1. Skipping password update.
+[24-12-2024 17:45:02906 +02:00 QuizApp.Services.UserService ] User with ID 1 updated successfully.
+[24-12-2024 17:45:02908 +02:00 QuizApp.Controllers.UserController ] User with ID 1 updated successfully.
+[24-12-2024 17:48:25831 +02:00 QuizApp.Services.UserService ] Update attempt for user ID: 1
+[24-12-2024 17:48:25903 +02:00 QuizApp.Services.UserService ] Updating password for user ID: 1
+[24-12-2024 17:48:26027 +02:00 QuizApp.Services.UserService ] User with ID 1 updated successfully.
+[24-12-2024 17:48:26028 +02:00 QuizApp.Controllers.UserController ] User with ID 1 updated successfully.
+[24-12-2024 17:48:44157 +02:00 QuizApp.Services.UserService ] Update attempt for user ID: 1
+[24-12-2024 17:48:44221 +02:00 QuizApp.Services.UserService ] Updating password for user ID: 1
+[24-12-2024 17:48:44347 +02:00 QuizApp.Services.UserService ] User with ID 1 updated successfully.
+[24-12-2024 17:48:44349 +02:00 QuizApp.Controllers.UserController ] User with ID 1 updated successfully.
+[24-12-2024 17:50:57611 +02:00 QuizApp.Services.UserService ] Update attempt for user ID: 1
+[24-12-2024 17:50:57981 +02:00 QuizApp.Controllers.UserController ] Update failed for user ID 1: "Username already exists."
+[24-12-2024 17:51:02843 +02:00 QuizApp.Services.UserService ] Update attempt for user ID: 1
+[24-12-2024 17:51:02857 +02:00 QuizApp.Controllers.UserController ] Update failed for user ID 1: "Email already exists."
+[24-12-2024 17:51:10949 +02:00 QuizApp.Services.UserService ] Update attempt for user ID: 1
+[24-12-2024 17:51:11045 +02:00 QuizApp.Services.UserService ] Updating password for user ID: 1
+[24-12-2024 17:51:11274 +02:00 QuizApp.Services.UserService ] User with ID 1 updated successfully.
+[24-12-2024 17:51:11276 +02:00 QuizApp.Controllers.UserController ] User with ID 1 updated successfully.
+[24-12-2024 17:51:42077 +02:00 QuizApp.Controllers.UserController ] Failed login attempt for user: "KanellosTestUser@"
+[24-12-2024 17:51:56504 +02:00 QuizApp.Services.UserService ] Update attempt for user ID: 1
+[24-12-2024 17:51:56606 +02:00 QuizApp.Services.UserService ] User with ID 1 updated successfully.
+[24-12-2024 17:51:56608 +02:00 QuizApp.Controllers.UserController ] User with ID 1 updated successfully.
+[24-12-2024 17:52:06714 +02:00 QuizApp.Services.UserService ] Update attempt for user ID: 1
+[24-12-2024 17:52:06782 +02:00 QuizApp.Services.UserService ] User with ID 1 updated successfully.
+[24-12-2024 17:52:06783 +02:00 QuizApp.Controllers.UserController ] User with ID 1 updated successfully.
+[24-12-2024 17:52:47840 +02:00 QuizApp.Services.UserService ] Update attempt for user ID: 1
+[24-12-2024 17:52:47914 +02:00 QuizApp.Services.UserService ] Updating password for user ID: 1
+[24-12-2024 17:52:48035 +02:00 QuizApp.Services.UserService ] User with ID 1 updated successfully.
+[24-12-2024 17:52:48038 +02:00 QuizApp.Controllers.UserController ] User with ID 1 updated successfully.
+[24-12-2024 17:53:17943 +02:00 QuizApp.Services.UserService ] Update attempt for user ID: 1
+[24-12-2024 17:53:17955 +02:00 QuizApp.Controllers.UserController ] Update failed for user ID 1: "Username already exists."
+[24-12-2024 17:53:24436 +02:00 QuizApp.Services.UserService ] Update attempt for user ID: 1
+[24-12-2024 17:53:24502 +02:00 QuizApp.Services.UserService ] Updating password for user ID: 1
+[24-12-2024 17:53:24626 +02:00 QuizApp.Services.UserService ] User with ID 1 updated successfully.
+[24-12-2024 17:53:24628 +02:00 QuizApp.Controllers.UserController ] User with ID 1 updated successfully.
+[24-12-2024 17:53:32418 +02:00 QuizApp.Services.UserService ] Update attempt for user ID: 1
+[24-12-2024 17:53:32498 +02:00 QuizApp.Services.UserService ] Updating password for user ID: 1
+[24-12-2024 17:53:32625 +02:00 QuizApp.Services.UserService ] User with ID 1 updated successfully.
+[24-12-2024 17:53:32627 +02:00 QuizApp.Controllers.UserController ] User with ID 1 updated successfully.
+[24-12-2024 17:54:16431 +02:00 QuizApp.Services.UserService ] Update attempt for user ID: 1
+[24-12-2024 17:54:16510 +02:00 QuizApp.Services.UserService ] User with ID 1 updated successfully.
+[24-12-2024 17:54:16512 +02:00 QuizApp.Controllers.UserController ] User with ID 1 updated successfully.
+[24-12-2024 18:02:20786 +02:00 QuizApp.Services.UserService ] Mapped UserRole to User entity: Admin
+[24-12-2024 18:02:20921 +02:00 QuizApp.Controllers.UserController ] User "KanellosTestq" registered successfully.
+[24-12-2024 18:03:29194 +02:00 QuizApp.Controllers.UserController ] User "KanellosTestq" logged in successfully.
+[24-12-2024 18:04:48271 +02:00 QuizApp.Services.UserService ] Attempting to verify password for user ID: 26
+[24-12-2024 18:04:48372 +02:00 QuizApp.Services.UserService ] Password verification result for user ID: 26: True
+[24-12-2024 18:04:48375 +02:00 QuizApp.Services.UserService ] Password for user ID: 26 remains unchanged.
+[24-12-2024 18:04:48490 +02:00 QuizApp.Services.UserService ] User with ID 26 updated successfully.
+[24-12-2024 18:04:48492 +02:00 QuizApp.Controllers.UserController ] User with ID 26 updated successfully.
+[24-12-2024 18:05:49730 +02:00 QuizApp.Controllers.UserController ] Failed login attempt for user: "KanellosTestqq"
+[24-12-2024 18:06:18788 +02:00 QuizApp.Controllers.UserController ] Failed login attempt for user: "KanellosTestq"
+[24-12-2024 18:06:24146 +02:00 QuizApp.Controllers.UserController ] Failed login attempt for user: "KanellosTestqq"
+[24-12-2024 18:06:49365 +02:00 QuizApp.Services.UserService ] Attempting to verify password for user ID: 26
+[24-12-2024 18:06:49425 +02:00 QuizApp.Services.UserService ] Password verification result for user ID: 26: False
+[24-12-2024 18:06:49428 +02:00 QuizApp.Services.UserService ] Updating password for user ID: 26
+[24-12-2024 18:06:49552 +02:00 QuizApp.Services.UserService ] User with ID 26 updated successfully.
+[24-12-2024 18:06:49556 +02:00 QuizApp.Controllers.UserController ] User with ID 26 updated successfully.
+[24-12-2024 18:14:04472 +02:00 QuizApp.Controllers.UserController ] SignUp failed for username "tester": "Username is already taken."
+[24-12-2024 18:14:09056 +02:00 QuizApp.Services.UserService ] Mapped UserRole to User entity: Admin
+[24-12-2024 18:14:09140 +02:00 QuizApp.Controllers.UserController ] User "tester1" registered successfully.
+[24-12-2024 18:14:27163 +02:00 QuizApp.Controllers.UserController ] User "tester1" logged in successfully.
+[24-12-2024 18:15:06373 +02:00 QuizApp.Controllers.UserController ] Failed login attempt for user: "tester2"
+[24-12-2024 18:15:26694 +02:00 QuizApp.Services.UserService ] Comparing passwords for user ID 27: Provided Password = "Test123!", Stored Password = "$2b$10$EFqUAcJAvAEjtdAJxhq45OjopzV7PXhpVTUIIUkkYPpQ3rkbk.8yy", Verification Result = True
+[24-12-2024 18:15:26696 +02:00 QuizApp.Services.UserService ] Password for user ID: 27 remains unchanged.
+[24-12-2024 18:15:26792 +02:00 QuizApp.Services.UserService ] User with ID 27 updated successfully.
+[24-12-2024 18:15:26793 +02:00 QuizApp.Controllers.UserController ] User with ID 27 updated successfully.
+[24-12-2024 18:16:33362 +02:00 QuizApp.Controllers.UserController ] Failed login attempt for user: "tester2"
+[24-12-2024 18:18:24325 +02:00 QuizApp.Services.UserService ] Mapped UserRole to User entity: User
+[24-12-2024 18:18:24452 +02:00 QuizApp.Controllers.UserController ] User "KanellosTestUser3" registered successfully.
+[24-12-2024 18:18:35831 +02:00 QuizApp.Controllers.UserController ] User "KanellosTestUser3" logged in successfully.
+[24-12-2024 18:19:39817 +02:00 QuizApp.Services.UserService ] Password for user ID 28 remains unchanged.
+[24-12-2024 18:19:39923 +02:00 QuizApp.Services.UserService ] User with ID 28 updated successfully.
+[24-12-2024 18:19:39925 +02:00 QuizApp.Controllers.UserController ] User with ID 28 updated successfully.
+[24-12-2024 18:26:45201 +02:00 QuizApp.Services.UserService ] Updating password for user ID: 28
+[24-12-2024 18:26:45451 +02:00 QuizApp.Services.UserService ] User with ID 28 updated successfully.
+[24-12-2024 18:26:45453 +02:00 QuizApp.Controllers.UserController ] User with ID 28 updated successfully.
+[24-12-2024 18:26:57572 +02:00 QuizApp.Services.UserService ] Updating password for user ID: 28
+[24-12-2024 18:26:57741 +02:00 QuizApp.Services.UserService ] User with ID 28 updated successfully.
+[24-12-2024 18:26:57742 +02:00 QuizApp.Controllers.UserController ] User with ID 28 updated successfully.
+[24-12-2024 18:27:23094 +02:00 QuizApp.Controllers.UserController ] Failed login attempt for user: "KanellosTestUserrr"
+[24-12-2024 18:31:10956 +02:00 QuizApp.Services.UserService ] Mapped UserRole to User entity: User
+[24-12-2024 18:31:11095 +02:00 QuizApp.Controllers.UserController ] User "KanellosTestUserw" registered successfully.
+[24-12-2024 18:31:32670 +02:00 QuizApp.Services.UserService ] Password for user ID 29 remains unchanged.
+[24-12-2024 18:31:32847 +02:00 QuizApp.Services.UserService ] User with ID 29 updated successfully.
+[24-12-2024 18:31:32848 +02:00 QuizApp.Controllers.UserController ] User with ID 29 updated successfully.
+[24-12-2024 18:32:25972 +02:00 QuizApp.Controllers.UserController ] Failed login attempt for user: "Kanellos1TestUserw"
+[24-12-2024 18:34:52166 +02:00 QuizApp.Services.UserService ] Username "KanellosTestUser" is already taken by another user (ID: 21).
+[24-12-2024 18:34:52170 +02:00 QuizApp.Controllers.UserController ] Update failed for user ID 29: "Username already exists."
+[24-12-2024 18:34:57339 +02:00 QuizApp.Services.UserService ] Username "KanellosTestUser1" is already taken by another user (ID: 22).
+[24-12-2024 18:34:57343 +02:00 QuizApp.Controllers.UserController ] Update failed for user ID 29: "Username already exists."
+[24-12-2024 18:35:01973 +02:00 QuizApp.Services.UserService ] Email "KanellosUser@example.com" is already taken by another user (ID: 21).
+[24-12-2024 18:35:01976 +02:00 QuizApp.Controllers.UserController ] Update failed for user ID 29: "Email already exists."
+[24-12-2024 18:35:07470 +02:00 QuizApp.Services.UserService ] Email "KanellosUser@example.com" is already taken by another user (ID: 21).
+[24-12-2024 18:35:07473 +02:00 QuizApp.Controllers.UserController ] Update failed for user ID 29: "Email already exists."
+[24-12-2024 18:36:48199 +02:00 QuizApp.Services.UserService ] Mapped UserRole to User entity: User
+[24-12-2024 18:36:48360 +02:00 QuizApp.Controllers.UserController ] User "KanellosTestUser44" registered successfully.
+[24-12-2024 18:37:01800 +02:00 QuizApp.Services.UserService ] Password for user ID 30 remains unchanged.
+[24-12-2024 18:37:02043 +02:00 QuizApp.Services.UserService ] User with ID 30 updated successfully.
+[24-12-2024 18:37:02046 +02:00 QuizApp.Controllers.UserController ] User with ID 30 updated successfully.
+[24-12-2024 18:37:23116 +02:00 QuizApp.Controllers.UserController ] Failed login attempt for user: "KanellosTestUser444"
+[24-12-2024 18:54:33575 +02:00 QuizApp.Controllers.UserController ] User "KanellosTestz" registered successfully.
+[24-12-2024 18:54:47394 +02:00 QuizApp.Controllers.UserController ] User "KanellosTestz" logged in successfully.
+[24-12-2024 18:55:21819 +02:00 QuizApp.Services.UserService ] Password for user ID: 31 remains unchanged.
+[24-12-2024 18:55:21838 +02:00 QuizApp.Controllers.UserController ] User with ID 31 updated successfully.
+[24-12-2024 18:55:48095 +02:00 QuizApp.Controllers.UserController ] User "KanellosTestzz" logged in successfully.
+[24-12-2024 18:59:47020 +02:00 QuizApp.Controllers.UserController ] User with ID 31 updated successfully.
+[24-12-2024 19:00:05054 +02:00 QuizApp.Services.UserService ] Updating password for user ID: 31
+[24-12-2024 19:00:05121 +02:00 QuizApp.Controllers.UserController ] User with ID 31 updated successfully.
+[24-12-2024 19:00:30091 +02:00 QuizApp.Controllers.UserController ] User "KanellosTestzz" logged in successfully.
+[24-12-2024 19:32:12365 +02:00 QuizApp.Controllers.UserController ] User with username "Κανελλοςς" not found.
+[24-12-2024 19:32:22097 +02:00 QuizApp.Controllers.UserController ] User with username "Kanellos" retrieved successfully.
+[24-12-2024 19:34:54733 +02:00 QuizApp.Controllers.UserController ] User "KanellosTest" could not find user with username "1".
+[24-12-2024 19:35:02754 +02:00 QuizApp.Controllers.UserController ] User "KanellosTest" successfully retrieved user "Kanellos".
+[24-12-2024 19:35:05919 +02:00 QuizApp.Controllers.UserController ] User "KanellosTest" could not find user with username "Kanelloss".
+[24-12-2024 19:35:08437 +02:00 QuizApp.Controllers.UserController ] User "KanellosTest" could not find user with username "Kanellossss".
+[24-12-2024 19:40:00155 +02:00 QuizApp.Controllers.UserController ] Admin "KanellosTest" could not find user with username "5".
+[24-12-2024 19:40:08708 +02:00 QuizApp.Controllers.UserController ] Admin "KanellosTest" successfully retrieved user "Kanellos".
+[24-12-2024 19:40:36591 +02:00 QuizApp.Controllers.UserController ] User "KanellosTestUser" logged in successfully.
+[24-12-2024 19:40:52068 +02:00 QuizApp.Controllers.UserController ] Access denied: User "KanellosTestUser" (ID: "21", Role: "User") attempted to retrieve user by username: "Kanellos".
+[24-12-2024 19:47:11831 +02:00 QuizApp.Controllers.UserController ] No high scores found for quiz ID 4. Accessed by "KanellosTest" (ID: 20).
+[24-12-2024 19:51:21023 +02:00 QuizApp.Controllers.UserController ] No high scores found for quiz ID 4. Accessed by "KanellosTest" (ID: 20).
+[24-12-2024 19:51:23457 +02:00 QuizApp.Controllers.UserController ] No high scores found for quiz ID 4. Accessed by "KanellosTest" (ID: 20).

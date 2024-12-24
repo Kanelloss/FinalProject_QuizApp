@@ -12,6 +12,11 @@ namespace QuizApp.Repositories
             return await _dbSet.FirstOrDefaultAsync(u => u.Username == username);
         }
 
+        public async Task<User?> GetUserByEmailAsync(string email)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+        }
+
         public async Task<User?> GetUserAsync(string username, string password)
         {
             var user = await _dbSet.FirstOrDefaultAsync(u => u.Username == username);
@@ -29,25 +34,23 @@ namespace QuizApp.Repositories
                 return false; // User not found
             }
 
-            // Update fields (you can add more fields here as needed)
+            // Update fields
             existingUser.Username = user.Username ?? existingUser.Username;
             existingUser.Email = user.Email ?? existingUser.Email;
 
-            if (!string.IsNullOrWhiteSpace(user.Password))
+            if (!string.IsNullOrWhiteSpace(user.Password) && user.Password != existingUser.Password)
             {
-                // Hash the new password if it's being updated
-                existingUser.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
+                existingUser.Password = user.Password; // Already hashed in the service
             }
 
             _dbSet.Update(existingUser);
             await SaveChangesAsync();
-            return true; // Update successful
+            return true;
         }
 
-        public async Task<User?> GetUserByEmailAsync(string email)
-        {
-            return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
-        }
+
+
+
 
     }
 }
