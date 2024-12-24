@@ -10,7 +10,11 @@ namespace QuizApp.Services
         Task<bool> UpdateQuizAsync(int id, QuizUpdateDTO dto);
         Task<bool> DeleteQuizAsync(int id);
         Task<QuestionReadOnlyDTO?> GetQuestionByIndexAsync(int quizId, int index); // Επιστροφή ερώτησης βάσει index
-        Task<QuizResultDTO?> EvaluateQuizAsync(int quizId, List<AnswerDTO> answers); // Αξιολόγηση απαντήσεων
+        Task<bool> UpdateQuestionAsync(int questionId, QuestionUpdateDTO dto);
+        Task<QuizResultDTO?> EvaluateQuizAsync(int quizId, List<AnswerDTO> answers, int userId);
+
+        //Task<QuestionReadOnlyDTO?> GetQuestionByIdAsync(int quizId, int questionId); // Επιστροφή ερώτησης βάσει id
+        //Task<QuizResultDTO?> EvaluateQuizAsync(int quizId, List<AnswerDTO> answers); // Αξιολόγηση απαντήσεων (δεν έκανε submit).
 
     }
 }

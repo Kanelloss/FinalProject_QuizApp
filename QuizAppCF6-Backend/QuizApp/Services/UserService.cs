@@ -30,6 +30,13 @@ namespace QuizApp.Services
             {
                 return false; // Username is taken
             }
+
+            var existingEmailUser = await _userRepository.GetUserByEmailAsync(dto.Email);
+            if (existingEmailUser != null)
+            {
+                throw new InvalidOperationException("Email already exists."); // Email is taken
+            }
+
             // Check if UserRole is null.
             if (string.IsNullOrEmpty(dto.UserRole))
             {
@@ -80,6 +87,23 @@ namespace QuizApp.Services
                 UserRole = user.UserRole
             };
         }
+
+        public async Task<UserReadOnlyDTO?> GetUserByUsernameAsync(string username)
+        {
+            // Αναζήτηση χρήστη από το repository
+            var user = await _userRepository.GetUserByUsernameAsync(username);
+            if (user == null) return null;
+
+            // Map από entity σε DTO
+            return new UserReadOnlyDTO
+            {
+                Id = user.Id,
+                Username = user.Username,
+                Email = user.Email,
+                UserRole = user.UserRole
+            };
+        }
+
 
         public async Task<bool> UpdateUserAsync(int userId, UserUpdateDTO dto)
         {

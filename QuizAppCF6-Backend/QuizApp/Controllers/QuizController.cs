@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using QuizApp.DTO;
 using QuizApp.Services;
+using System.Security.Claims;
 using System.Text.Json;
 
 namespace QuizApp.Controllers
@@ -11,10 +12,12 @@ namespace QuizApp.Controllers
     public class QuizController : ControllerBase
     {
         private readonly IQuizService _quizService;
+        private readonly IQuizScoreService _quizScoreService;
 
-        public QuizController(IQuizService quizService)
+        public QuizController(IQuizService quizService, IQuizScoreService quizScoreService)
         {
             _quizService = quizService;
+            _quizScoreService = quizScoreService;
         }
 
         // Δημιουργία Quiz
@@ -59,7 +62,7 @@ namespace QuizApp.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                return BadRequest(new { Message = "The title field is required and cannot be empty." });
             }
 
             var result = await _quizService.UpdateQuizAsync(id, dto);
@@ -98,9 +101,45 @@ namespace QuizApp.Controllers
             return Ok(quiz);
         }
 
+        [Authorize(Roles = "Admin")]
+        [HttpPut("questions/{questionId}")]
+        public async Task<IActionResult> UpdateQuestion(int questionId, [FromBody] QuestionUpdateDTO dto)
+        {
+            if (!User.IsInRole("Admin"))
+            {
+                return StatusCode(403, new { Message = "You must be an admin to update a question." });
+            }
+
+            var result = await _quizService.UpdateQuestionAsync(questionId, dto);
+
+            if (!result)
+            {
+                return NotFound(new { Message = $"Question with ID {questionId} not found." });
+            }
+
+            return Ok(new { Message = "Question updated successfully." });
+        }
+
+
+
+
+        //[HttpGet("{quizId}/questions/{id}")]
+        //[Authorize]
+        //public async Task<IActionResult> GetQuestionById(int quizId, int id)
+        //{
+        //    var question = await _quizService.GetQuestionByIdAsync(quizId, id);
+        //    if (question == null)
+        //    {
+        //        return NotFound(new { Message = $"Question with ID {id} not found in quiz {quizId}." });
+        //    }
+
+        //    return Ok(question);
+        //}
+
+
         [HttpGet("{quizId}/questions/{index}")]
         [Authorize]
-        public async Task<IActionResult> GetQuestion(int quizId, int index)
+        public async Task<IActionResult> GetQuestionByIndex(int quizId, int index)
         {
             var quiz = await _quizService.GetQuizByIdAsync(quizId);
             if (quiz == null)
@@ -127,13 +166,55 @@ namespace QuizApp.Controllers
         [Authorize]
         public async Task<IActionResult> SubmitQuiz(int quizId, [FromBody] SubmitQuizDTO dto)
         {
-            var result = await _quizService.EvaluateQuizAsync(quizId, dto.Answers);
+            // Εξαγωγή του userId από το JWT token
+            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+            {
+                return Unauthorized(new { Message = "User ID is invalid or missing from token." });
+            }
+
+            // Αξιολόγηση του κουίζ
+            var result = await _quizService.EvaluateQuizAsync(quizId, dto.Answers, userId);
             if (result == null)
             {
-                return BadRequest(new { Message = "Quiz evaluation failed. Ensure the answers are valid." });
+                return BadRequest(new { Message = "Quiz evaluation failed. Ensure the quiz and answers are valid." });
             }
 
             return Ok(result);
         }
+
+        [HttpGet("{quizId}/alltimehighscores")]
+        [Authorize]
+        public async Task<IActionResult> GetAllTimeHighScores(int quizId, [FromQuery] int topN = 10)
+        {
+            try
+            {
+                var highScores = await _quizScoreService.GetAllTimeHighScoresByQuizAsync(quizId, topN);
+                if (highScores == null || !highScores.Any())
+                {
+                    return NotFound(new { Message = "No high scores found for the specified quiz." });
+                }
+                return Ok(highScores);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = "An error occurred while retrieving high scores.", Details = ex.Message });
+            }
+        }
+
+
+
+        //[HttpPost("{quizId}/submit")]
+        //[Authorize]
+        //public async Task<IActionResult> SubmitQuiz(int quizId, [FromBody] SubmitQuizDTO dto)
+        //{
+        //    var result = await _quizService.EvaluateQuizAsync(quizId, dto.Answers);
+        //    if (result == null)
+        //    {
+        //        return BadRequest(new { Message = "Quiz evaluation failed. Ensure the answers are valid." });
+        //    }
+
+        //    return Ok(result);
+        //}
     }
 }

@@ -10,12 +10,16 @@ namespace QuizApp.Services
     public class QuizService : IQuizService
     {
         private readonly IQuizRepository _quizRepository;
+        private readonly IQuizScoreRepository _quizScoreRepository;
+        private readonly IQuestionRepository _questionRepository;
         private readonly ILogger<UserService> _logger;
 
-        public QuizService(IQuizRepository quizRepository)
+        public QuizService(IQuizRepository quizRepository, IQuizScoreRepository quizScoreRepository, IQuestionRepository questionRepository)
         {
             _quizRepository = quizRepository;
+            _quizScoreRepository = quizScoreRepository;
             _logger = new LoggerFactory().AddSerilog().CreateLogger<UserService>();
+            _questionRepository = questionRepository;
         }
 
         // Δημιουργία Quiz
@@ -124,12 +128,13 @@ namespace QuizApp.Services
             };
         }
 
+
         public async Task<QuestionReadOnlyDTO?> GetQuestionByIndexAsync(int quizId, int index)
         {
             var quiz = await _quizRepository.GetQuizWithQuestionsAsync(quizId);
             if (quiz == null || index < 0 || index >= quiz.Questions.Count) return null;
 
-            var question = quiz.Questions.ElementAt(index);
+            var question = quiz.Questions.ElementAt(index);   
 
             return new QuestionReadOnlyDTO
             {
@@ -140,9 +145,35 @@ namespace QuizApp.Services
             };
         }
 
-        public async Task<QuizResultDTO?> EvaluateQuizAsync(int quizId, List<AnswerDTO> answers)
+        public async Task<bool> UpdateQuestionAsync(int questionId, QuestionUpdateDTO dto)
         {
-            // Φόρτωση του Quiz μαζί με τις ερωτήσεις
+            // Ανάκτηση ερώτησης
+            var question = await _questionRepository.GetByIdAsync(questionId);
+            if (question == null)
+            {
+                _logger.LogWarning("Question with ID {QuestionId} not found.", questionId);
+                return false; // Ερώτηση δεν βρέθηκε
+            }
+
+            // Ενημέρωση πεδίων αν υπάρχουν νέες τιμές
+            question.Text = dto.Text ?? question.Text;
+            question.Options = dto.Options != null ? string.Join(",", dto.Options) : question.Options; // Serialize List<string> to CSV
+            question.CorrectAnswer = dto.CorrectAnswer ?? question.CorrectAnswer;
+            question.Category = dto.Category ?? question.Category;
+
+            // Αποθήκευση αλλαγών
+            var result = await _questionRepository.UpdateAsync(question);
+            if (result)
+            {
+                _logger.LogInformation("Question with ID {QuestionId} updated successfully.", questionId);
+            }
+            return result;
+        }
+
+
+
+        public async Task<QuizResultDTO?> EvaluateQuizAsync(int quizId, List<AnswerDTO> answers, int userId)
+        {
             var quiz = await _quizRepository.GetQuizWithQuestionsAsync(quizId);
             if (quiz == null) return null;
 
@@ -151,21 +182,16 @@ namespace QuizApp.Services
 
             foreach (var answer in answers)
             {
-                // Αναζήτηση της ερώτησης βάσει index
-                var question = quiz.Questions.ElementAtOrDefault(answer.QuestionId); // Αν το QuestionId είναι το index
-
-                // Αν η ερώτηση δεν βρεθεί
+                var question = quiz.Questions.ElementAtOrDefault(answer.QuestionId);
                 if (question == null)
                 {
                     _logger.LogError($"Question with index {answer.QuestionId} not found in quiz {quizId}.");
                     continue;
                 }
 
-                // Αξιολόγηση της απάντησης
                 bool isCorrect = question.CorrectAnswer == answer.SelectedOption;
                 if (isCorrect) score++;
 
-                // Πρόσθεση αποτελέσματος στη λίστα
                 questionResults.Add(new QuestionResultDTO
                 {
                     QuestionId = question.Id,
@@ -175,14 +201,168 @@ namespace QuizApp.Services
                 });
             }
 
-            // Επιστροφή αποτελέσματος
+            // Δημιουργία εγγραφής QuizScore
+            var quizScore = new QuizScore
+            {
+                UserId = userId,
+                QuizId = quizId,
+                Score = (int)((double)score / quiz.Questions.Count * 100), // Υπολογισμός ποσοστού
+                InsertedAt = DateTime.UtcNow
+            };
+
+            await _quizScoreRepository.AddAsync(quizScore);
+            await _quizScoreRepository.SaveChangesAsync();
+
             return new QuizResultDTO
             {
                 TotalQuestions = quiz.Questions.Count,
                 CorrectAnswers = score,
-                Score = (int)((double)score / quiz.Questions.Count * 100),
+                Score = quizScore.Score,
                 QuestionResults = questionResults
             };
         }
+
+
+
+
+
+        // ΔΕΝ ΚΑΝΕΙ SUBMIT, ΘΑ ΣΒΗΣΤΕΙ ΟΤΑΝ ΤΕΣΤΑΡΙΣΤΕΙ ΟΛΟ ΤΟ ΠΡΟΤΖΕΚΤ ΑΝ ΔΕΝ ΧΡΕΙΑΣΤΕΙ ΚΑΠΟΥ
+
+        //public async Task<QuizResultDTO?> EvaluateQuizAsync(int quizId, List<AnswerDTO> answers)
+        //{
+        //    // Φόρτωση του Quiz μαζί με τις ερωτήσεις
+        //    var quiz = await _quizRepository.GetQuizWithQuestionsAsync(quizId);
+        //    if (quiz == null) return null;
+
+        //    int score = 0;
+        //    var questionResults = new List<QuestionResultDTO>();
+
+        //    foreach (var answer in answers)
+        //    {
+        //        // Αναζήτηση της ερώτησης βάσει index
+        //        var question = quiz.Questions.ElementAtOrDefault(answer.QuestionId); // Αν το QuestionId είναι το index
+
+        //        // Αν η ερώτηση δεν βρεθεί
+        //        if (question == null)
+        //        {
+        //            _logger.LogError($"Question with index {answer.QuestionId} not found in quiz {quizId}.");
+        //            continue;
+        //        }
+
+        //        // Αξιολόγηση της απάντησης
+        //        bool isCorrect = question.CorrectAnswer == answer.SelectedOption;
+        //        if (isCorrect) score++;
+
+        //        // Πρόσθεση αποτελέσματος στη λίστα
+        //        questionResults.Add(new QuestionResultDTO
+        //        {
+        //            QuestionId = question.Id,
+        //            CorrectAnswer = question.CorrectAnswer,
+        //            SelectedOption = answer.SelectedOption,
+        //            IsCorrect = isCorrect
+        //        });
+        //    }
+
+        //    // Επιστροφή αποτελέσματος
+        //    return new QuizResultDTO
+        //    {
+        //        TotalQuestions = quiz.Questions.Count,
+        //        CorrectAnswers = score,
+        //        Score = (int)((double)score / quiz.Questions.Count * 100),
+        //        QuestionResults = questionResults
+        //    };
+        //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // Υλοποίηση με questionId (not used).
+
+        //public async Task<QuestionReadOnlyDTO?> GetQuestionByIdAsync(int quizId, int questionId)
+        //{
+        //    var quiz = await _quizRepository.GetQuizWithQuestionsAsync(quizId);
+        //    if (quiz == null) return null;
+
+        //    // Βρίσκουμε την ερώτηση με το συγκεκριμένο ID
+        //    var question = quiz.Questions.FirstOrDefault(q => q.Id == questionId);
+        //    if (question == null) return null;
+
+        //    return new QuestionReadOnlyDTO
+        //    {
+        //        Id = question.Id,
+        //        Text = question.Text,
+        //        Options = question.Options.Split(',').ToList(),
+        //        Category = question.Category
+        //    };
+        //}
+
+        //public async Task<QuizResultDTO?> EvaluateQuizAsync(int quizId, List<AnswerDTO> answers)
+        //{
+        //    // Φόρτωση του Quiz μαζί με τις ερωτήσεις
+        //    var quiz = await _quizRepository.GetQuizWithQuestionsAsync(quizId);
+        //    if (quiz == null) return null;
+
+        //    int score = 0;
+        //    var questionResults = new List<QuestionResultDTO>();
+
+        //    foreach (var answer in answers)
+        //    {
+        //        // Βρίσκουμε την ερώτηση βάσει του QuestionId
+        //        var question = quiz.Questions.FirstOrDefault(q => q.Id == answer.QuestionId);
+        //        if (question == null)
+        //        {
+        //            _logger.LogError($"Question with ID {answer.QuestionId} not found in quiz {quizId}.");
+        //            continue;
+        //        }
+
+        //        // Αξιολόγηση της απάντησης
+        //        bool isCorrect = question.CorrectAnswer == answer.SelectedOption;
+        //        if (isCorrect) score++;
+
+        //        // Πρόσθεση αποτελέσματος στη λίστα
+        //        questionResults.Add(new QuestionResultDTO
+        //        {
+        //            QuestionId = question.Id,
+        //            CorrectAnswer = question.CorrectAnswer,
+        //            SelectedOption = answer.SelectedOption,
+        //            IsCorrect = isCorrect
+        //        });
+        //    }
+
+        //    // Επιστροφή αποτελέσματος
+        //    return new QuizResultDTO
+        //    {
+        //        TotalQuestions = quiz.Questions.Count,
+        //        CorrectAnswers = score,
+        //        Score = (int)((double)score / quiz.Questions.Count * 100),
+        //        QuestionResults = questionResults
+        //    };
+        //}
+
+
+
     }
 }

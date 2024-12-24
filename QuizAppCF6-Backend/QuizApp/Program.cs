@@ -37,6 +37,8 @@ namespace QuizApp
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IQuizService, QuizService>();
             builder.Services.AddScoped<IQuizScoreService, QuizScoreService>();
+            builder.Services.AddScoped<IQuestionRepository, QuestionRepository>();
+
 
             // JWT Authentication setup
             var jwtKey = builder.Configuration["Authentication:SecretKey"];
