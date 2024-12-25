@@ -155,14 +155,24 @@ namespace QuizApp.Controllers
 
 
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> UpdateUser(int id, [FromBody] UserUpdateDTO dto)
         {
-
-           
             if (dto == null)
             {
                 _logger.LogWarning("Update failed: No data provided for user ID {UserId}.", id);
                 return BadRequest(new { Message = "The dto field is required." });
+            }
+
+            // Retrieve current user information from the JWT token
+            var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            var currentUserRole = User.FindFirst(ClaimTypes.Role)?.Value;
+
+            // Allow only if the user is Admin or updating their own data
+            if (currentUserRole != "Admin" && currentUserId != id)
+            {
+                _logger.LogWarning("Unauthorized update attempt: User ID {CurrentUserId} tried to update User ID {TargetUserId}.", currentUserId, id);
+                return StatusCode(StatusCodes.Status403Forbidden, new { Message = "You are not authorized to update this user." });
             }
 
             try
@@ -174,20 +184,21 @@ namespace QuizApp.Controllers
                     return NotFound(new { Message = $"User with ID {id} not found." });
                 }
 
-                _logger.LogInformation("User with ID {UserId} updated successfully.", id);
+                _logger.LogInformation("User with ID {UserId} updated successfully by User ID {CurrentUserId}.", id, currentUserId);
                 return Ok(new { Message = "User updated successfully." });
             }
             catch (InvalidOperationException ex)
             {
-                _logger.LogWarning("Update failed for user ID {UserId}: {Error}", id, ex.Message);
+                _logger.LogWarning("Update failed for user ID {UserId} by User ID {CurrentUserId}: {Error}", id, currentUserId, ex.Message);
                 return Conflict(new { Message = ex.Message });
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Unexpected error while updating user ID {UserId}.", id);
+                _logger.LogError(ex, "Unexpected error while updating user ID {UserId} by User ID {CurrentUserId}.", id, currentUserId);
                 return StatusCode(500, new { Message = "An unexpected error occurred." });
             }
         }
+
 
 
         [HttpGet("{userId}/quiz/{quizId}/history-and-highscores")]

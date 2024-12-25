@@ -115,26 +115,43 @@ namespace QuizApp.Services
                 return false; // User not found
             }
 
+            // Check if the new username already exists (excluding the current user)
+            if (!string.IsNullOrWhiteSpace(dto.Username))
+            {
+                var existingUser = await _userRepository.GetUserByUsernameAsync(dto.Username);
+                if (existingUser != null && existingUser.Id != userId)
+                {
+                    throw new InvalidOperationException("Username already exists.");
+                }
+            }
+
+            // Check if the new email already exists (excluding the current user)
+            if (!string.IsNullOrWhiteSpace(dto.Email))
+            {
+                var existingEmailUser = await _userRepository.GetUserByEmailAsync(dto.Email);
+                if (existingEmailUser != null && existingEmailUser.Id != userId)
+                {
+                    throw new InvalidOperationException("Email already exists.");
+                }
+            }
+
             // Update fields
             user.Username = dto.Username ?? user.Username;
             user.Email = dto.Email ?? user.Email;
-
+            user.UserRole = dto.UserRole ?? user.UserRole;
             if (!string.IsNullOrWhiteSpace(dto.Password))
             {
+                // Check if password remains the same. If not, update it.
                 var isSamePassword = EncryptionUtil.IsValidPassword(dto.Password, user.Password);
                 if (!isSamePassword)
                 {
-                    _logger.LogInformation("Updating password for user ID: {UserId}", userId);
                     user.Password = EncryptionUtil.Encrypt(dto.Password);
-                }
-                else
-                {
-                    _logger.LogInformation("Password for user ID: {UserId} remains unchanged.", userId);
                 }
             }
 
             return await _userRepository.UpdateUserAsync(user);
         }
+
 
 
 
