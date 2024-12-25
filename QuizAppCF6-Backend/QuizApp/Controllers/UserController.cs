@@ -25,7 +25,18 @@ namespace QuizApp.Controllers
             _logger = new LoggerFactory().AddSerilog().CreateLogger<UserController>();
         }
 
-
+        /// <summary>
+        /// Registers a new user into the system.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint is used to create a new user account. 
+        /// The request must include the user's username, password, email, and role (user/admin).
+        /// </remarks>
+        /// <param name="dto">The user registration details in JSON format.</param>
+        /// <response code="200">Indicates successful registration.</response>
+        /// <response code="400">Invalid input provided.</response>
+        /// <response code="409">The username or email is already taken.</response>
+        /// <response code="500">An unexpected error occurred.</response> 
         [HttpPost("signup")]
         public async Task<IActionResult> SignUp([FromBody] UserSignUpDTO dto)
         {
@@ -60,6 +71,16 @@ namespace QuizApp.Controllers
 
 
 
+        /// <summary>
+        /// Authenticates a user and generates a JWT token.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint validates the provided username and password 
+        /// and returns a JWT token if authentication is successful.
+        /// </remarks>
+        /// <param name="dto">The user's login credentials.</param>
+        /// <response code="200">Login successful, JWT token returned.</response>
+        /// <response code="401">Invalid username or password.</response>
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] UserLoginDTO dto)
         {
@@ -90,10 +111,19 @@ namespace QuizApp.Controllers
             return Ok(token);
         }
 
-        // Admin can see every user's info, User can see only his own.
+
+        /// <summary>
+        /// Retrieves a user's details by their ID.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns a user's details, including their username, email, and role, by their unique ID.
+        /// </remarks>
+        /// <param name="id">The ID of the user to retrieve.</param>
+        /// <response code="200">User details retrieved successfully.</response>
+        /// <response code="404">User not found.</response>
         [Authorize]
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetUserById(int id)
+        public async Task<IActionResult> GetUserById(int id)    // Admin can see every user's info, User can see only his own.
         {
 
             // Retrieve information from JWT token
@@ -118,6 +148,16 @@ namespace QuizApp.Controllers
             return Ok(user);
         }
 
+
+        /// <summary>
+        /// Retrieves a user's details by their username.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns a user's details, including their email and role, by their unique username.
+        /// </remarks>
+        /// <param name="username">The username of the user to retrieve.</param>
+        /// <response code="200">User details retrieved successfully.</response>
+        /// <response code="404">User not found.</response>
         [Authorize] // Basic authorization to allow authenticated users
         [HttpGet("by-username/{username}")]
         public async Task<IActionResult> GetUserByUsername(string username)
@@ -154,6 +194,27 @@ namespace QuizApp.Controllers
         }
 
 
+        /// <summary>
+        /// Updates user details.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint allows an admin to update any user's details or a user to update their own account details.
+        /// </remarks>
+        /// <param name="id">The ID of the user to update.</param>
+        /// <param name="dto">The updated user details.</param>
+        /// <returns>
+        /// A 200 response indicates the user was successfully updated. 
+        /// A 400 response indicates invalid input. 
+        /// A 403 response indicates unauthorized access. 
+        /// A 404 response indicates the user was not found. 
+        /// A 409 response indicates a conflict, such as a duplicate username or email. 
+        /// A 500 response indicates an unexpected error occurred.
+        /// </returns>
+        /// <response code="200">User successfully updated.</response>
+        /// <response code="400">Invalid input.</response>
+        /// <response code="404">User not found.</response>
+        /// <response code="409">Conflict: duplicate username or email.</response>
+        /// <response code="500">An unexpected error occurred.</response>
         [HttpPut("{id}")]
         [Authorize]
         public async Task<IActionResult> UpdateUser(int id, [FromBody] UserUpdateDTO dto)
@@ -199,6 +260,21 @@ namespace QuizApp.Controllers
             }
         }
 
+        /// <summary>
+        /// Deletes a user from the system.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint allows an admin to delete any user or a user to delete their own account.
+        /// </remarks>
+        /// <param name="id">The ID of the user to delete.</param>
+        /// <returns>
+        /// A 200 response indicates the user was successfully deleted. 
+        /// A 404 response indicates the user was not found. 
+        /// A 500 response indicates an unexpected error occurred.
+        /// </returns>
+        /// <response code="200">User successfully deleted.</response>
+        /// <response code="404">User not found.</response>
+        /// <response code="500">An unexpected error occurred.</response>
         [HttpDelete("{id}")]
         [Authorize]
         public async Task<IActionResult> DeleteUser(int id)
@@ -229,7 +305,16 @@ namespace QuizApp.Controllers
             }
         }
 
-
+        /// <summary>
+        /// Retrieves a user's quiz history and high scores.
+        /// </summary>
+        /// <remarks>
+        /// Returns the user's played quizzes, their scores, and the high scores for the quizzes they've participated in.
+        /// </remarks>
+        /// <param name="userId">The ID of the user to retrieve history for.</param>
+        /// <param name="quizId">The ID of the quiz to retrieve history for.</param>
+        /// <response code="200">Quiz history and high scores retrieved successfully.</response>
+        /// <response code="404">User not found or no quiz history available.</response>
         [HttpGet("{userId}/quiz/{quizId}/history-and-highscores")]
         [Authorize]
         public async Task<IActionResult> GetHistoryAndHighScores(int userId, int quizId)

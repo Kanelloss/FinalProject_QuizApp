@@ -1,0 +1,302 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>QuizApp</name>
+    </assembly>
+    <members>
+        <member name="M:QuizApp.Controllers.QuizController.GetQuizById(System.Int32)">
+            <summary>
+            Retrieves a quiz by its ID.
+            </summary>
+            <remarks>
+            This endpoint allows a user to fetch a quiz's details by providing its unique ID.
+            </remarks>
+            <param name="id">The unique identifier of the quiz.</param>
+            <response code="200">Returns the details of the quiz.</response>
+            <response code="404">If the quiz is not found.</response>
+        </member>
+        <member name="M:QuizApp.Controllers.QuizController.CreateQuiz(QuizApp.DTO.QuizCreateDTO)">
+            <summary>
+            Creates a new quiz in the system.
+            </summary>
+            <remarks>
+            This endpoint allows administrators to create a new quiz with questions.
+            </remarks>
+            <param name="dto">The details of the quiz to create.</param>
+            <returns>
+            Returns the created quiz and a 201 response if successful.
+            Returns 400 for invalid data or 500 for unexpected errors.
+            </returns>
+            <response code="201">Quiz created successfully.</response>
+            <response code="400">Invalid data provided.</response>
+            <response code="500">An unexpected error occurred.</response>
+        </member>
+        <member name="M:QuizApp.Controllers.QuizController.UpdateQuiz(System.Int32,QuizApp.DTO.QuizUpdateDTO)">
+            <summary>
+            Modifies the details of an existing quiz.
+            </summary>
+            <remarks>
+            This endpoint allows an admin to update the details of an existing quiz.
+            The request must include valid quiz data in JSON format.
+            </remarks>
+            <param name="id">The unique identifier of the quiz to be updated.</param>
+            <param name="dto">The updated quiz details.</param>
+            <response code="200">If the quiz was updated successfully.</response>
+            <response code="400">If the provided data is invalid.</response>
+            <response code="404">If the quiz with the specified ID was not found.</response>
+        </member>
+        <member name="M:QuizApp.Controllers.QuizController.DeleteQuiz(System.Int32)">
+            <summary>
+            Deletes a quiz by its ID.
+            </summary>
+            <remarks>
+            This endpoint allows an Admin to delete an existing quiz.  
+            Only Admin users are authorized to perform this action.
+            </remarks>
+            <param name="id">The ID of the quiz to delete.</param>
+            <returns>
+            <response code="200">The quiz was successfully deleted.</response>
+            <response code="404">The quiz with the specified ID was not found.</response>
+            <response code="403">The user does not have permission to delete the quiz.</response>
+            <response code="500">An unexpected error occurred while processing the request.</response>
+            </returns>
+        </member>
+        <member name="M:QuizApp.Controllers.QuizController.StartQuiz(System.Int32)">
+            <summary>
+            Starts a quiz for a user.
+            </summary>
+            <remarks>
+            This endpoint initializes a quiz for a user. The user must be authenticated to access this endpoint.
+            </remarks>
+            <param name="id">The ID of the quiz to start.</param>
+            <response code="200">Quiz started successfully.</response>
+            <response code="401">Unauthorized. The user must log in to access this resource.</response>
+            <response code="404">Quiz not found.</response>
+            <response code="500">An unexpected error occurred.</response>
+        </member>
+        <member name="M:QuizApp.Controllers.QuizController.UpdateQuestion(System.Int32,QuizApp.DTO.QuestionUpdateDTO)">
+            <summary>
+            Updates a specific question in a quiz.
+            </summary>
+            <remarks>
+            This endpoint allows an admin to update the details of a question, including its text, options, correct answer, and category.
+            </remarks>
+            <param name="questionId">The ID of the question to update.</param>
+            <param name="dto">The updated details of the question.</param>
+            <response code="200">Question updated successfully.</response>
+            <response code="400">Bad Request. The request body is invalid or empty.</response>
+            <response code="401">Unauthorized. The user must log in to access this resource.</response>
+            <response code="403">Forbidden. Only admins can access this resource.</response>
+            <response code="404">Question not found.</response>
+            <response code="500">An unexpected error occurred.</response>
+        </member>
+        <member name="M:QuizApp.Controllers.QuizController.GetQuestionByIndex(System.Int32,System.Int32)">
+            <summary>
+            Retrieves a specific question by its index from a quiz.
+            </summary>
+            <remarks>
+            This endpoint allows authenticated users to fetch a specific question by providing the quiz ID and the question's index.
+            </remarks>
+            <param name="quizId">The ID of the quiz.</param>
+            <param name="index">The index of the question within the quiz.</param>
+            <response code="200">Returns the question details (ID, text, options).</response>
+            <response code="400">Invalid question index provided.</response>
+            <response code="404">Quiz with the specified ID not found.</response>
+            <response code="401">Unauthorized. The user must be authenticated to access this endpoint.</response>
+        </member>
+        <member name="M:QuizApp.Controllers.QuizController.SubmitQuiz(System.Int32,QuizApp.DTO.SubmitQuizDTO)">
+            <summary>
+            Submits the user's answers for a specific quiz and evaluates the score.
+            </summary>
+            <remarks>
+            This endpoint allows the user to submit their answers for a quiz. The answers must be indexed starting from `questionId: 0` and follow the sequence of questions as retrieved from the quiz.
+            
+            **Example Request Body:**
+            ```json
+            {
+              "answers": [
+                { "questionId": 0, "selectedOption": "H2O1" },
+                { "questionId": 1, "selectedOption": "100°C" },
+                { "questionId": 2, "selectedOption": "Carbon Dioxide" },
+                { "questionId": 3, "selectedOption": "Au" }
+              ]
+            }
+            ```
+            </remarks>
+            <param name="quizId">The ID of the quiz being submitted.</param>
+            <param name="dto">The user's answers in JSON format. Each answer must include a `questionId` starting from 0 and a `selectedOption`.</param>
+            <returns>
+            **200 OK:** Returns the evaluation results, including the score and the correctness of each answer.
+            **400 Bad Request:** Indicates invalid input or missing required fields.
+            **404 Not Found:** Indicates that the quiz with the specified ID was not found.
+            **500 Internal Server Error:** Indicates an unexpected error during processing.
+            </returns>
+        </member>
+        <member name="M:QuizApp.Controllers.QuizController.GetAllTimeHighScores(System.Int32,System.Int32)">
+            <summary>
+            Retrieve all-time high scores for a quiz.
+            </summary>
+            <remarks>
+            This endpoint returns the top N all-time high scores for a specific quiz.
+            If no high scores are found, a 404 response is returned.
+            </remarks>
+            <param name="quizId">The ID of the quiz to retrieve high scores for.</param>
+            <param name="topN">The number of top scores to retrieve (default is 10).</param>
+            <returns>
+            A list of high scores, each containing the username, score, and the date achieved.
+            Possible response codes:
+            - 200: High scores retrieved successfully.
+            - 404: No high scores found.
+            - 500: Internal server error.
+            </returns>
+        </member>
+        <member name="M:QuizApp.Controllers.UserController.SignUp(QuizApp.DTO.UserSignUpDTO)">
+            <summary>
+            Registers a new user into the system.
+            </summary>
+            <remarks>
+            This endpoint is used to create a new user account. 
+            The request must include the user's username, password, email, and role (user/admin).
+            </remarks>
+            <param name="dto">The user registration details in JSON format.</param>
+            <response code="200">Indicates successful registration.</response>
+            <response code="400">Invalid input provided.</response>
+            <response code="409">The username or email is already taken.</response>
+            <response code="500">An unexpected error occurred.</response> 
+        </member>
+        <member name="M:QuizApp.Controllers.UserController.Login(QuizApp.DTO.UserLoginDTO)">
+            <summary>
+            Authenticates a user and generates a JWT token.
+            </summary>
+            <remarks>
+            This endpoint validates the provided username and password 
+            and returns a JWT token if authentication is successful.
+            </remarks>
+            <param name="dto">The user's login credentials.</param>
+            <response code="200">Login successful, JWT token returned.</response>
+            <response code="401">Invalid username or password.</response>
+        </member>
+        <member name="M:QuizApp.Controllers.UserController.GetUserById(System.Int32)">
+            <summary>
+            Retrieves a user's details by their ID.
+            </summary>
+            <remarks>
+            This endpoint returns a user's details, including their username, email, and role, by their unique ID.
+            </remarks>
+            <param name="id">The ID of the user to retrieve.</param>
+            <response code="200">User details retrieved successfully.</response>
+            <response code="404">User not found.</response>
+        </member>
+        <member name="M:QuizApp.Controllers.UserController.GetUserByUsername(System.String)">
+            <summary>
+            Retrieves a user's details by their username.
+            </summary>
+            <remarks>
+            This endpoint returns a user's details, including their email and role, by their unique username.
+            </remarks>
+            <param name="username">The username of the user to retrieve.</param>
+            <response code="200">User details retrieved successfully.</response>
+            <response code="404">User not found.</response>
+        </member>
+        <member name="M:QuizApp.Controllers.UserController.UpdateUser(System.Int32,QuizApp.DTO.UserUpdateDTO)">
+            <summary>
+            Updates user details.
+            </summary>
+            <remarks>
+            This endpoint allows an admin to update any user's details or a user to update their own account details.
+            </remarks>
+            <param name="id">The ID of the user to update.</param>
+            <param name="dto">The updated user details.</param>
+            <returns>
+            A 200 response indicates the user was successfully updated. 
+            A 400 response indicates invalid input. 
+            A 403 response indicates unauthorized access. 
+            A 404 response indicates the user was not found. 
+            A 409 response indicates a conflict, such as a duplicate username or email. 
+            A 500 response indicates an unexpected error occurred.
+            </returns>
+            <response code="200">User successfully updated.</response>
+            <response code="400">Invalid input.</response>
+            <response code="404">User not found.</response>
+            <response code="409">Conflict: duplicate username or email.</response>
+            <response code="500">An unexpected error occurred.</response>
+        </member>
+        <member name="M:QuizApp.Controllers.UserController.DeleteUser(System.Int32)">
+            <summary>
+            Deletes a user from the system.
+            </summary>
+            <remarks>
+            This endpoint allows an admin to delete any user or a user to delete their own account.
+            </remarks>
+            <param name="id">The ID of the user to delete.</param>
+            <returns>
+            A 200 response indicates the user was successfully deleted. 
+            A 404 response indicates the user was not found. 
+            A 500 response indicates an unexpected error occurred.
+            </returns>
+            <response code="200">User successfully deleted.</response>
+            <response code="404">User not found.</response>
+            <response code="500">An unexpected error occurred.</response>
+        </member>
+        <member name="M:QuizApp.Controllers.UserController.GetHistoryAndHighScores(System.Int32,System.Int32)">
+            <summary>
+            Retrieves a user's quiz history and high scores.
+            </summary>
+            <remarks>
+            Returns the user's played quizzes, their scores, and the high scores for the quizzes they've participated in.
+            </remarks>
+            <param name="userId">The ID of the user to retrieve history for.</param>
+            <param name="quizId">The ID of the quiz to retrieve history for.</param>
+            <response code="200">Quiz history and high scores retrieved successfully.</response>
+            <response code="404">User not found or no quiz history available.</response>
+        </member>
+        <member name="T:QuizApp.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:QuizApp.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:QuizApp.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:QuizApp.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:QuizApp.Migrations.FixTimeStampsToSeconds">
+            <inheritdoc />
+        </member>
+        <member name="M:QuizApp.Migrations.FixTimeStampsToSeconds.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:QuizApp.Migrations.FixTimeStampsToSeconds.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:QuizApp.Migrations.FixTimeStampsToSeconds.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:QuizApp.Migrations.FixTimeStampsToSeconds2">
+            <inheritdoc />
+        </member>
+        <member name="M:QuizApp.Migrations.FixTimeStampsToSeconds2.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:QuizApp.Migrations.FixTimeStampsToSeconds2.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:QuizApp.Migrations.FixTimeStampsToSeconds2.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:QuizApp.Migrations.FixTimeStampsToSeconds3">
+            <inheritdoc />
+        </member>
+        <member name="M:QuizApp.Migrations.FixTimeStampsToSeconds3.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:QuizApp.Migrations.FixTimeStampsToSeconds3.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:QuizApp.Migrations.FixTimeStampsToSeconds3.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

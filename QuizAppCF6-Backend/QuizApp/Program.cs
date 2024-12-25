@@ -11,6 +11,7 @@ using Microsoft.OpenApi.Models;
 using QuizApp.Helpers;
 using System.Security.Claims;
 using Serilog;
+using System.Reflection;
 
 namespace QuizApp
 {
@@ -71,11 +72,17 @@ namespace QuizApp
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(options =>
             {
+
                 options.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Title = "Quiz API",
-                    Version = "v1"
+                    Version = "v1",
+                    Description = "API for managing quizzes and users."
                 });
+
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                options.IncludeXmlComments(xmlPath);
 
                 // Add JWT Security Definition
                 options.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, new OpenApiSecurityScheme
@@ -92,6 +99,8 @@ namespace QuizApp
                 options.OperationFilter<AuthorizeOperationFilter>();
             });
 
+
+
             var app = builder.Build();
 
             // Middleware
@@ -103,6 +112,8 @@ namespace QuizApp
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Quiz API V1");
                 });
             }
+
+            app.UseMiddleware<CustomErrorHandlingMiddleware>();
 
             app.UseHttpsRedirection();
 
