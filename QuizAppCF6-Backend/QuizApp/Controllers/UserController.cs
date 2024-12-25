@@ -199,6 +199,35 @@ namespace QuizApp.Controllers
             }
         }
 
+        [HttpDelete("{id}")]
+        [Authorize]
+        public async Task<IActionResult> DeleteUser(int id)
+        {
+            var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            var currentUserRole = User.FindFirst(ClaimTypes.Role)?.Value;
+
+            try
+            {
+                var result = await _userService.DeleteUserAsync(id, currentUserId, currentUserRole);
+                if (!result)
+                {
+                    _logger.LogWarning("Delete attempt failed: User with ID {UserId} not found. Requested by User ID {CurrentUserId}.", id, currentUserId);
+                    return NotFound(new { Message = $"User with ID {id} not found." });
+                }
+                _logger.LogInformation("User with ID {UserId} successfully deleted by User ID {CurrentUserId}.", id, currentUserId);
+                return Ok(new { Message = $"User with ID {id} successfully deleted." });
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                _logger.LogWarning("Unauthorized delete attempt by User ID {CurrentUserId} for User ID {UserId}.", currentUserId, id);
+                return StatusCode(StatusCodes.Status403Forbidden, new { Message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Unexpected error occurred while deleting User ID: {Id} by User ID: {CurrentUserId}", id, currentUserId);
+                return StatusCode(500, new { Message = "An unexpected error occurred." });
+            }
+        }
 
 
         [HttpGet("{userId}/quiz/{quizId}/history-and-highscores")]

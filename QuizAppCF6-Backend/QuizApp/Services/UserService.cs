@@ -152,8 +152,23 @@ namespace QuizApp.Services
             return await _userRepository.UpdateUserAsync(user);
         }
 
+        public async Task<bool> DeleteUserAsync(int userId, int currentUserId, string currentUserRole)
+        {
+            // Αν ο χρήστης δεν είναι admin και προσπαθεί να διαγράψει άλλον χρήστη
+            if (currentUserRole != "Admin" && currentUserId != userId)
+            {
+                throw new UnauthorizedAccessException("You are not authorized to delete this user.");
+            }
 
-
+            var result = await _userRepository.DeleteAsync(userId);
+            if (!result)
+            {
+                //_logger.LogWarning("Failed to delete User ID: {UserId} by User ID: {CurrentUserId}", userId, currentUserId);
+                return false; // User not found or delete failed
+            }
+            //_logger.LogInformation("User ID: {UserId} successfully deleted by User ID: {CurrentUserId}", userId, currentUserId);
+            return true;
+        }
 
 
         public string CreateUserToken(int userId, string username, string email, UserRole? userRole, string appSecurityKey)

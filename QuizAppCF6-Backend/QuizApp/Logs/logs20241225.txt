@@ -338,3 +338,23 @@ Error Number:2601,State:1,Class:14
 [25-12-2024 13:55:42268 +02:00 QuizApp.Controllers.UserController ] User with ID 1 updated successfully by User ID 1.
 [25-12-2024 13:55:55335 +02:00 QuizApp.Controllers.UserController ] Failed login attempt for user: "Admin"
 [25-12-2024 13:55:57809 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
+[25-12-2024 14:05:58710 +02:00 QuizApp.Controllers.UserController ] User "User3" registered successfully.
+[25-12-2024 14:06:30816 +02:00 QuizApp.Controllers.UserController ] User "User3" logged in successfully.
+[25-12-2024 14:07:19979 +02:00 QuizApp.Services.UserService ] Unauthorized delete attempt by User ID: 4 for User ID: 3
+[25-12-2024 14:07:22579 +02:00 QuizApp.Services.UserService ] Unauthorized delete attempt by User ID: 4 for User ID: 1
+[25-12-2024 14:07:24517 +02:00 QuizApp.Services.UserService ] Unauthorized delete attempt by User ID: 4 for User ID: 5
+[25-12-2024 14:07:31508 +02:00 QuizApp.Services.UserService ] User ID: 4 successfully deleted by User ID: 4
+[25-12-2024 14:07:51300 +02:00 QuizApp.Controllers.UserController ] User "User3" registered successfully.
+[25-12-2024 14:07:55492 +02:00 QuizApp.Controllers.UserController ] User "User3" logged in successfully.
+[25-12-2024 14:08:12147 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
+[25-12-2024 14:08:42663 +02:00 QuizApp.Services.UserService ] User ID: 5 successfully deleted by User ID: 1
+[25-12-2024 14:08:52979 +02:00 QuizApp.Services.UserService ] Failed to delete User ID: 6 by User ID: 1
+[25-12-2024 14:09:04128 +02:00 QuizApp.Services.UserService ] User ID: 3 successfully deleted by User ID: 1
+[25-12-2024 14:13:49662 +02:00 QuizApp.Controllers.UserController ] User "User2" registered successfully.
+[25-12-2024 14:13:58949 +02:00 QuizApp.Controllers.UserController ] User "User3" registered successfully.
+[25-12-2024 14:14:27536 +02:00 QuizApp.Controllers.UserController ] User "User2" logged in successfully.
+[25-12-2024 14:14:46298 +02:00 QuizApp.Controllers.UserController ] Unauthorized delete attempt by User ID 6 for User ID 1.
+[25-12-2024 14:14:54498 +02:00 QuizApp.Controllers.UserController ] Unauthorized delete attempt by User ID 6 for User ID 2.
+[25-12-2024 14:15:03530 +02:00 QuizApp.Controllers.UserController ] User with ID 6 successfully deleted by User ID 6.
+[25-12-2024 14:15:33141 +02:00 QuizApp.Controllers.UserController ] User "User3" logged in successfully.
+[25-12-2024 14:15:57431 +02:00 QuizApp.Controllers.UserController ] User with ID 7 successfully deleted by User ID 7.

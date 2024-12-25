@@ -11,6 +11,7 @@ namespace QuizApp.Services
         Task<UserReadOnlyDTO?> GetUserByIdAsync(int id); // Get user by ID
         Task<UserReadOnlyDTO?> GetUserByUsernameAsync(string username);
         Task<bool> UpdateUserAsync(int userId, UserUpdateDTO dto); // Update user details
+        Task<bool> DeleteUserAsync(int userId, int currentUserId, string currentUserRole);
         string CreateUserToken(int userId, string username, string email, UserRole? userRole, string appSecurityKey);
 
 
