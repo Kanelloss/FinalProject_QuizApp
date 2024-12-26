@@ -17,3 +17,6 @@
 [26-12-2024 17:10:07356 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 2.
 [26-12-2024 17:10:30587 +02:00 QuizApp.Controllers.UserController ] User "User4" registered successfully.
 [26-12-2024 17:15:07932 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 2.
+[26-12-2024 17:37:13992 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
+[26-12-2024 18:14:50025 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 6 retrieved successfully.
+[26-12-2024 18:34:41835 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 6 retrieved successfully.

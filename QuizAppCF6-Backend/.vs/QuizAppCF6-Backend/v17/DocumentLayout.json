@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|c:\\users\\kanel\\desktop\\quizapp cf6\\quizappcf6-backend\\quizapp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|solutionrelative:quizapp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|c:\\users\\kanel\\desktop\\quizapp cf6\\quizappcf6-backend\\quizapp\\services\\quizscoreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|solutionrelative:quizapp\\services\\quizscoreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -30,21 +34,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserQuizHistoryDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\DTO\\UserQuizHistoryDTO.cs",
-              "RelativeDocumentMoniker": "QuizApp\\DTO\\UserQuizHistoryDTO.cs",
-              "ToolTip": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\DTO\\UserQuizHistoryDTO.cs",
-              "RelativeToolTip": "QuizApp\\DTO\\UserQuizHistoryDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T15:12:46.161Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -60,19 +51,44 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "QuizApp\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\Properties\\launchSettings.json",
+              "RelativeToolTip": "QuizApp\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-26T15:45:57.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserQuizHistoryDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\DTO\\UserQuizHistoryDTO.cs",
+              "RelativeDocumentMoniker": "QuizApp\\DTO\\UserQuizHistoryDTO.cs",
+              "ToolTip": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\DTO\\UserQuizHistoryDTO.cs",
+              "RelativeToolTip": "QuizApp\\DTO\\UserQuizHistoryDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T15:12:46.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "QuizScoreService.cs",
               "DocumentMoniker": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\Services\\QuizScoreService.cs",
               "RelativeDocumentMoniker": "QuizApp\\Services\\QuizScoreService.cs",
               "ToolTip": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\Services\\QuizScoreService.cs",
               "RelativeToolTip": "QuizApp\\Services\\QuizScoreService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABXAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-25T19:23:52.356Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "IQuizService.cs",
               "DocumentMoniker": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\Services\\IQuizService.cs",
               "RelativeDocumentMoniker": "QuizApp\\Services\\IQuizService.cs",
@@ -84,7 +100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "QuizService.cs",
               "DocumentMoniker": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\Services\\QuizService.cs",
               "RelativeDocumentMoniker": "QuizApp\\Services\\QuizService.cs",
@@ -92,12 +108,11 @@
               "RelativeToolTip": "QuizApp\\Services\\QuizService.cs",
               "ViewState": "AQIAAIoAAAAAAAAAAAAAALQAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T17:43:11.832Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-25T17:43:11.832Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "QuizController.cs",
               "DocumentMoniker": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\Controllers\\QuizController.cs",
               "RelativeDocumentMoniker": "QuizApp\\Controllers\\QuizController.cs",
@@ -105,8 +120,7 @@
               "RelativeToolTip": "QuizApp\\Controllers\\QuizController.cs",
               "ViewState": "AQIAAIoBAAAAAAAAAAAYwKABAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T18:37:28.081Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-25T18:37:28.081Z"
             },
             {
               "$type": "Bookmark",
