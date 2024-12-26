@@ -70,6 +70,8 @@ namespace QuizApp.Services
             return result;
         }
 
+        // If needed: AchievedAt = qs.InsertedAt.ToString("yyyy-MM-dd HH:mm:ss")   // Date format change.
+
         public async Task<List<HighScoreDTO>> GetAllTimeHighScoresByQuizAsync(int quizId, int topN = 10)
         {
             // Κλήση της repository μεθόδου
@@ -82,6 +84,8 @@ namespace QuizApp.Services
                 Score = qs.Score,            // Το σκορ του
                 AchievedAt = qs.InsertedAt   // Ημερομηνία επίτευξης
             }).ToList();
+
+            
         }
     }
 }

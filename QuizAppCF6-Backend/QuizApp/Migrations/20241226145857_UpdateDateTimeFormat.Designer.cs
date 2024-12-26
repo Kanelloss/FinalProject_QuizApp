@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QuizApp.Data;
 
@@ -11,9 +12,11 @@ using QuizApp.Data;
 namespace QuizApp.Migrations
 {
     [DbContext(typeof(QuizAppDbContext))]
-    partial class QuizAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241226145857_UpdateDateTimeFormat")]
+    partial class UpdateDateTimeFormat
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,7 +44,7 @@ namespace QuizApp.Migrations
                     b.Property<DateTime>("InsertedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValueSql("CONVERT(VARCHAR, SYSDATETIME(), 120)");
+                        .HasDefaultValueSql("FORMAT(SYSDATETIME(), 'yyyy-MM-dd HH:mm:ss')");
 
                     b.Property<DateTime>("ModifiedAt")
                         .ValueGeneratedOnAddOrUpdate()
@@ -81,12 +84,12 @@ namespace QuizApp.Migrations
                     b.Property<DateTime>("InsertedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValueSql("CONVERT(VARCHAR, SYSDATETIME(), 120)");
+                        .HasDefaultValueSql("FORMAT(SYSDATETIME(), 'yyyy-MM-dd HH:mm:ss')");
 
                     b.Property<DateTime>("ModifiedAt")
                         .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2")
-                        .HasDefaultValueSql("CONVERT(VARCHAR, SYSDATETIME(), 120)");
+                        .HasDefaultValueSql("FORMAT(SYSDATETIME(), 'yyyy-MM-dd HH:mm:ss')");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -108,12 +111,12 @@ namespace QuizApp.Migrations
                     b.Property<DateTime>("InsertedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValueSql("CONVERT(VARCHAR, SYSDATETIME(), 120)");
+                        .HasDefaultValueSql("FORMAT(SYSDATETIME(), 'yyyy-MM-dd HH:mm:ss')");
 
                     b.Property<DateTime>("ModifiedAt")
                         .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2")
-                        .HasDefaultValueSql("CONVERT(VARCHAR, SYSDATETIME(), 120)");
+                        .HasDefaultValueSql("FORMAT(SYSDATETIME(), 'yyyy-MM-dd HH:mm:ss')");
 
                     b.Property<int>("QuizId")
                         .HasColumnType("int");
@@ -148,12 +151,12 @@ namespace QuizApp.Migrations
                     b.Property<DateTime>("InsertedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValueSql("CONVERT(VARCHAR, SYSDATETIME(), 120)");
+                        .HasDefaultValueSql("FORMAT(SYSDATETIME(), 'yyyy-MM-dd HH:mm:ss')");
 
                     b.Property<DateTime>("ModifiedAt")
                         .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2")
-                        .HasDefaultValueSql("CONVERT(VARCHAR, SYSDATETIME(), 120)");
+                        .HasDefaultValueSql("FORMAT(SYSDATETIME(), 'yyyy-MM-dd HH:mm:ss')");
 
                     b.Property<string>("Password")
                         .IsRequired()

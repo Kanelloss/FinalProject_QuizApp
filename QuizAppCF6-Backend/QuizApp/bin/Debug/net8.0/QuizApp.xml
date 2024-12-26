@@ -298,5 +298,29 @@
         <member name="M:QuizApp.Migrations.FixTimeStampsToSeconds3.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:QuizApp.Migrations.UpdateDateTimeFormat">
+            <inheritdoc />
+        </member>
+        <member name="M:QuizApp.Migrations.UpdateDateTimeFormat.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:QuizApp.Migrations.UpdateDateTimeFormat.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:QuizApp.Migrations.UpdateDateTimeFormat.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:QuizApp.Migrations.UpdateDateTimeFormatWithConvert">
+            <inheritdoc />
+        </member>
+        <member name="M:QuizApp.Migrations.UpdateDateTimeFormatWithConvert.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:QuizApp.Migrations.UpdateDateTimeFormatWithConvert.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:QuizApp.Migrations.UpdateDateTimeFormatWithConvert.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>
