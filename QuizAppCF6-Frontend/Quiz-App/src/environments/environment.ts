@@ -1,5 +1,5 @@
 export const environment = {
     production: false,
-    apiUrl: 'http://localhost:5000/api' // Το URL του backend.
+    apiUrl: 'https://localhost:5000/api' // Το URL του backend.
   };
   

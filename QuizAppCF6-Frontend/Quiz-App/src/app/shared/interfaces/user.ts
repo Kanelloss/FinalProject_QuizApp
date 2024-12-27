@@ -2,7 +2,7 @@ export interface User {
   id?: number;
   username: string;
   email: string;
-  password: string; // Προαιρετικό, μόνο κατά την εγγραφή/σύνδεση.
+  password: string; 
   role: 'Admin' | 'User'; // Admin ή User
 }
 

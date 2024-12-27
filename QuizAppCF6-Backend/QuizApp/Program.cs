@@ -68,6 +68,21 @@ namespace QuizApp
                     options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter(JsonNamingPolicy.CamelCase, allowIntegerValues: false));
                 });
 
+            // Add CORS policy
+            builder.Services.AddCors(options => {
+                options.AddPolicy("AllowAll",
+                    b => b.AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowAnyOrigin());
+            });
+
+            //builder.Services.AddCors(options => {
+            //    options.AddPolicy("AngularClient",
+            //        b => b.WithOrigins("http://localhost:4200") // Assuming Angular runs on localhost:4200
+            //              .AllowAnyMethod()
+            //              .AllowAnyHeader());
+            //});
+
             // Swagger setup
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(options =>
@@ -99,9 +114,13 @@ namespace QuizApp
                 options.OperationFilter<AuthorizeOperationFilter>();
             });
 
+          
+
 
 
             var app = builder.Build();
+
+            app.UseCors("AllowAll");
 
             // Middleware
             if (app.Environment.IsDevelopment())
