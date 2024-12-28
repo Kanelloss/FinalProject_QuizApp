@@ -1,0 +1,31 @@
+/* Style for the role section */
+mat-radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  mat-radio-button {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #3A6073;
+  }
+  
+  mat-radio-button.mat-radio-checked {
+    color: #3A6073; /* Χρώμα όταν είναι επιλεγμένο */
+  }
+  
+  mat-radio-button:hover {
+    background-color: rgba(58, 96, 115, 0.1); /* Διακριτικό hover */
+    border-radius: 4px;
+  }
+
+  /* Στυλ για τα Validation Errors */
+.validation-error {
+  font-size: 0.75rem; /* Μικρότερο μέγεθος (14px) */
+  color: #d10c0c; /* Απαλό κόκκινο */
+  margin-top: 0.25rem; /* Διακριτική απόσταση από το πεδίο */
+  font-weight: 500; /* Ελαφρώς πιο έντονη γραφή */
+}
+
+  

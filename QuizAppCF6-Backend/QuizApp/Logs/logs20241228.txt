@@ -18,3 +18,23 @@
 [28-12-2024 15:25:41569 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
 [28-12-2024 15:26:08721 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
 [28-12-2024 15:27:34694 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
+[28-12-2024 17:01:32996 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
+[28-12-2024 17:30:26406 +02:00 QuizApp.Controllers.UserController ] User "Kanellos" registered successfully.
+[28-12-2024 17:30:51076 +02:00 QuizApp.Controllers.UserController ] User "Kanellos" logged in successfully.
+[28-12-2024 17:49:12736 +02:00 QuizApp.Controllers.UserController ] User "Kanellos" logged in successfully.
+[28-12-2024 17:49:21878 +02:00 QuizApp.Controllers.UserController ] User "Kanellos" logged in successfully.
+[28-12-2024 17:50:08472 +02:00 QuizApp.Controllers.UserController ] User "Kanellos" logged in successfully.
+[28-12-2024 17:52:09459 +02:00 QuizApp.Controllers.UserController ] User "Kanellos" logged in successfully.
+[28-12-2024 17:57:49223 +02:00 QuizApp.Controllers.UserController ] User "Kanellos" logged in successfully.
+[28-12-2024 18:01:34907 +02:00 QuizApp.Controllers.UserController ] User "Kanellos" logged in successfully.
+[28-12-2024 18:02:49125 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
+[28-12-2024 18:03:55382 +02:00 QuizApp.Controllers.UserController ] User "Kanellos" logged in successfully.
+[28-12-2024 18:06:03360 +02:00 QuizApp.Controllers.UserController ] User "Kanellos" logged in successfully.
+[28-12-2024 18:22:23075 +02:00 QuizApp.Controllers.UserController ] Failed login attempt for user: "Admin"
+[28-12-2024 18:22:35256 +02:00 QuizApp.Controllers.UserController ] Failed login attempt for user: "Admin"
+[28-12-2024 18:22:38189 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
+[28-12-2024 18:22:52991 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
+[28-12-2024 20:15:53401 +02:00 QuizApp.Controllers.UserController ] User "Kanellos" logged in successfully.
+[28-12-2024 20:29:55372 +02:00 QuizApp.Controllers.UserController ] User "Kanellos" logged in successfully.
+[28-12-2024 20:32:04717 +02:00 QuizApp.Controllers.UserController ] User "Atonaki" registered successfully.
+[28-12-2024 20:32:21713 +02:00 QuizApp.Controllers.UserController ] User "Atonaki" logged in successfully.

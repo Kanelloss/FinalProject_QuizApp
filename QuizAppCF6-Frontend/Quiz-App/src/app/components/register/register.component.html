@@ -1,0 +1,71 @@
+<div class="h-screen flex items-center justify-center">
+    <form class="shadow-md rounded-md p-5 bg-white w1/6" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="py-4">
+        <h1 class="font-bold py-2">
+          Register
+        </h1>
+        <h6 class="text-slate-600 text-base">
+          Create your account
+        </h6>
+      </div>
+  
+      <!-- Validation Errors για Username -->
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Username" formControlName="username" />
+        @if (form.get('username')?.hasError('required') && form.get('username')?.touched) {
+          <div class="validation-error">Username is required.</div>
+        }
+        @if (form.get('username')?.hasError('minlength') && form.get('username')?.touched) {
+          <div class="validation-error">Username must be at least 2 characters long.</div>
+        }
+      </mat-form-field>
+  
+      <!-- Validation Errors για Password -->
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" placeholder="Password" formControlName="password" />
+        @if (form.get('password')?.invalid && form.get('password')?.touched) {
+          <div class="validation-error">
+            Password must be at least 8 characters long, include at least one uppercase letter, one lowercase letter, one digit, and one special character.
+          </div>
+        }
+      </mat-form-field>
+      
+      
+  
+      <!-- Validation Errors για Email -->
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" placeholder="Email" formControlName="email" />
+        @if (form.get('email')?.hasError('required') && form.get('email')?.touched) {
+          <div class="validation-error">Email is required.</div>
+        }
+        @if (form.get('email')?.hasError('email') && form.get('email')?.touched) {
+          <div class="validation-error">Please enter a valid email address.</div>
+        }
+      </mat-form-field>
+  
+      <!-- Validation Errors για Role -->
+      <div class="mb-4">
+        <h6 class="text-slate-600 text-base">Select Role</h6>
+        <mat-radio-group formControlName="role">
+          @for (role of ['User', 'Admin']; track role) {
+            <mat-radio-button class="block" [value]="role">{{ role }}</mat-radio-button>
+          }
+        </mat-radio-group>
+        @if (form.get('role')?.hasError('required') && form.get('role')?.touched) {
+          <div class="text-red-500 text-sm mt-1">Role is required.</div>
+        }
+      </div>
+  
+      <button
+        type="submit"
+        [disabled]="!form.valid"
+        class="w-full bg-blue-600 text-white font-bold py-2 rounded-md hover:bg-blue-700"
+      >
+        Register
+      </button>
+    </form>
+  </div>
+  

@@ -71,10 +71,14 @@ export class UserLoginComponent {
        this.successMessage = 'Login successful! Redirecting...';
        this.errorMessage = null;
 
-       // Καθυστερημένη ανακατεύθυνση
        setTimeout(() => {
-         this.router.navigate(['home']);
-       }, 1000); // Ανακατεύθυνση μετά από 2 δευτερόλεπτα
+        this.router.navigate(['home']).then((success) => {
+          console.log('Redirected to home successfully:', success);
+        }).catch((err) => {
+          console.error('Failed to redirect:', err);
+        });
+      }, 1000);
+      
         
       },
       error: (error) => {

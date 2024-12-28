@@ -45,14 +45,11 @@ export class UserService {
     return this.http.post<{token:string}>(`${apiUrl}/login`, credentials)
   }
 
-  /**
-   * Εγγράφει έναν νέο χρήστη
-   * @param user Τα στοιχεία του χρήστη
-   * @returns Observable για επιτυχία ή αποτυχία
-   */
-  registerUser(user: User): Observable<any> {
-    return this.http.post(`${apiUrl}/register`, user);
+ 
+  registerUser(user: User) {
+    return this.http.post(`${apiUrl}/signup`, user);
   }
+  
 
   /**
    * Ελέγχει αν το email υπάρχει ήδη
@@ -80,6 +77,6 @@ export class UserService {
    * @returns boolean
    */
   isLoggedIn(): boolean {
-    return !!localStorage.getItem('token');
+    return !!localStorage.getItem('access_token');
   }
 }

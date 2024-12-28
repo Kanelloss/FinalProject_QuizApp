@@ -1,0 +1,118 @@
+/* Welcome Container */
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;
+    background: linear-gradient(135deg, #3a6073, #4b79a1); /* Gradient matching the theme */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+  }
+  
+  /* Header Section */
+  .header h1 {
+    font-size: 4rem;
+    color: #ff8e2b; /* Logo Color */
+    font-family: 'Brush Script MT', cursive;
+    margin-bottom: 0.5rem;
+  }
+  
+  .header p {
+    font-size: 1.2rem;
+    color: #ffd3a5; /* Softer highlight color */
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
+  
+  /* Main Content Section */
+  .main-content {
+    background: rgb(255, 238, 223);
+    color: #3a6073;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 4rem;
+    width: 65%;
+    min-height: 15rem;
+    animation: slide-up 1s ease-out;
+  }
+  @keyframes slide-up {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .main-content h2 {
+    font-size: 1.8rem;
+    color: #3a6073;
+    margin-bottom: 1.5rem;
+  }
+  
+  .main-content ul {
+    text-align: left;
+    margin: 1rem 0;
+  }
+  
+  .main-content ul li {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #4E6E8E; /* Slightly lighter blue */
+  }
+  
+  .main-content ul li strong {
+    color: #ff8e2b;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2.3rem;
+    justify-content: center;
+  }
+  
+  .btn {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-bottom: -1.2rem;
+  }
+  
+  .btn-login {
+    background: #4E6E8E;
+    color: white;
+  }
+  
+  .btn-login:hover {
+    background: #3A6073;
+    color: #ff8e2b;
+    transform: scale(1.05);
+  }
+  
+  .btn-register {
+    background: #ff8e2b;
+    color: white;
+  }
+  
+  .btn-register:hover {
+    background: #eb8e24;
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  /* Footer Section */
+  .footer {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #ffd3a5;
+    font-style: italic;
+  }
+  
