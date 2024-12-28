@@ -1,0 +1,13 @@
+.container {
+    max-width: 1200px;
+  }
+  
+  .mat-icon {
+    font-size: 48px;
+    color: #4A90E2;
+  }
+  
+  div:hover {
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,61 @@
+/* Navbar Container */
+nav {
+    background: #3A6073; /* Σκούρο μπλε φόντο */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem; /* Μειωμένο ύψος */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Logo */
+  nav h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Μοντέρνα γραμματοσειρά */
+  }
+  
+  /* Links Container */
+  nav .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  /* Individual Links */
+  nav .nav-links a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  nav .nav-links a:hover {
+    background: #5A738E; /* Πιο ανοιχτό μπλε */
+    border-radius: 8px;
+    color: #ffffff;
+  }
+  
+  /* Logout Button */
+  nav .logout-btn {
+    background: transparent; /* Διακριτικό */
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  nav .logout-btn:hover {
+    background: #5A738E; /* Διακριτικό hover */
+  }
+  

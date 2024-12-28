@@ -1,0 +1,21 @@
+<nav class="bg-blue-600 text-white shadow-lg fixed w-full top-0 left-0 z-50">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <h1 class="text-xl font-bold">
+        <a routerLink="/home" class="hover:underline">Trivia Quiz</a>
+      </h1>
+      <ul class="flex items-center space-x-4">
+        <li>
+          <a routerLink="/about" class="hover:underline">About</a>
+        </li>
+        <li>
+          <button
+            class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
+            (click)="logout()"
+          >
+            Logout
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  

@@ -68,7 +68,7 @@ export class UserService {
    */
   logoutUser(): void {
     this.user.set(null);
-    localStorage.removeItem('token');
+    localStorage.removeItem('access_token');
     localStorage.removeItem('userId');
     localStorage.removeItem('username');
     localStorage.removeItem('role');

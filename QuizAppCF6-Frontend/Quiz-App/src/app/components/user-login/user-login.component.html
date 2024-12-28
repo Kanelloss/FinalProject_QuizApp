@@ -1,23 +1,56 @@
+<div class="h-screen flex items-center justify-center">
+    <form class="shadow-md rounded-md p-5 bg-white w1/6" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="py-4">
+            <h1 class="font-bold py-2">
+                Login
+            </h1>
+            <h6 class="text-slate-600 text-base">
+                Login to your account
+            </h6>
+        </div>
 
-<div class="container">
-    <h4>User Login</h4>
-    <form [formGroup]="form" class="d-flex flex-column gap-3 w-50" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" id="username" class="form-control" formControlName="username" />
+         <!-- Μήνυμα Επιτυχίας -->
+    @if (successMessage) {
+        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4">
+          {{ successMessage }}
+        </div>
+      }
+   <!-- Μήνυμα Λάθους -->
+   @if (errorMessage) {
+    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4">
+      {{ errorMessage }}
     </div>
-    <div>
-        <label for="password">Password</label>
-        <input type="password" id="password" class="form-control" formControlName="password" />
-    </div>
-    <button type="submit" class="btn btn-primary" [disabled]="!form.valid">
-        Login
-    </button>
-    @if (invalidLogin)  {
-        <div
-        class="alert alert-danger mt-3">
-        <strong>Error:</strong> Invalid username or password
-    </div>
-    }
+  }
+
+      
+
+        <mat-form-field appearance="fill" class="w-full">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Username" formControlName="username" />
+            <mat-icon matPrefix>person</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="w-full">
+            <mat-label>Password</mat-label>
+            <input matInput type="{{ hide ? 'password' : 'text' }}" formControlName="password" placeholder="Password" />
+            <mat-icon matPrefix>lock</mat-icon>
+            <mat-icon (click)="hide = !hide" matSuffix>
+                {{ hide ? 'visibility_off' : 'visibility' }}
+            </mat-icon>
+        </mat-form-field>
+
+        <button type="submit" [disabled]="!form.valid"
+            class="w-full border border-slate-200 rounded-md disabled:bg-purple-400 py-2 px-3 bg-purple-700 text-white font-bold">
+            Login
+        </button>
+
+        <div class="my-5">
+            <span class="text-slate-600">
+                Don't have an account?
+            </span>
+            <a class="text-purple-700" [routerLink]="['/register']">Register</a>
+        </div>
+
     </form>
 </div>
+

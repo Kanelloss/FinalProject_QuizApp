@@ -1,0 +1,23 @@
+<div class="container mx-auto p-5">
+    <h1 class="text-3xl font-bold text-center mb-5">Trivia Quiz</h1>
+    <p class="text-center text-lg text-gray-600 mb-10">Test Your Knowledge</p>
+  
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+      @for (category of categories; track category) {
+        <div
+          class="bg-white shadow-lg rounded-md p-5 flex flex-col items-center justify-center text-center hover:shadow-xl transition-shadow"
+        >
+        <mat-icon
+  class="flex items-center justify-center text-blue-500 bg-gray-200 rounded-full"
+  style="width: 4rem; height: 4rem; font-size: 2rem; display: flex; align-items: center; justify-content: center;"
+>
+  {{ category.icon }}
+</mat-icon>
+
+
+          <h2 class="text-xl font-semibold">{{ category.name }}</h2>
+        </div>
+      }
+    </div>
+  </div>
+  
