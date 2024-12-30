@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { HttpErrorResponse } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs/internal/firstValueFrom';
+import { QuizResult } from '../interfaces/quizresult';
 
 const apiUrl = `${environment.apiUrl}/Quiz`; // backend URL.
 
@@ -19,7 +20,7 @@ export class QuizService {
   async fetchAvailableQuizzes() {
     console.log(`[QuizService] Fetching available quizzes...`);
     const availableQuizzes = [];
-    let quizzesNumber = 5;
+    let quizzesNumber = 9;
 
     for (let quizId = 1; quizId <= quizzesNumber; quizId++) {
       try {
@@ -63,4 +64,22 @@ export class QuizService {
       console.log(`[QuizService] Fetching completed.`);
     }
   }
+
+ /**
+   * Ξεκινάει ένα νέο Quiz μέσω του API
+   */
+ startQuiz(quizId: number) {
+  return firstValueFrom(
+    this.http.get<{ message: string; quiz: any }>(`${apiUrl}/${quizId}/start`, {})
+  );
+}
+
+/**
+ * Υποβάλλει τις απαντήσεις του Quiz
+ */
+submitQuiz(quizId: number, answers: { questionId: number; selectedOption: string }[]) {
+  return firstValueFrom(
+    this.http.post<{ score: number }>(`${apiUrl}/${quizId}/submit`, { answers })
+  );
+}
 }

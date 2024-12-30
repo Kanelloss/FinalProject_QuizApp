@@ -33,6 +33,7 @@ namespace QuizApp.Controllers
         /// <response code="200">Returns the details of the quiz.</response>
         /// <response code="404">If the quiz is not found.</response>
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<IActionResult> GetQuizById(int id)
         {
             var quiz = await _quizService.GetQuizByIdAsync(id);

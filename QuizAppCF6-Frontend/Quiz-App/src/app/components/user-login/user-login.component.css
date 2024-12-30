@@ -104,6 +104,10 @@ body {
     font-weight: bold;
   }
 
+  .pointer:hover {
+    cursor: pointer;
+  }
+
   /* a {
     color: #3A6073;
     text-decoration: none;

@@ -17,7 +17,8 @@
       </li>
     }
     <li>
-      <a [routerLink]="['/']" routerLinkActive="active">Home</a>
+      <a [routerLink]="userService.isLoggedIn() ? '/home' : '/welcome'"
+      class="nav-link">Home</a>
     </li>
     <li>
       <a [routerLink]="['/leaderboards']" routerLinkActive="active">Leaderboards</a>

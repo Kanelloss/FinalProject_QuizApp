@@ -7,13 +7,16 @@ import { RegisterComponent } from './components/register/register.component';
 import { LeaderboardsComponent } from './components/leaderboards/leaderboards.component';
 import { authGuard } from './shared/guards/auth.guard';
 import { redirectGuard } from './shared/guards/redirect.guard';
+import { QuizComponent } from './components/quiz/quiz.component';
 
 export const routes: Routes = [
     { path: '', component: WelcomeComponent },
+    { path: 'welcome', component: WelcomeComponent },
     { path: 'login', component: UserLoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'home', component: HomeComponent, canActivate: [authGuard] },
-    { path: 'leaderboards', component: LeaderboardsComponent }, // Νέο route για Leaderboards
+    { path: 'leaderboards', component: LeaderboardsComponent },
+    { path: 'quiz/:id/start', component: QuizComponent },
     { path: '**', redirectTo: 'login' }
 ];
 

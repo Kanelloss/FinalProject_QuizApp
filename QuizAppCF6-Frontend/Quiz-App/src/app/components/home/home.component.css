@@ -1,13 +1,45 @@
 .container {
-    max-width: 1200px;
+    max-width: 75rem;
+
   }
   
   .mat-icon {
-    font-size: 48px;
-    color: #4A90E2;
+    font-size: 3rem;
+    color: #3a6073;
   }
   
   div:hover {
     cursor: pointer;
+  }
+
+  .square {
+    border-radius: 15px;
+  }
+
+  .square:hover {
+    border: 3px solid #ff8e2b;
+  }
+
+  .custom-paragraph {
+    color: #3a6073;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2rem;
+  }
+
+   /* Header Section */
+  h1 {
+    font-size: 4rem;
+    color: #ff8e2b; /* Logo Color */
+    font-family: 'Brush Script MT', cursive;
+    margin-bottom: 0.5rem;
+  }
+  
+  mat-dialog-content {
+    font-size: 1.2rem;
+    color: #ff8e2b;
+  }
+  
+  mat-dialog-actions {
+    margin-top: 1rem;
   }
   

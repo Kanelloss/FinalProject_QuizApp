@@ -1,0 +1,53 @@
+
+  .dialog-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    color: #3a6073;
+    text-align: center;
+    margin-bottom: 1rem;
+    width: 25rem;
+  }
+  
+  .dialog-message {
+    font-size: 1rem;
+    color: #3a6073;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .dialog-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+button {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+ .confirm-button {
+    background-color: #ff8e2b; 
+    color: #ffffff;
+    border: none;
+  }
+  
+  .confirm-button:hover {
+    background-color: #1aa343;
+  }
+  
+  .cancel-button {
+    background-color: #3a6073;
+    color: white;
+    border: none;
+  }
+  
+  .cancel-button:hover {
+    background-color: #b93a36;
+  }
+  

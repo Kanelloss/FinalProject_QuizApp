@@ -1,0 +1,52 @@
+<div class="quiz-container">
+  @if (quiz) {
+    <div class="quiz-header">
+      <h1>{{ quiz.title }}</h1>
+    </div>
+
+    <div class="quiz-question-card">
+      <p class="question-text">{{ currentQuestion.text }}</p>
+      <div class="quiz-options">
+        @for (option of currentQuestion.options; track option) {
+          <button
+            class="quiz-option-button"
+            [class.selected]="selectedAnswers[currentIndex] === option"
+            (click)="selectAnswer(option)"
+          >
+            {{ option }}
+          </button>
+        }
+      </div>
+    </div>
+
+    <div class="quiz-controls">
+      <div class="control-buttons">
+        <button 
+          class="control-button prev-button" 
+          [disabled]="currentIndex === 0" 
+          (click)="prevQuestion()"
+        >
+          Previous
+        </button>
+        <button 
+          class="control-button next-button" 
+          [disabled]="currentIndex === quiz.questions.length - 1" 
+          (click)="nextQuestion()"
+        >
+          Next
+        </button>
+      </div>
+      <button 
+        class="submit-button" 
+        [disabled]="selectedAnswers.includes(null)" 
+        (click)="submitQuiz()"
+      >
+        Submit Quiz
+      </button>
+    </div>
+  } @else {
+    <div class="loading">
+      <p>Loading quiz...</p>
+    </div>
+  }
+</div>

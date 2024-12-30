@@ -1,9 +1,9 @@
 <div class="leaderboards-container">
     <h1>Leaderboards</h1>
     <p>Choose a category to see the top scores.</p>
-  
-    <mat-form-field appearance="fill">
-        <mat-label>Select Category</mat-label>
+
+    <mat-form-field class="mt-2" appearance="fill">
+        <mat-label class="category-select">Select Category</mat-label>
         <mat-select
           [value]="selectedCategory"
           (selectionChange)="onCategoryChange($event.value)"
@@ -16,13 +16,12 @@
         </mat-select>
       </mat-form-field>
        
-  
     <!-- Κατάσταση φόρτωσης -->
     @if (quizService.isLoading()) {
       <p>Loading scores...</p>
     } @else {
       @if (quizService.highScores().length > 0) {
-        <h2>{{ quizService.categories()[0].name }}</h2>
+        <!-- <h2>{{ quizService.categories()[0].name }}</h2>  toDo -- add dynamic title-->
         <table class="leaderboards-table">
           <thead>
             <tr>
@@ -36,7 +35,12 @@
             @for (score of quizService.highScores(); track score.username) {
               <tr>
                 <td>{{ $index + 1 }}</td>
-                <td>{{ score.username }}</td>
+                <td>
+                  @if ($index === 0) {
+                    👑
+                  }
+                  {{ score.username }}
+                </td>
                 <td>{{ score.score }}</td>
                 <td>{{ formatDate(score.achievedAt) }}</td>
               </tr>
@@ -47,5 +51,4 @@
         <p>No scores available for this category.</p>
       }
     }
-  </div>
-  
+</div>
