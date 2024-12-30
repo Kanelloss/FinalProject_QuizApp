@@ -11,14 +11,24 @@ import { RouterModule } from '@angular/router';
 })
 export class NavbarComponent {
   menuOpen = false;
+  userService = inject(UserService);
+  user = this.userService.user;
 
 toggleMenu() {
   this.menuOpen = !this.menuOpen;
 }
 
-  userService = inject(UserService);
+  isLoggedIn(): boolean {
+    return this.userService.isLoggedIn();
+  }
+
+  getUsername(): string {
+    return localStorage.getItem('username') || 'Guest';
+  }
 
   logout(): void {
     this.userService.logoutUser();
   }
+
+
 }

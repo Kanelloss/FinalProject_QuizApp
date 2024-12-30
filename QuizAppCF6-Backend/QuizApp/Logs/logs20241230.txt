@@ -1,0 +1,525 @@
+[30-12-2024 09:12:41411 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
+[30-12-2024 09:12:58918 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 1.
+[30-12-2024 09:17:23683 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
+[30-12-2024 09:24:28146 +02:00 QuizApp.Controllers.UserController ] Failed login attempt for user: "User1"
+[30-12-2024 09:24:59957 +02:00 QuizApp.Controllers.UserController ] User "User1" logged in successfully.
+[30-12-2024 09:25:24586 +02:00 QuizApp.Controllers.UserController ] Failed login attempt for user: "User1"
+[30-12-2024 09:25:28525 +02:00 QuizApp.Controllers.UserController ] User "User1" logged in successfully.
+[30-12-2024 09:25:48247 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
+[30-12-2024 09:27:08267 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
+[30-12-2024 09:29:53550 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
+[30-12-2024 09:30:24137 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
+[30-12-2024 09:31:02181 +02:00 QuizApp.Controllers.UserController ] Failed login attempt for user: "User"
+[30-12-2024 09:31:06109 +02:00 QuizApp.Controllers.UserController ] Failed login attempt for user: "User"
+[30-12-2024 09:31:08178 +02:00 QuizApp.Controllers.UserController ] User "User1" logged in successfully.
+[30-12-2024 09:32:27789 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
+[30-12-2024 09:33:23037 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
+[30-12-2024 09:35:22519 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
+[30-12-2024 09:37:53081 +02:00 QuizApp.Controllers.UserController ] User "User1" logged in successfully.
+[30-12-2024 09:41:40372 +02:00 QuizApp.Controllers.UserController ] User "Kanellos" logged in successfully.
+[30-12-2024 09:55:50590 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
+[30-12-2024 09:56:34694 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
+[30-12-2024 10:02:38511 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 10:05:20092 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 10:08:58366 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 10:18:05390 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 10:19:24609 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 10:19:27222 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 6. Requested by User ID 0.
+[30-12-2024 10:19:29692 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 10:19:31316 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 10:19:32872 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 1 not found. Requested by User ID 0.
+[30-12-2024 10:19:35590 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 10:21:38583 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 10:23:34470 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 10:23:42393 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 10:23:47932 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 3. Requested by User ID 0.
+[30-12-2024 10:23:57982 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 5. Requested by User ID 0.
+[30-12-2024 10:42:49982 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 10:49:23649 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 0 not found. Requested by User ID 0.
+[30-12-2024 10:51:08910 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 0 not found. Requested by User ID 0.
+[30-12-2024 10:51:10400 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 0 not found. Requested by User ID 0.
+[30-12-2024 10:52:50073 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 0 not found. Requested by User ID 0.
+[30-12-2024 10:52:59060 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 0 not found. Requested by User ID 0.
+[30-12-2024 10:54:14345 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 0 not found. Requested by User ID 0.
+[30-12-2024 10:59:54557 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 1 not found. Requested by User ID 0.
+[30-12-2024 10:59:54579 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 2. Requested by User ID 0.
+[30-12-2024 10:59:54589 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 3. Requested by User ID 0.
+[30-12-2024 10:59:54598 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 4 not found. Requested by User ID 0.
+[30-12-2024 10:59:54607 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 5. Requested by User ID 0.
+[30-12-2024 10:59:54617 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 10:59:54626 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 10:59:54634 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 10:59:54644 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 8. Requested by User ID 0.
+[30-12-2024 10:59:54656 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 9. Requested by User ID 0.
+[30-12-2024 10:59:54663 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 10:59:54672 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:00:03068 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 1 not found. Requested by User ID 0.
+[30-12-2024 11:00:03088 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 2. Requested by User ID 0.
+[30-12-2024 11:00:03103 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 3. Requested by User ID 0.
+[30-12-2024 11:00:03111 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 4 not found. Requested by User ID 0.
+[30-12-2024 11:00:03119 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 5. Requested by User ID 0.
+[30-12-2024 11:00:03128 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:00:03136 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:00:03144 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 11:00:03172 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 8. Requested by User ID 0.
+[30-12-2024 11:00:03182 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 9. Requested by User ID 0.
+[30-12-2024 11:00:03191 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 11:00:03198 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:00:42095 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 1 not found. Requested by User ID 0.
+[30-12-2024 11:00:42115 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 2. Requested by User ID 0.
+[30-12-2024 11:00:42126 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 3. Requested by User ID 0.
+[30-12-2024 11:00:42133 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 4 not found. Requested by User ID 0.
+[30-12-2024 11:00:42141 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 5. Requested by User ID 0.
+[30-12-2024 11:00:42150 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:00:42160 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:00:42167 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 11:00:42177 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 8. Requested by User ID 0.
+[30-12-2024 11:00:42188 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 9. Requested by User ID 0.
+[30-12-2024 11:00:42196 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 11:00:42213 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:00:46071 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:02:24064 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 1 not found. Requested by User ID 0.
+[30-12-2024 11:02:24086 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 2. Requested by User ID 0.
+[30-12-2024 11:02:24097 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 3. Requested by User ID 0.
+[30-12-2024 11:02:24103 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 4 not found. Requested by User ID 0.
+[30-12-2024 11:02:24112 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 5. Requested by User ID 0.
+[30-12-2024 11:02:24121 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:02:24129 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:02:24137 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 11:02:24144 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 8. Requested by User ID 0.
+[30-12-2024 11:02:24153 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 9. Requested by User ID 0.
+[30-12-2024 11:02:24161 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 11:02:24170 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:03:07876 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 1 not found. Requested by User ID 0.
+[30-12-2024 11:03:07896 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 2. Requested by User ID 0.
+[30-12-2024 11:03:07904 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 3. Requested by User ID 0.
+[30-12-2024 11:03:07911 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 4 not found. Requested by User ID 0.
+[30-12-2024 11:03:07920 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 5. Requested by User ID 0.
+[30-12-2024 11:03:07929 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:03:07937 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:03:07943 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 11:03:07950 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 8. Requested by User ID 0.
+[30-12-2024 11:03:07958 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 9. Requested by User ID 0.
+[30-12-2024 11:03:07965 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 11:03:07972 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:04:13612 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 1 not found. Requested by User ID 0.
+[30-12-2024 11:04:13625 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 2. Requested by User ID 0.
+[30-12-2024 11:04:13634 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 3. Requested by User ID 0.
+[30-12-2024 11:04:13640 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 4 not found. Requested by User ID 0.
+[30-12-2024 11:04:13647 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 5. Requested by User ID 0.
+[30-12-2024 11:04:13654 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:04:13660 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:04:13665 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 11:04:13672 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 8. Requested by User ID 0.
+[30-12-2024 11:04:13678 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 9. Requested by User ID 0.
+[30-12-2024 11:04:13683 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 11:04:13690 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:04:18622 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 1 not found. Requested by User ID 0.
+[30-12-2024 11:04:18630 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 2. Requested by User ID 0.
+[30-12-2024 11:04:18638 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 3. Requested by User ID 0.
+[30-12-2024 11:04:18644 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 4 not found. Requested by User ID 0.
+[30-12-2024 11:04:18650 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 5. Requested by User ID 0.
+[30-12-2024 11:04:18657 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:04:18666 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:04:18671 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 11:04:18678 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 8. Requested by User ID 0.
+[30-12-2024 11:04:18684 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 9. Requested by User ID 0.
+[30-12-2024 11:04:18690 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 11:04:18698 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:04:21738 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 1 not found. Requested by User ID 0.
+[30-12-2024 11:04:21747 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 2. Requested by User ID 0.
+[30-12-2024 11:04:21754 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 3. Requested by User ID 0.
+[30-12-2024 11:04:21760 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 4 not found. Requested by User ID 0.
+[30-12-2024 11:04:21767 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 5. Requested by User ID 0.
+[30-12-2024 11:04:21774 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:04:21782 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:04:21788 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 11:04:21794 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 8. Requested by User ID 0.
+[30-12-2024 11:04:21801 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 9. Requested by User ID 0.
+[30-12-2024 11:04:21807 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 11:04:21814 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:04:24163 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 1 not found. Requested by User ID 0.
+[30-12-2024 11:04:24172 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 2. Requested by User ID 0.
+[30-12-2024 11:04:24179 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 3. Requested by User ID 0.
+[30-12-2024 11:04:24186 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 4 not found. Requested by User ID 0.
+[30-12-2024 11:04:24193 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 5. Requested by User ID 0.
+[30-12-2024 11:04:24200 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:04:24208 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:04:24214 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 11:04:24220 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 8. Requested by User ID 0.
+[30-12-2024 11:04:24226 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 9. Requested by User ID 0.
+[30-12-2024 11:04:24232 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 11:04:24238 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:12:32237 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 1 not found. Requested by User ID 0.
+[30-12-2024 11:12:32256 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 2. Requested by User ID 0.
+[30-12-2024 11:12:32266 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 3. Requested by User ID 0.
+[30-12-2024 11:12:32274 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 4 not found. Requested by User ID 0.
+[30-12-2024 11:12:32284 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 5. Requested by User ID 0.
+[30-12-2024 11:12:32292 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:12:32298 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:12:32303 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 11:12:32311 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 8 by User ID 0.
+[30-12-2024 11:12:32318 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 8 by User ID 0.
+[30-12-2024 11:12:32325 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 9. Requested by User ID 0.
+[30-12-2024 11:12:32332 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 11:12:32339 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:12:33615 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:13:06450 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 1 not found. Requested by User ID 0.
+[30-12-2024 11:13:06462 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 2. Requested by User ID 0.
+[30-12-2024 11:13:06469 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 3. Requested by User ID 0.
+[30-12-2024 11:13:06477 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 4 not found. Requested by User ID 0.
+[30-12-2024 11:13:06485 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 5. Requested by User ID 0.
+[30-12-2024 11:13:06494 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:13:06504 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:13:06508 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 11:13:06516 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 8 by User ID 0.
+[30-12-2024 11:13:06526 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 8 by User ID 0.
+[30-12-2024 11:13:06534 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 9. Requested by User ID 0.
+[30-12-2024 11:13:06539 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 11:13:06544 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[30-12-2024 11:16:51429 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
+[30-12-2024 11:17:57877 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 12 created successfully by User ID "1".
+[30-12-2024 11:24:17434 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
+[30-12-2024 11:24:31869 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 1 created successfully by User ID "1".
+[30-12-2024 11:27:00905 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 1 created successfully by User ID "1".
+[30-12-2024 11:27:46099 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 1 created successfully by User ID "1".
+[30-12-2024 11:30:54212 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 2 created successfully by User ID "1".
+[30-12-2024 11:31:16285 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 3 created successfully by User ID "1".
+[30-12-2024 11:31:22747 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 4 created successfully by User ID "1".
+[30-12-2024 11:32:17891 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 5 created successfully by User ID "1".
+[30-12-2024 11:37:17097 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 11:37:17112 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 11:37:17121 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 11:37:17130 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 11:37:17137 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 11:37:17145 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 11:37:17153 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 11:37:17162 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 11:37:17171 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 11:37:17180 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 11:37:17187 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 6 not found. Requested by User ID 0.
+[30-12-2024 11:37:17194 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 11:37:17200 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 8 not found. Requested by User ID 0.
+[30-12-2024 11:37:17207 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 9 not found. Requested by User ID 0.
+[30-12-2024 11:37:17213 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 11:37:17223 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 11:37:18518 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:09:43862 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:09:43890 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:09:43906 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:09:43921 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:09:43937 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:09:43947 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:09:43958 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:09:43969 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:09:43979 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:09:43988 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:09:43997 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 6 not found. Requested by User ID 0.
+[30-12-2024 13:09:44005 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 13:09:44014 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 8 not found. Requested by User ID 0.
+[30-12-2024 13:09:44023 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 9 not found. Requested by User ID 0.
+[30-12-2024 13:09:44031 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 13:09:44041 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:12:37452 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:14:00067 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:14:04293 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:14:06414 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:14:08500 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:14:10560 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:14:12673 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 6 not found. Requested by User ID 0.
+[30-12-2024 13:14:15002 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:17:17309 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:17:17321 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:17:17329 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:17:17338 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:17:17347 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:17:17355 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:17:17362 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:17:17369 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:17:17378 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:17:17386 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:17:17393 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 6 not found. Requested by User ID 0.
+[30-12-2024 13:17:17399 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 13:17:17405 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 8 not found. Requested by User ID 0.
+[30-12-2024 13:17:17413 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 9 not found. Requested by User ID 0.
+[30-12-2024 13:17:17420 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 13:17:17429 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:17:27542 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:17:27567 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:17:27586 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:17:27600 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:17:27608 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:17:27616 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:17:27624 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:17:27632 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:17:27640 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:17:27647 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:17:27653 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 6 not found. Requested by User ID 0.
+[30-12-2024 13:17:27657 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 13:17:27662 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 8 not found. Requested by User ID 0.
+[30-12-2024 13:17:27668 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 9 not found. Requested by User ID 0.
+[30-12-2024 13:17:27676 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 13:17:27692 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:17:29351 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:17:33995 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:17:34002 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:17:34010 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:17:34017 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:17:34025 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:17:34031 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:17:34040 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:17:34047 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:17:34054 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:17:34061 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:17:34065 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 6 not found. Requested by User ID 0.
+[30-12-2024 13:17:34073 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 13:17:34078 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 8 not found. Requested by User ID 0.
+[30-12-2024 13:17:34084 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 9 not found. Requested by User ID 0.
+[30-12-2024 13:17:34089 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 13:17:34096 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:17:55435 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:17:55441 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:17:55448 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:17:55456 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:17:55462 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:17:55469 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:17:55475 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:17:55481 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:17:55487 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:17:55495 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:17:55499 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 6 not found. Requested by User ID 0.
+[30-12-2024 13:17:55504 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 13:17:55508 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 8 not found. Requested by User ID 0.
+[30-12-2024 13:17:55513 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 9 not found. Requested by User ID 0.
+[30-12-2024 13:17:55517 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 13:17:55523 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:18:08458 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:18:08465 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:18:08472 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:18:08478 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:18:08486 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:18:08492 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:18:08499 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:18:08505 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:18:08512 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:18:08519 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:18:08524 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 6 not found. Requested by User ID 0.
+[30-12-2024 13:18:08531 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 13:18:08537 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 8 not found. Requested by User ID 0.
+[30-12-2024 13:18:08544 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 9 not found. Requested by User ID 0.
+[30-12-2024 13:18:08549 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 13:18:08556 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:23:20935 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:25:32077 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:25:32119 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:25:32144 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:25:32158 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:25:32173 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:25:32190 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:25:39317 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:25:45734 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:25:45742 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:25:45751 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:25:45761 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:25:45769 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:25:45779 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:28:22064 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:28:22083 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:28:22096 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:28:22108 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:28:22120 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:28:22129 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:28:23164 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:28:30243 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:28:30257 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:28:30269 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:28:30303 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:28:30325 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:28:30351 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:28:52917 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:28:52939 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:28:52995 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:28:53008 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:28:53019 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:28:53028 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:28:54323 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:31:19512 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:31:19537 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:31:19551 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:31:19565 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:31:19580 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:31:19594 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:31:25247 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:33:34661 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:33:34705 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:33:34723 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:33:34753 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:33:34765 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:33:34776 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:33:36952 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:34:57304 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:34:57353 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:34:57384 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:34:57404 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:34:57415 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:34:57426 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:35:04552 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:35:06982 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:35:06996 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:35:07011 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:35:07034 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:35:07062 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:35:07076 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:38:09735 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:39:20369 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:39:20403 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:39:20432 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:39:20450 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:39:20466 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:39:20481 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:39:22898 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:39:33446 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:39:33474 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:39:33485 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:39:33494 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:39:33514 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:39:33523 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:41:18863 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:41:18895 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:41:18919 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:41:18932 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:41:18956 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:41:18967 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:45:14518 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:45:14551 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:45:14574 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:45:14586 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:45:14599 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:45:14617 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:46:50447 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:46:50519 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:46:50530 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:46:50541 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:46:50555 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:46:50569 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:47:12514 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:47:12547 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:47:12575 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:47:12593 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:47:12608 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:47:12622 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:49:08530 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:49:08565 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:49:08603 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:49:08620 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:49:08633 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:49:08648 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:52:10354 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:52:10372 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:52:10766 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:52:10792 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:52:10807 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:52:10817 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:52:10832 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:52:10854 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 6 not found. Requested by User ID 0.
+[30-12-2024 13:52:10864 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 13:52:10875 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 8 not found. Requested by User ID 0.
+[30-12-2024 13:52:10886 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 9 not found. Requested by User ID 0.
+[30-12-2024 13:52:10900 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 13:52:10917 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:52:21291 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:52:21339 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:52:21361 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:52:21373 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:52:21392 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:52:21402 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:54:19565 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:54:19589 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:54:19602 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:54:19615 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:54:19632 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:54:19643 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:55:31194 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:55:31219 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:55:31248 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:55:31277 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:55:31290 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:55:31305 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 6 not found. Requested by User ID 0.
+[30-12-2024 13:55:31321 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 13:55:31335 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 8 not found. Requested by User ID 0.
+[30-12-2024 13:55:31355 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 9 not found. Requested by User ID 0.
+[30-12-2024 13:55:31377 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 13:55:31396 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:55:51632 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:55:53391 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:55:55027 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:55:56474 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:55:57866 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:55:59924 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:56:00792 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:56:19072 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:56:19086 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:56:19097 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:56:19105 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:56:19114 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:56:19122 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 6 not found. Requested by User ID 0.
+[30-12-2024 13:56:19130 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 13:56:19135 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 8 not found. Requested by User ID 0.
+[30-12-2024 13:56:19141 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 9 not found. Requested by User ID 0.
+[30-12-2024 13:56:19147 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 13:56:19157 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:56:21469 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:56:22220 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:56:33548 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:56:33558 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:56:33567 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:56:33575 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:56:33584 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:56:33590 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 6 not found. Requested by User ID 0.
+[30-12-2024 13:56:33597 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 13:56:33603 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 8 not found. Requested by User ID 0.
+[30-12-2024 13:56:33610 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 9 not found. Requested by User ID 0.
+[30-12-2024 13:56:33616 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 13:56:33625 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:56:35082 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:56:36328 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:56:37402 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:56:38568 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:57:29041 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:57:29062 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:57:29072 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:57:29082 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:57:29091 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:57:29098 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 6 not found. Requested by User ID 0.
+[30-12-2024 13:57:29105 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 13:57:29111 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 8 not found. Requested by User ID 0.
+[30-12-2024 13:57:29118 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 9 not found. Requested by User ID 0.
+[30-12-2024 13:57:29125 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 13:57:29133 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:57:30857 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:57:31952 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:57:33586 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:57:48065 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:57:48084 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:57:48094 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:57:48102 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:57:48110 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:57:48116 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 6 not found. Requested by User ID 0.
+[30-12-2024 13:57:48123 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 7 not found. Requested by User ID 0.
+[30-12-2024 13:57:48130 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 8 not found. Requested by User ID 0.
+[30-12-2024 13:57:48136 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 9 not found. Requested by User ID 0.
+[30-12-2024 13:57:48142 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 not found. Requested by User ID 0.
+[30-12-2024 13:57:48150 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:57:49766 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:57:51118 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:58:35090 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:58:35104 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:58:35111 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:58:35119 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:58:35128 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:58:35137 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[30-12-2024 13:58:37375 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[30-12-2024 13:58:38513 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[30-12-2024 13:58:44307 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[30-12-2024 13:58:45311 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[30-12-2024 13:58:46294 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.

@@ -1,0 +1,39 @@
+.leaderboards-container {
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #3a6073;
+  }
+  
+  .leaderboards-container h1 {
+    font-size: 2rem;
+    color: #ff8e2b;
+    margin-bottom: 1rem;
+  }
+  
+  .leaderboards-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  .leaderboards-table th,
+  .leaderboards-table td {
+    border: 1px solid #ddd;
+    padding: 0.8rem;
+    text-align: left;
+  }
+  
+  .leaderboards-table th {
+    background: #3a6073;
+    color: white;
+  }
+  
+  .leaderboards-table tr:nth-child(even) {
+    background: #f9f9f9;
+  }
+  
+  .leaderboards-table tr:hover {
+    background: #eb8e24;
+    color: white;
+  }
+  

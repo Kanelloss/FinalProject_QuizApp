@@ -1,0 +1,51 @@
+<div class="leaderboards-container">
+    <h1>Leaderboards</h1>
+    <p>Choose a category to see the top scores.</p>
+  
+    <mat-form-field appearance="fill">
+        <mat-label>Select Category</mat-label>
+        <mat-select
+          [value]="selectedCategory"
+          (selectionChange)="onCategoryChange($event.value)"
+        >
+          @for (category of quizService.categories(); track category.id) {
+            <mat-option [value]="category.id">
+              {{ category.name }}
+            </mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+       
+  
+    <!-- Κατάσταση φόρτωσης -->
+    @if (quizService.isLoading()) {
+      <p>Loading scores...</p>
+    } @else {
+      @if (quizService.highScores().length > 0) {
+        <h2>{{ quizService.categories()[0].name }}</h2>
+        <table class="leaderboards-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Username</th>
+              <th>Score</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (score of quizService.highScores(); track score.username) {
+              <tr>
+                <td>{{ $index + 1 }}</td>
+                <td>{{ score.username }}</td>
+                <td>{{ score.score }}</td>
+                <td>{{ formatDate(score.achievedAt) }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      } @else {
+        <p>No scores available for this category.</p>
+      }
+    }
+  </div>
+  

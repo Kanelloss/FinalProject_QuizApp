@@ -1,6 +1,6 @@
 /* Navbar Container */
 .navbar {
-  background: #3A6073; /* Dark blue background */
+  background: #3A6073;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,7 +25,8 @@
   gap: 1rem;
 }
 
-.nav-links a {
+.nav-links a,
+.nav-links button {
   font-size: 1rem;
   font-weight: 500;
   color: white;
@@ -35,11 +36,31 @@
   transition: all 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links button:hover {
   background: #4E6E8E;
   color: #eb8e24;
   transform: scale(1.05);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* User Greeting */
+.greeting {
+  font-size: 1rem;
+  color: #ee9939; /* Light orange */
+  margin-right: 1rem;
+  font-weight: 500;
+}
+
+
+/* Logout Button */
+.logout-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 /* Hamburger Menu */
@@ -72,7 +93,8 @@
   border-radius: 8px;
 }
 
-.nav-links.show a {
+.nav-links.show a,
+.nav-links.show button {
   padding: 0.5rem;
   text-align: left;
   width: 100%;

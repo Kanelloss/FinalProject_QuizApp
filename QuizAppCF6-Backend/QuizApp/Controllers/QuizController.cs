@@ -378,43 +378,53 @@ namespace QuizApp.Controllers
         }
 
         /// <summary>
-        /// Retrieve all-time high scores for a quiz.
+        /// Retrieves all-time high scores for a specific quiz.
         /// </summary>
         /// <remarks>
         /// This endpoint returns the top N all-time high scores for a specific quiz.
-        /// If no high scores are found, a 404 response is returned.
+        /// It also includes the title of the quiz for display purposes.
         /// </remarks>
-        /// <param name="quizId">The ID of the quiz to retrieve high scores for.</param>
+        /// <param name="quizId">The unique ID of the quiz for which high scores are requested.</param>
         /// <param name="topN">The number of top scores to retrieve (default is 10).</param>
-        /// <returns>
-        /// A list of high scores, each containing the username, score, and the date achieved.
-        /// Possible response codes:
-        /// - 200: High scores retrieved successfully.
-        /// - 404: No high scores found.
-        /// - 500: Internal server error.
-        /// </returns>
+        /// <response code="200">Returns the quiz title and the top N high scores.</response>
+        /// <response code="404">If the quiz or high scores are not found.</response>
+        /// <response code="500">If an unexpected error occurs.</response>
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
 
         [HttpGet("{quizId}/alltimehighscores")]
-        [Authorize]
         public async Task<IActionResult> GetAllTimeHighScores(int quizId, [FromQuery] int topN = 10)
         {
-
+            // Διατήρηση του currentUserId για logging ή άλλες χρήσεις
             var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
-
 
             try
             {
+                // Ανάκτηση quiz details
+                var quiz = await _quizService.GetQuizByIdAsync(quizId);
+                if (quiz == null)
+                {
+                    _logger.LogWarning("Quiz with ID {QuizId} not found. Requested by User ID {UserId}.", quizId, currentUserId);
+                    return NotFound(new { Message = $"Quiz with ID {quizId} not found." });
+                }
+
+                // Ανάκτηση σκορ
                 var highScores = await _quizScoreService.GetAllTimeHighScoresByQuizAsync(quizId, topN);
                 if (highScores == null || !highScores.Any())
                 {
-                    _logger.LogWarning("No high scores found for quiz ID {QuizId} requested by User ID {UserId}.", quizId, currentUserId);
+                    _logger.LogWarning("No high scores found for quiz ID {QuizId}. Requested by User ID {UserId}.", quizId, currentUserId);
                     return NotFound(new { Message = "No high scores found for the specified quiz." });
                 }
+
                 _logger.LogInformation("High scores retrieved successfully for quiz ID {QuizId} by User ID {UserId}.", quizId, currentUserId);
-                return Ok(highScores);
+
+                // Επιστροφή quiz title και high scores
+                return Ok(new
+                {
+                    QuizTitle = quiz.Title, // Τίτλος του quiz
+                    HighScores = highScores // Σκορ
+                });
             }
             catch (Exception ex)
             {
@@ -422,6 +432,7 @@ namespace QuizApp.Controllers
                 return StatusCode(500, new { Message = "An error occurred while retrieving high scores.", Details = ex.Message });
             }
         }
+
 
         //[HttpGet("{quizId}/questions/{id}")]
         //[Authorize]

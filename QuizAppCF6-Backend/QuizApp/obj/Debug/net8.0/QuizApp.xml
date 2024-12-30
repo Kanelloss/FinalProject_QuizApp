@@ -134,21 +134,17 @@
         </member>
         <member name="M:QuizApp.Controllers.QuizController.GetAllTimeHighScores(System.Int32,System.Int32)">
             <summary>
-            Retrieve all-time high scores for a quiz.
+            Retrieves all-time high scores for a specific quiz.
             </summary>
             <remarks>
             This endpoint returns the top N all-time high scores for a specific quiz.
-            If no high scores are found, a 404 response is returned.
+            It also includes the title of the quiz for display purposes.
             </remarks>
-            <param name="quizId">The ID of the quiz to retrieve high scores for.</param>
+            <param name="quizId">The unique ID of the quiz for which high scores are requested.</param>
             <param name="topN">The number of top scores to retrieve (default is 10).</param>
-            <returns>
-            A list of high scores, each containing the username, score, and the date achieved.
-            Possible response codes:
-            - 200: High scores retrieved successfully.
-            - 404: No high scores found.
-            - 500: Internal server error.
-            </returns>
+            <response code="200">Returns the quiz title and the top N high scores.</response>
+            <response code="404">If the quiz or high scores are not found.</response>
+            <response code="500">If an unexpected error occurs.</response>
         </member>
         <member name="M:QuizApp.Controllers.UserController.SignUp(QuizApp.DTO.UserSignUpDTO)">
             <summary>

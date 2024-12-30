@@ -11,14 +11,21 @@
 
   <!-- Navigation Links -->
   <ul class="nav-links" [class.show]="menuOpen">
+    @if (isLoggedIn()) {
+      <li class="greeting">
+        Hi, {{ getUsername() }}!
+      </li>
+    }
     <li>
       <a [routerLink]="['/']" routerLinkActive="active">Home</a>
     </li>
     <li>
-      <a [routerLink]="['/login']" routerLinkActive="active">Login</a>
+      <a [routerLink]="['/leaderboards']" routerLinkActive="active">Leaderboards</a>
     </li>
-    <li>
-      <a [routerLink]="['/register']" routerLinkActive="active">Register</a>
-    </li>
+    @if (isLoggedIn()) {
+      <li>
+        <button class="logout-btn" (click)="logout()">Logout</button>
+      </li>
+    }
   </ul>
 </nav>
