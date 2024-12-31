@@ -42,7 +42,7 @@ export class QuizComponent {
     }
   }
 
-  async submitQuiz() {
+  submitQuiz() {
     const answers = this.selectedAnswers.map((selectedOption, index) => {
       if (!selectedOption) {
         throw new Error(`Question ${index + 1} has not been answered.`);
@@ -53,12 +53,16 @@ export class QuizComponent {
       };
     });
   
-    try {
-      const result = await this.quizService.submitQuiz(this.quiz.id, answers);
-      alert(`Quiz completed! Your score: ${result.score}`);
-    } catch (error) {
-      console.error('Error submitting quiz:', error);
-      alert('There was an error submitting your quiz. Please try again.');
-    }
+    this.quizService.submitQuiz(this.quiz.quizId, { answers }).subscribe({
+      next: (response) => {
+        const score = response.result.score;
+        console.log('Submission result:', response);
+        alert(`Quiz completed! Your score: ${score} / 100.`);
+      },
+      error: (error) => {
+        console.error('Error submitting quiz:', error);
+        alert('There was an error submitting your quiz. Please try again.');
+      }
+    });
   }
 }

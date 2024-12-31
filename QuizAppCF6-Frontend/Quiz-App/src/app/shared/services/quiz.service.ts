@@ -65,21 +65,22 @@ export class QuizService {
     }
   }
 
- /**
-   * Ξεκινάει ένα νέο Quiz μέσω του API
-   */
- startQuiz(quizId: number) {
-  return firstValueFrom(
-    this.http.get<{ message: string; quiz: any }>(`${apiUrl}/${quizId}/start`, {})
-  );
-}
+  /**
+     * Ξεκινάει ένα νέο Quiz μέσω του API
+     */
+  startQuiz(quizId: number) {
+    return firstValueFrom(
+      this.http.get<{ message: string; quiz: any }>(`${apiUrl}/${quizId}/start`, {})
+    );
+  }
 
 /**
  * Υποβάλλει τις απαντήσεις του Quiz
  */
-submitQuiz(quizId: number, answers: { questionId: number; selectedOption: string }[]) {
-  return firstValueFrom(
-    this.http.post<{ score: number }>(`${apiUrl}/${quizId}/submit`, { answers })
+submitQuiz(quizId: number, answers: any) {
+  return this.http.post<{ message: string; result: { score: number; correctAnswers: number; totalQuestions: number; questionResults: any[] } }>(
+    `${apiUrl}/${quizId}/submit`,
+    answers
   );
 }
 }

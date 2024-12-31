@@ -4,6 +4,19 @@
       <h1>{{ quiz.title }}</h1>
     </div>
 
+     <!-- Question Number -->
+     <div class="quiz-question-number">
+      Question {{ currentIndex + 1 }} / {{ quiz.questions.length }}
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="quiz-progress-bar">
+      <div
+        class="progress"
+        [style.width]="((currentIndex + 1) / quiz.questions.length) * 100 + '%'"
+      ></div>
+    </div>
+
     <div class="quiz-question-card">
       <p class="question-text">{{ currentQuestion.text }}</p>
       <div class="quiz-options">
