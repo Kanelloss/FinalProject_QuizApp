@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { QuizService } from '../../shared/services/quiz.service';
 
 @Component({
@@ -9,8 +9,9 @@ import { QuizService } from '../../shared/services/quiz.service';
   styleUrls: ['./quiz.component.css'],
 })
 export class QuizComponent {
-  private quizService = inject(QuizService);
-  private route = inject(ActivatedRoute);
+  quizService = inject(QuizService);
+  route = inject(ActivatedRoute);
+  router = inject(Router);
 
   quiz: any = null;
   currentIndex = 0;
@@ -41,28 +42,42 @@ export class QuizComponent {
       this.currentIndex++;
     }
   }
-
-  submitQuiz() {
-    const answers = this.selectedAnswers.map((selectedOption, index) => {
-      if (!selectedOption) {
-        throw new Error(`Question ${index + 1} has not been answered.`);
-      }
-      return {
-        questionId: index,
-        selectedOption: selectedOption,
-      };
-    });
   
-    this.quizService.submitQuiz(this.quiz.quizId, { answers }).subscribe({
-      next: (response) => {
-        const score = response.result.score;
-        console.log('Submission result:', response);
-        alert(`Quiz completed! Your score: ${score} / 100.`);
-      },
-      error: (error) => {
-        console.error('Error submitting quiz:', error);
-        alert('There was an error submitting your quiz. Please try again.');
-      }
-    });
+    submitQuiz() {
+      const answers = this.selectedAnswers.map((selectedOption, index) => {
+        if (!selectedOption) {
+          throw new Error(`Question ${index + 1} has not been answered.`);
+        }
+        return {
+          questionId: index,
+          selectedOption: selectedOption,
+        };
+      });
+    
+      this.quizService.submitQuiz(this.quiz.quizId, { answers }).subscribe({
+        next: (response) => {
+          const score = response.result.score;
+          const totalQuestions = response.result.totalQuestions;
+          const questionResults = response.result.questionResults;
+    
+          console.log('Submission result:', response);
+    
+          // Redirect to Results Page
+          this.router.navigate(['/results'], {
+            state: {
+              score: score,
+              totalQuestions: totalQuestions,
+              questionResults: questionResults,
+              quizId: this.quiz.quizId, // Προσθήκη quizId
+              questions: this.quiz.questions // Pass all questions here.
+            },
+          });
+        },
+        error: (error) => {
+          console.error('Error submitting quiz:', error);
+          alert('There was an error submitting your quiz. Please try again.');
+        },
+      });
+    }
   }
-}
+

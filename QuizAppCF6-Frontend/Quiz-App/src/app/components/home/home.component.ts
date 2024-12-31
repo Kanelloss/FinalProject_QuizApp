@@ -36,7 +36,7 @@ export class HomeComponent {
       width: '400px',
       data: {
         title: `Start a New ${category.name} Quiz?`,
-        message: 'Do you want to start a new quiz for this category?',
+        message: 'Click "Yes" to continue ',
       },
     });
 

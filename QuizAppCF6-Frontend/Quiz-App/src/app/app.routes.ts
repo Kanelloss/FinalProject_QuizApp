@@ -8,6 +8,7 @@ import { LeaderboardsComponent } from './components/leaderboards/leaderboards.co
 import { authGuard } from './shared/guards/auth.guard';
 import { redirectGuard } from './shared/guards/redirect.guard';
 import { QuizComponent } from './components/quiz/quiz.component';
+import { ResultsComponent } from './components/results/results.component';
 
 export const routes: Routes = [
     { path: '', component: WelcomeComponent },
@@ -16,7 +17,8 @@ export const routes: Routes = [
     { path: 'register', component: RegisterComponent },
     { path: 'home', component: HomeComponent, canActivate: [authGuard] },
     { path: 'leaderboards', component: LeaderboardsComponent },
-    { path: 'quiz/:id/start', component: QuizComponent },
+    { path: 'quiz/:id/start', component: QuizComponent, canActivate: [authGuard] },
+    { path: 'results', component: ResultsComponent, canActivate: [authGuard] },
     { path: '**', redirectTo: 'login' }
 ];
 

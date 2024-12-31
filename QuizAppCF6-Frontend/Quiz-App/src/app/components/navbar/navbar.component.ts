@@ -1,6 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { UserService } from '../../shared/services/user.service';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
+import { ConfirmDialogComponent } from '../../confirm-dialog/confirm-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-navbar',
@@ -12,6 +14,8 @@ import { RouterModule } from '@angular/router';
 export class NavbarComponent {
   menuOpen = false;
   userService = inject(UserService);
+  router = inject(Router);
+  dialog = inject(MatDialog);
   user = this.userService.user;
 
 toggleMenu() {
@@ -28,6 +32,22 @@ toggleMenu() {
 
   logout(): void {
     this.userService.logoutUser();
+  }
+
+  confirmLogout() {
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+      data: {
+        title: 'Logout Confirmation:',
+        message: 'Are you sure you want to log out?',
+      },
+    });
+
+    dialogRef.afterClosed().subscribe((confirmed) => {
+      if (confirmed) {
+        this.userService.logoutUser();
+        this.router.navigate(['/login']);
+      }
+    });
   }
 
 

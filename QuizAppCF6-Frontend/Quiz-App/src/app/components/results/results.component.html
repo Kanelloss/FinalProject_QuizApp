@@ -1,0 +1,42 @@
+<div class="results-container">
+    @if (hasResults) {
+      <h1>Quiz Results</h1>
+      <p class="score">
+        Your score: 
+        <strong>
+          @if (score !== null && totalQuestions !== null) {
+            {{ score }} / {{ totalQuestions * 10 }}
+          } @else {
+            Loading...
+          }
+        </strong>
+      </p>
+      
+      <div class="questions-review">
+        <h2>Question Analysis</h2>
+        <ul>
+          @for (result of questionResults; track result) {
+            <li>
+              <p><strong>Question:</strong> {{ questions[questionResults.indexOf(result)]?.text || ('Question ' + (questionResults.indexOf(result) + 1)) }}</p>
+              <p><strong>Correct Answer:</strong> {{ result.correctAnswer }}</p>
+              <p>
+                <strong>Your Answer:</strong>
+                <span [class.correct]="result.isCorrect" [class.incorrect]="!result.isCorrect">
+                  {{ result.selectedOption }}
+                </span>
+              </p>
+            </li>
+          }
+        </ul>
+      </div>
+  
+      <div class="actions">
+        <button routerLink="/home" class="action-button">Back to Home Page</button>
+        <button routerLink="/leaderboards" class="action-button">View Leaderboards</button>
+        <button routerLink="/quiz/{{ quizId }}/start" class="action-button retry-button">Retry Quiz</button>
+      </div>
+    } @else {
+      <p>Loading results...</p>
+    }
+  </div>
+  
