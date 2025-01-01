@@ -50,5 +50,10 @@ toggleMenu() {
     });
   }
 
+  isAdmin(): boolean {
+    return this.userService.isAdmin();
+  }
+  
+
 
 }

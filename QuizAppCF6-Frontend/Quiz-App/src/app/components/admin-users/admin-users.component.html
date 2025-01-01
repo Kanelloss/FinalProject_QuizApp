@@ -1,0 +1,37 @@
+<div class="admin-container">
+    <h2>User Management</h2>
+  
+    <div class="users-table">
+      <div class="table-header">
+        <span>ID</span>
+        <span>Username</span>
+        <span>Email</span>
+        <span>Role</span>
+        <span>Actions</span>
+      </div>
+  
+      @for (user of users; track user) {
+        <div class="user-row">
+          <span>{{ user.id }}</span>
+          <span>{{ user.username }}</span>
+          <span>{{ user.email }}</span>
+          <span class="capitalize">{{ user.userRole }}</span>
+          <span class="actions">
+            <button class="edit-btn" (click)="editUser(user.id)">Edit</button>
+            <button class="delete-btn" (click)="deleteUser(user.id)">Delete</button>
+          </span>
+        </div>
+      }
+  
+      @if (!users.length) {
+        <div class="no-users">
+          <p>No users available.</p>
+        </div>
+      }
+    </div>
+  
+    <div class="add-user">
+      <button class="add-user-btn" (click)="addUser()">Add New User</button>
+    </div>
+  </div>
+  

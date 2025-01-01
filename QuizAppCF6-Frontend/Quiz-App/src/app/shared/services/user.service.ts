@@ -49,16 +49,28 @@ export class UserService {
   registerUser(user: User) {
     return this.http.post(`${apiUrl}/signup`, user);
   }
-  
+
+  getUserRole(): string | null {
+    return localStorage.getItem('role');
+  }
 
   /**
-   * Ελέγχει αν το email υπάρχει ήδη
-   * @param email Το email που θα ελεγχθεί
-   * @returns Observable με μήνυμα επιτυχίας ή αποτυχίας
+   * Ελέγχει αν ο χρήστης είναι admin
+   * @returns boolean
    */
-  checkDuplicateEmail(email: string): Observable<any> {
-    return this.http.get<{ message: string }>(`${apiUrl}/check_duplicate_email/${email}`);
+  isAdmin(): boolean {
+    return this.getUserRole() === 'Admin';
   }
+
+
+  // /**
+  //  * Ελέγχει αν το email υπάρχει ήδη
+  //  * @param email Το email που θα ελεγχθεί
+  //  * @returns Observable με μήνυμα επιτυχίας ή αποτυχίας
+  //  */
+  // checkDuplicateEmail(email: string): Observable<any> {
+  //   return this.http.get<{ message: string }>(`${apiUrl}/check_duplicate_email/${email}`);
+  // }
 
   /**
    * Κάνει logout τον χρήστη
@@ -78,5 +90,22 @@ export class UserService {
    */
   isLoggedIn(): boolean {
     return !!localStorage.getItem('access_token');
+  }
+
+   // Μέθοδος για λήψη όλων των χρηστών
+   getAllUsers(): Observable<any[]> {
+    return this.http.get<any[]>(`${apiUrl}/getall`);
+  }
+
+  deleteUser(userId: number): Observable<any> {
+    return this.http.delete(`${apiUrl}/${userId}`);
+  }
+
+  getUserById(id: number): Observable<any> {
+    return this.http.get<any>(`${apiUrl}/${id}`);
+  }
+
+  updateUser(id: number, user: any): Observable<any> {
+    return this.http.put<any>(`${apiUrl}/${id}`, user);
   }
 }

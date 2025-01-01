@@ -1,0 +1,144 @@
+/* Overall container styling */
+.edit-user-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #f7f9fc;
+  }
+  
+  .edit-user-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #ff8e2b;
+    margin-bottom: 0.5rem;
+  }
+  
+  .edit-user-container h6 {
+    text-align: center;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #3a6073;
+    margin-bottom: 2rem;
+  }
+  
+  /* Form styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* Labels and input styling */
+  mat-form-field {
+    width: 100%;
+  }
+  
+  mat-form-field.mat-form-field {
+    font-size: 1rem;
+  }
+  
+  .mat-input-element {
+    font-size: 1rem;
+  }
+  
+  /* Validation error styling */
+  .validation-error {
+    font-size: 0.875rem;
+    color: #d10c0c;
+    margin-top: 0.25rem;
+    font-weight: 500;
+  }
+  
+  /* Radio group styling */
+  mat-radio-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  mat-radio-button {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #3a6073;
+  }
+  
+  mat-radio-button.mat-radio-checked {
+    color: #ff8e2b;
+  }
+  
+  /* Button container */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 100%; /* Align buttons to the form width */
+  }
+  
+  /* Button styling */
+  button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Equal button width */
+  }
+  
+  button.cancel-btn {
+    background-color: #ff8e2b;
+    color: white;
+  }
+  
+  button.cancel-btn:hover {
+    background-color: #d35d5d;
+  }
+  
+  button.save-btn {
+    background-color: #3a6073;
+    color: white;
+  }
+  
+  button.save-btn:hover {
+    background-color: #238137;
+  }
+
+  .role-select {
+    margin-top: -2rem;
+  }
+
+  .role-choices {
+    margin-top: -1.5rem;
+    margin-bottom: -1rem;
+  }
+  
+  /* Adjust for smaller screens */
+  @media (max-width: 768px) {
+    .edit-user-container {
+      padding: 1rem;
+    }
+  
+    form {
+      gap: 1rem;
+      max-width: 90%;
+    }
+  
+    button {
+      font-size: 0.875rem;
+      padding: 0.625rem 1.25rem;
+    }
+  }
+  

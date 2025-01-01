@@ -1,6 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { QuizService } from '../../shared/services/quiz.service';
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmDialogComponent } from '../../confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-quiz',
@@ -12,10 +14,12 @@ export class QuizComponent {
   quizService = inject(QuizService);
   route = inject(ActivatedRoute);
   router = inject(Router);
+  dialog = inject(MatDialog)
 
   quiz: any = null;
   currentIndex = 0;
   selectedAnswers: (string | null)[] = [];
+  isQuizStarted = true; // Flag to track if the quiz is ongoing
 
   get currentQuestion() {
     return this.quiz?.questions[this.currentIndex];
@@ -61,6 +65,7 @@ export class QuizComponent {
           const questionResults = response.result.questionResults;
     
           console.log('Submission result:', response);
+          this.isQuizStarted = false; // Mark the quiz as completed
     
           // Redirect to Results Page
           this.router.navigate(['/results'], {
@@ -79,5 +84,25 @@ export class QuizComponent {
         },
       });
     }
+
+    canDeactivate(): Promise<boolean> {
+      if (!this.isQuizStarted) {
+        return Promise.resolve(true);
+      }
+  
+      return new Promise((resolve) => {
+        const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+          data: {
+            title: 'Leave Quiz?',
+            message: 'Are you sure you want to leave? Your progress will be lost.',
+          },
+        });
+  
+        dialogRef.afterClosed().subscribe((confirmed: boolean) => {
+          resolve(confirmed);
+        });
+      });
+    }
   }
+  
 
