@@ -110,4 +110,84 @@
   .capitalize {
     text-transform: capitalize;
   }
+
+  /* Adjust for smaller screens */
+  @media (max-width: 768px) {
+    .admin-container h2 {
+      text-align: center;
+      font-size: 1.5rem; /* Μείωση από 2rem */
+      color: #ff8e2b;
+      margin-bottom: 1rem;
+    }
+    
+    .table-header {
+      font-size: 0.9rem; /* Μείωση από το default */
+    }
+    
+    .user-row span {
+      font-size: 0.85rem; /* Μείωση από το default */
+    }
+
+    .edit-btn, .delete-btn {
+      font-size: 0.75rem; /* Μείωση της γραμματοσειράς */
+      padding: 0.4rem 0.8rem; /* Μείωση padding */
+      border-radius: 4px; /* Ελαφρώς μικρότερα κουμπιά */
+    }
+    
+    .edit-btn:hover, .delete-btn:hover {
+      transform: scale(1.05); /* Ελαφριά αύξηση στο hover */
+    }
+    
+    .add-user-btn {
+      font-size: 0.85rem; /* Μείωση της γραμματοσειράς */
+      padding: 0.5rem 1rem; /* Μείωση padding */
+    }
+    
+    .add-user-btn:hover {
+      transform: scale(1.05); /* Ελαφριά αύξηση στο hover */
+    }
+  }
+
+ /* Responsive Rules for Small Screens */
+@media (max-width: 480px) {
+  .table-header {
+    display: none; /* Απόκρυψη του header για μικρές οθόνες */
+  }
+
+  .user-row {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+    background-color: #f7f9fc;
+  }
+
+  .user-row span {
+    font-size: 0.85rem; /* Μείωση γραμματοσειράς */
+    margin-bottom: 0.5rem;
+    position: relative; /* Χρειάζεται για το pseudo-element */
+  }
+
+  .user-row span::before {
+    content: attr(data-label); /* Εμφανίζει το data-label */
+    font-weight: bold;
+    color: #3a6073; /* Χρώμα τίτλων */
+    margin-right: 0.5rem;
+    display: inline-block;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+
+  .edit-btn, .delete-btn {
+    font-size: 0.75rem; /* Μικρότερη γραμματοσειρά */
+    padding: 0.4rem 0.8rem; /* Μείωση padding */
+  }
+}
+
+
   

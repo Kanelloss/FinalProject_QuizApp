@@ -72,10 +72,7 @@
     font-weight: 500;
     color: #3a6073;
   }
-  
-  mat-radio-button.mat-radio-checked {
-    color: #ff8e2b;
-  }
+
   
   /* Button container */
   .button-container {
@@ -107,14 +104,24 @@
     background-color: #d35d5d;
   }
   
-  button.save-btn {
-    background-color: #3a6073;
-    color: white;
-  }
-  
-  button.save-btn:hover {
-    background-color: #238137;
-  }
+  /* Αχνο κουμπί όταν δεν είναι έγκυρο */
+button.save-btn:disabled {
+  background-color: #e0e0e0; /* Απαλό γκρι */
+  color: #b0b0b0; /* Απαλό γκρι για το κείμενο */
+  cursor: not-allowed;
+  box-shadow: none; /* Αφαίρεση σκιάς */
+}
+
+/* Ενεργό κουμπί */
+button.save-btn {
+  background-color: #3a6073; /* Σκούρο μπλε */
+  color: white;
+}
+
+button.save-btn:hover:enabled {
+  background-color: #28526a; /* Ελαφρώς πιο σκούρο */
+}
+
 
   .role-select {
     margin-top: -2rem;

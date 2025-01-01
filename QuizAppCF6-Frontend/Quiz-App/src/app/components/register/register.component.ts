@@ -7,6 +7,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRadioModule } from '@angular/material/radio';
 import { User } from '../../shared/interfaces/user';
+import { MatDialog } from '@angular/material/dialog';
+import { AlertDialogComponent } from '../../shared/components/alert-dialog/alert-dialog.component';
 
 @Component({
   selector: 'app-register',
@@ -25,6 +27,7 @@ import { User } from '../../shared/interfaces/user';
 export class RegisterComponent {
   userService = inject(UserService);
   router = inject(Router);
+  dialog = inject(MatDialog);
 
   successMessage = '';
   errorMessage = '';
@@ -53,20 +56,21 @@ export class RegisterComponent {
         UserRole: formValue.role as 'Admin' | 'User',
       };
 
-      console.log('Sending user object to backend:', user);
-
       this.userService.registerUser(user).subscribe({
         next: () => {
-          this.successMessage = 'Registration successful! Redirecting to login...';
-          this.errorMessage = '';
+          // Εμφάνιση του AlertDialogComponent
+          this.dialog.open(AlertDialogComponent, {
+            data: { message: 'User registered successfully' },
+          });
+  
+          // Κατεύθυνση στο login μετά από 0.5 δευτερόλεπτα
           setTimeout(() => {
             this.router.navigate(['/login']);
-          }, 1000);
+          }, 500);
         },
         error: (error) => {
-          console.error('Registration failed:', error.error?.message || 'Unexpected error occurred.');
-          this.errorMessage = error.error?.message || 'Unexpected error occurred.';
-          this.successMessage = '';
+          console.error('Registration failed:', error);
+          alert('Failed to register user. Please try again.');
         },
       });
     }

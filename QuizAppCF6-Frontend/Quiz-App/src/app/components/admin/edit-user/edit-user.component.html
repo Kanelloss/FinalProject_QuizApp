@@ -1,7 +1,7 @@
 <div class="edit-user-container">
     <h2>Edit User</h2>
     <h6 class="text-slate-600 text-base">Update user details</h6>
-  
+
     <form class="shadow-md rounded-md p-5 bg-white w-full max-w-3xl" [formGroup]="form" (ngSubmit)="onSubmit()">
       <!-- Username Field -->
       <mat-form-field appearance="fill" class="w-full">
@@ -14,18 +14,25 @@
           <div class="validation-error">Username must be at least 2 characters long.</div>
         }
       </mat-form-field>
-  
+
       <!-- Password Field -->
-      <mat-form-field appearance="fill" class="w-full">
-        <mat-label>Password</mat-label>
-        <input matInput type="password" placeholder="Password" formControlName="password" />
-        @if (form.get('password')?.invalid && form.get('password')?.touched) {
-          <div class="validation-error">
-            Password must be at least 8 characters long, include at least one uppercase letter, one lowercase letter, one digit, and one special character.
-          </div>
-        }
-      </mat-form-field>
-  
+    <mat-form-field appearance="fill" class="w-full">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" placeholder="Password" formControlName="password" />
+      @if (form.get('password')?.hasError('required') && form.get('password')?.touched) {
+        <div class="validation-error">Password is required.</div>
+      }
+      @if (form.get('password')?.hasError('minlength') && form.get('password')?.touched) {
+        <div class="validation-error">Password must be at least 8 characters long.</div>
+      }
+      @if (form.get('password')?.hasError('pattern') && form.get('password')?.touched) {
+        <div class="validation-error">
+          Password must include at least one uppercase letter, one lowercase letter, one digit, and one special character.
+        </div>
+      }
+    </mat-form-field>
+
+
       <!-- Email Field -->
       <mat-form-field appearance="fill" class="w-full">
         <mat-label>Email</mat-label>
@@ -37,21 +44,21 @@
           <div class="validation-error">Please enter a valid email address.</div>
         }
       </mat-form-field>
-  
-      <!-- Role Field -->
+
+      <!-- User Role Field -->
       <div class="mb-4">
-        <h6 class="text-slate-600 text-base role-select">Select Role</h6>
-        <mat-radio-group formControlName="role">
+        <h6 class="text-slate-600 text-base">Select Role</h6>
+        <mat-radio-group formControlName="userRole"> <!-- Updated formControlName -->
           @for (role of ['User', 'Admin']; track role) {
-            <mat-radio-button class="block role-choices" [value]="role">{{ role }}</mat-radio-button>
+            <mat-radio-button class="block" [value]="role">{{ role }}</mat-radio-button>
           }
         </mat-radio-group>
-        @if (form.get('role')?.hasError('required') && form.get('role')?.touched) {
+        @if (form.get('userRole')?.hasError('required') && form.get('userRole')?.touched) {
           <div class="validation-error">Role is required.</div>
         }
       </div>
-  
-      <!-- Buttons Container -->
+
+      <!-- Buttons -->
       <div class="button-container">
         <button
           type="button"
@@ -69,5 +76,4 @@
         </button>
       </div>
     </form>
-  </div>
-  
+</div>

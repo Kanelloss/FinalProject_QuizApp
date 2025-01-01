@@ -6,6 +6,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRadioModule } from '@angular/material/radio';
+import { AlertDialogComponent } from '../../../shared/components/alert-dialog/alert-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-edit-user',
@@ -25,6 +27,7 @@ export class EditUserComponent implements OnInit {
   userService = inject(UserService);
   router = inject(Router);
   route = inject(ActivatedRoute);
+  dialog = inject(MatDialog);
 
   form!: FormGroup;
 
@@ -40,11 +43,12 @@ export class EditUserComponent implements OnInit {
     this.form = new FormGroup({
       username: new FormControl('', [Validators.required, Validators.minLength(2)]),
       password: new FormControl('', [
+        Validators.required,
         Validators.minLength(8),
         Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).+$/),
       ]),
       email: new FormControl('', [Validators.required, Validators.email]),
-      role: new FormControl('User', [Validators.required]),
+      userRole: new FormControl('User', [Validators.required]),
     });
   }
 
@@ -64,14 +68,16 @@ export class EditUserComponent implements OnInit {
     });
   }
 
-  onSubmit() {
+   onSubmit() {
     if (this.form.valid) {
       const formValue = this.form.value;
-  
+
       this.userService.updateUser(this.route.snapshot.params['id'], formValue).subscribe({
         next: () => {
-          alert('User updated successfully!');
-          this.router.navigate(['/admin/users']);
+          this.showSuccessDialog('User updated successfully!');
+          setTimeout(() => {
+            this.router.navigate(['/admin/users']);
+          }, 500); // Add a 0.5-second delay
         },
         error: (error) => {
           if (error.error && error.error.errors) {
@@ -82,11 +88,29 @@ export class EditUserComponent implements OnInit {
               }
             }
           } else {
-            alert('Failed to update user.');
+            this.showErrorDialog('Failed to update user. Please try again.');
           }
         },
       });
     }
+  }
+
+  showSuccessDialog(message: string) {
+    this.dialog.open(AlertDialogComponent, {
+      data: {
+        title: 'Success',
+        message: message,
+      },
+    });
+  }
+
+  showErrorDialog(message: string) {
+    this.dialog.open(AlertDialogComponent, {
+      data: {
+        title: 'Error',
+        message: message,
+      },
+    });
   }
   
 

@@ -37,7 +37,39 @@
     color: white;
   }
 
-  /* .category-choice {
-    width: 40rem;
-  } */
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .leaderboards-container {
+      padding: 1rem;
+  }
+
+  .leaderboards-container h1 {
+      font-size: 1.5rem!important; /* Μειώνεται από 2rem */
+  }
+
+  .leaderboards-container p {
+      font-size: 0.9rem!important; /* Μειώνεται από 1rem */
+  }
+
+  .leaderboards-table th {
+      font-size: 0.9rem!important; /* Μειώνεται ελαφρώς */
+  }
+
+  .leaderboards-table td {
+      font-size: 0.8rem!important; /* Μειώνεται ελαφρώς */
+      padding: 0.5rem!important;
+  }
+
+  .mat-form-field {
+      font-size: 0.9rem!important; /* Μειώνεται από 1rem */
+  }
+
+  .mat-select {
+      font-size: 0.9rem!important;
+  }
+
+  .mat-select-placeholder {
+      font-size: 0.85rem!important;
+  }
+}
   

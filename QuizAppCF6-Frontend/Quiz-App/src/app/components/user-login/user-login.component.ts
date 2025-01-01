@@ -68,7 +68,7 @@ export class UserLoginComponent {
       localStorage.setItem('role', role);
 
        // Ορισμός μηνύματος επιτυχίας
-       this.successMessage = 'Login successful! Redirecting...';
+       this.successMessage = 'Successful login!';
        this.errorMessage = null;
 
        setTimeout(() => {

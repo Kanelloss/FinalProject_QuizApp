@@ -105,7 +105,8 @@ export class UserService {
     return this.http.get<any>(`${apiUrl}/${id}`);
   }
 
-  updateUser(id: number, user: any): Observable<any> {
-    return this.http.put<any>(`${apiUrl}/${id}`, user);
+  updateUser(id: number, user: any) {
+    console.log('Data sent to backend:', user); // Debug τα δεδομένα
+    return this.http.put(`${apiUrl}/${id}`, user);
   }
 }

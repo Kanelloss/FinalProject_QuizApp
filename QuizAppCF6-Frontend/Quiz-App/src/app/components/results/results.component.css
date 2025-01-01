@@ -1,84 +1,111 @@
 .results-container {
-    max-width: 800px;
-    margin: 2rem auto;
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-  }
-  
-  h1 {
-    font-size: 2rem;
-    color: #ff8e2b;
-    margin-bottom: 1rem;
-  }
-  
-  .score {
-    font-size: 1.5rem;
-    color: #3a6073;
-    margin-bottom: 2rem;
-  }
-  
-  .questions-review {
-    margin-top: 1rem;
-    text-align: left;
-  }
-  
-  .questions-review h2 {
-    font-size: 1.2rem;
-    color: #3a6073;
-    margin-bottom: 1rem;
-  }
-  
-  .questions-review ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .questions-review li {
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    background: #f7f9fc;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .correct {
-    color: green;
-  }
-  
-  .incorrect {
-    color: red;
-  }
-  
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #ff8e2b;
+  margin-bottom: 1rem;
+}
+
+.score {
+  font-size: 1.5rem;
+  color: #3a6073;
+  margin-bottom: 2rem;
+}
+
+.questions-review {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.questions-review h2 {
+  font-size: 1.2rem;
+  color: #3a6073;
+  margin-bottom: 1rem;
+}
+
+.questions-review ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.questions-review li {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f7f9fc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1rem; /* Default font size */
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
+
+.actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around; /* Ομοιόμορφη απόσταση */
+  gap: 1rem;
+  flex-wrap: nowrap; /* Δεν θα τυλίγονται τα κουμπιά */
+}
+
+.action-button {
+  background-color: #3a6073;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  flex: 1; /* Ισομεγέθη κουμπιά */
+  text-align: center;
+  min-width: 100px; /* Ελάχιστο πλάτος για να μην κολλάνε */
+}
+
+.action-button:hover {
+  background-color: #ff8e2b;
+}
+
+.retry-button {
+  background-color: #3a6073;
+}
+
+.retry-button:hover {
+  background-color: #ff8e2b;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
   .actions {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-around;
+    flex-wrap: nowrap; /* Διατήρηση της ίδιας γραμμής */
+    justify-content: space-around; /* Διατήρηση ομοιόμορφης απόστασης */
   }
-  
+
   .action-button {
-    background-color: #3a6073;
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
+    padding: 0.5rem 1rem; /* Μείωση padding */
+    font-size: 0.875rem; /* Μικρότερη γραμματοσειρά */
+    flex: 1;
+    min-width: 80px; /* Μικρότερο ελάχιστο πλάτος */
   }
-  
-  .action-button:hover {
-    background-color: #ff8e2b;
+}
+
+@media (max-width: 480px) {
+  .action-button {
+    font-size: 0.8rem; /* Ακόμη μικρότερη γραμματοσειρά */
+    padding: 0.4rem 0.8rem;
   }
-  
-  .retry-button {
-    background-color: #ff8e2b;
-  }
-  
-  .retry-button:hover {
-    background-color: #3a6073;
-  }
-  
+}

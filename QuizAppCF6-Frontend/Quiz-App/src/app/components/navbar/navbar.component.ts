@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { UserService } from '../../shared/services/user.service';
 import { RouterModule, Router } from '@angular/router';
 import { ConfirmDialogComponent } from '../../confirm-dialog/confirm-dialog.component';
@@ -20,6 +20,14 @@ export class NavbarComponent {
 
 toggleMenu() {
   this.menuOpen = !this.menuOpen;
+}
+
+@HostListener('window:resize', ['$event'])
+onResize(event: Event) {
+  const width = (event.target as Window).innerWidth;
+  if (width > 768 && this.menuOpen) {
+    this.menuOpen = false; // Close menu if screen is resized to larger size
+  }
 }
 
   isLoggedIn(): boolean {
@@ -45,7 +53,7 @@ toggleMenu() {
     dialogRef.afterClosed().subscribe((confirmed) => {
       if (confirmed) {
         this.userService.logoutUser();
-        this.router.navigate(['/login']);
+        this.router.navigate(['/welcome']);
       }
     });
   }

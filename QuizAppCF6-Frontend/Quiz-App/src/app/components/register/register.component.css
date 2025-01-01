@@ -1,31 +1,120 @@
-/* Style for the role section */
-mat-radio-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  mat-radio-button {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #3A6073;
-  }
-  
-  mat-radio-button.mat-radio-checked {
-    color: #3A6073; /* Χρώμα όταν είναι επιλεγμένο */
-  }
-  
-  mat-radio-button:hover {
-    background-color: rgba(58, 96, 115, 0.1); /* Διακριτικό hover */
-    border-radius: 4px;
-  }
-
-  /* Στυλ για τα Validation Errors */
-.validation-error {
-  font-size: 0.75rem; /* Μικρότερο μέγεθος (14px) */
-  color: #d10c0c; /* Απαλό κόκκινο */
-  margin-top: 0.25rem; /* Διακριτική απόσταση από το πεδίο */
-  font-weight: 500; /* Ελαφρώς πιο έντονη γραφή */
+/* Container styling */
+.h-screen {
+  background-color: #f7f9fc; /* Light gray background for contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-  
+form {
+  max-width: 500px; /* Align form width to Edit User */
+  width: 100%;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header styling */
+h1 {
+  font-size: 2rem;
+  color: #ff8e2b; /* Match the orange tone */
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+h6 {
+  text-align: center;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #3a6073; /* Dark blue for subtitle */
+  margin-bottom: 2rem;
+}
+
+/* Form field styling */
+mat-form-field {
+  width: 100%; /* Ensure fields span the form width */
+}
+
+.mat-input-element {
+  font-size: 1rem;
+}
+
+mat-form-field.mat-form-field {
+  font-size: 1rem;
+}
+
+/* Validation error styling */
+.validation-error {
+  font-size: 0.875rem;
+  color: #d10c0c;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+/* Radio group styling */
+mat-radio-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+mat-radio-button {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #3a6073;
+}
+
+mat-radio-button.mat-radio-checked {
+  color: #ff8e2b; /* Match the orange tone when selected */
+}
+
+mat-radio-button:hover {
+  background-color: rgba(58, 96, 115, 0.1);
+  border-radius: 4px;
+}
+
+/* Button styling */
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"] {
+  background-color: #ccc; /* Light gray when disabled */
+  color: white;
+  width: 100%;
+  cursor: not-allowed; /* Show "not-allowed" cursor when disabled */
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:not(:disabled) {
+  background-color: #3a6073; /* Dark blue when enabled */
+  cursor: pointer; /* Default pointer cursor when enabled */
+}
+
+button[type="submit"]:not(:disabled):hover {
+  background-color: #28526a; /* Darker blue on hover */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  form {
+    padding: 1rem;
+    max-width: 90%; /* Reduce form width for smaller screens */
+  }
+
+  button {
+    font-size: 0.875rem;
+    padding: 0.625rem 1.25rem;
+  }
+}

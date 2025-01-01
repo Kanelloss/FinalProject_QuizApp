@@ -75,10 +75,4 @@ export class AdminUsersComponent implements OnInit {
       }
     });
   }
-  
-
-  addUser() {
-    console.log('Adding a new user');
-    // Implement logic for adding a new user
-  }
 }

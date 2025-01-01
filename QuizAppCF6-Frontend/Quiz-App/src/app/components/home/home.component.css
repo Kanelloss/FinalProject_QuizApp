@@ -1,45 +1,126 @@
 .container {
-    max-width: 75rem;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
 
-  }
-  
-  .mat-icon {
-    font-size: 3rem;
-    color: #3a6073;
-  }
-  
-  div:hover {
-    cursor: pointer;
+.mat-icon {
+  font-size: 3rem;
+  color: #3a6073;
+}
+
+div:hover {
+  cursor: pointer;
+}
+
+.square {
+  border-radius: 15px;
+  padding: 2rem;
+  transition: all 0.1s ease-in-out;
+  text-align: center;
+  width: 100%;
+}
+
+.square:hover {
+  border: 3px solid #ff8e2b;
+}
+
+.custom-paragraph {
+  color: #3a6073;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Header Section */
+h1 {
+  font-size: 4rem;
+  color: #ff8e2b;
+  font-family: 'Brush Script MT', cursive;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+mat-dialog-content {
+  font-size: 1.2rem;
+  color: #ff8e2b;
+}
+
+mat-dialog-actions {
+  margin-top: 1rem;
+}
+
+/* Responsive Adjustments */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+      gap: 1rem;
   }
 
   .square {
-    border-radius: 15px;
+      padding: 1.5rem;
+      font-size: 0.9rem;
   }
 
-  .square:hover {
-    border: 3px solid #ff8e2b;
+  .mat-icon {
+      font-size: 2.5rem;
+  }
+
+  h1 {
+      font-size: 3rem;
   }
 
   .custom-paragraph {
-    color: #3a6073;
-    font-family: 'Brush Script MT', cursive;
-    font-size: 2rem;
+      font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+      gap: 1rem;
   }
 
-   /* Header Section */
+  .square {
+      padding: 1rem;
+      font-size: 0.8rem;
+  }
+
+  .mat-icon {
+      font-size: 2rem;
+  }
+
   h1 {
-    font-size: 4rem;
-    color: #ff8e2b; /* Logo Color */
-    font-family: 'Brush Script MT', cursive;
-    margin-bottom: 0.5rem;
+      font-size: 2.5rem;
   }
-  
-  mat-dialog-content {
-    font-size: 1.2rem;
-    color: #ff8e2b;
+
+  .custom-paragraph {
+      font-size: 1.8rem;
   }
-  
-  mat-dialog-actions {
-    margin-top: 1rem;
+}
+
+@media (max-width: 480px) {
+  .grid {
+      grid-template-columns: repeat(2, 1fr); /* Still 2 columns for very small screens */
+      gap: 0.8rem;
   }
-  
+
+  .square {
+      padding: 0.8rem;
+      font-size: 0.7rem;
+  }
+
+  .mat-icon {
+      font-size: 1.8rem;
+  }
+
+  .custom-paragraph {
+    font-size: 1.5rem;
+}
+}

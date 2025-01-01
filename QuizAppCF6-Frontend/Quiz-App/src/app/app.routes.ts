@@ -24,7 +24,7 @@ export const routes: Routes = [
     { path: 'results', component: ResultsComponent, canActivate: [authGuard] },
     { path: 'admin/users', component: AdminUsersComponent, canActivate: [authGuard] },
     { path: 'admin/users/edit/:id', component: EditUserComponent, canActivate: [authGuard]},
-    { path: '**', redirectTo: 'login' }
+    { path: '**', redirectTo: 'welcome' }
 ];
 
 @NgModule({

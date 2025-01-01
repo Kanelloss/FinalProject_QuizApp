@@ -12,11 +12,11 @@
   
       @for (user of users; track user) {
         <div class="user-row">
-          <span>{{ user.id }}</span>
-          <span>{{ user.username }}</span>
-          <span>{{ user.email }}</span>
-          <span class="capitalize">{{ user.userRole }}</span>
-          <span class="actions">
+          <span data-label="ID:">{{ user.id }}</span>
+          <span data-label="Username:">{{ user.username }}</span>
+          <span data-label="Email:">{{ user.email }}</span>
+          <span data-label="Role:" class="capitalize">{{ user.userRole }}</span>
+          <span class="actions" data-label="Actions:">
             <button class="edit-btn" (click)="editUser(user.id)">Edit</button>
             <button class="delete-btn" (click)="deleteUser(user.id)">Delete</button>
           </span>
@@ -29,9 +29,4 @@
         </div>
       }
     </div>
-  
-    <div class="add-user">
-      <button class="add-user-btn" (click)="addUser()">Add New User</button>
-    </div>
-  </div>
   
