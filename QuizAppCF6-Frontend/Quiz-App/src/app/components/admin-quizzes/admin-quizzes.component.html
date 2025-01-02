@@ -1,0 +1,34 @@
+<div class="admin-container">
+    <h2>Quiz Management</h2>
+  
+    <div class="quizzes-table">
+      <div class="table-header">
+        <span>ID</span>
+        <span>Title</span>
+        <span>Description</span>
+        <span>Actions</span>
+      </div>
+  
+      @for (quiz of quizzes; track quiz) {
+        <div class="quiz-row">
+          <span data-label="ID:">{{ quiz.id }}</span>
+          <span data-label="Title:">{{ quiz.title }}</span>
+          <span data-label="Description:">{{ quiz.description }}</span>
+          <span class="actions">
+            <button class="edit-btn" (click)="editQuiz(quiz.id)">Edit</button>
+            <button class="delete-btn" (click)="deleteQuiz(quiz.id)">Delete</button>
+          </span>
+        </div>
+      }
+  
+      @if (!quizzes.length) {
+        <div class="no-quizzes">
+          <p>No quizzes available.</p>
+        </div>
+      }
+    </div>
+
+    <div class="add-quiz">
+        <button class="add-quiz-btn " (click)="navigateToAddQuiz()">Add New Quiz</button>
+      </div>
+    </div>

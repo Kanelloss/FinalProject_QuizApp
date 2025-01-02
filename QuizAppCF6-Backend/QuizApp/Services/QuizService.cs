@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Options;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using QuizApp.Data;
 using QuizApp.DTO;
 using QuizApp.Repositories;
@@ -221,6 +222,22 @@ namespace QuizApp.Services
                 QuestionResults = questionResults
             };
         }
+
+        public async Task<IEnumerable<QuizBasicDTO>> GetAllQuizzesAsync()
+        {
+            var quizzes = await _quizRepository.GetAllAsync(); // Ανάκτηση quizzes
+            return quizzes.Select(quiz => new QuizBasicDTO
+            {
+                Id = quiz.Id,
+                Title = quiz.Title,
+                Description = quiz.Description
+            }).ToList();
+        }
+
+
+
+
+
 
 
 

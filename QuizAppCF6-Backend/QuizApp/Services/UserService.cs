@@ -107,6 +107,19 @@ namespace QuizApp.Services
             };
         }
 
+        public async Task<IEnumerable<UserReadOnlyDTO>> GetAllUsersAsync()
+        {
+            var users = await _userRepository.GetAllAsync();
+            return users.Select(user => new UserReadOnlyDTO
+            {
+                Id = user.Id,
+                Username = user.Username,
+                Email = user.Email,
+                UserRole = user.UserRole
+            }).ToList();
+        }
+
+
         public async Task<bool> UpdateUserAsync(int userId, UserUpdateDTO dto)
         {
             var user = await _userRepository.GetByIdAsync(userId);

@@ -12,6 +12,8 @@ namespace QuizApp.Services
         Task<QuestionReadOnlyDTO?> GetQuestionByIndexAsync(int quizId, int index); // Επιστροφή ερώτησης βάσει index
         Task<bool> UpdateQuestionAsync(int questionId, QuestionUpdateDTO dto);
         Task<QuizResultDTO?> EvaluateQuizAsync(int quizId, List<AnswerDTO> answers, int userId);
+        Task<IEnumerable<QuizBasicDTO>> GetAllQuizzesAsync();
+
 
         //Task<QuestionReadOnlyDTO?> GetQuestionByIdAsync(int quizId, int questionId); // Επιστροφή ερώτησης βάσει id
         //Task<QuizResultDTO?> EvaluateQuizAsync(int quizId, List<AnswerDTO> answers); // Αξιολόγηση απαντήσεων (δεν έκανε submit).

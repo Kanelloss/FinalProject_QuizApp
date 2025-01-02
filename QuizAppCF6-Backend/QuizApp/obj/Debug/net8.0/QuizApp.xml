@@ -146,6 +146,22 @@
             <response code="404">If the quiz or high scores are not found.</response>
             <response code="500">If an unexpected error occurs.</response>
         </member>
+        <member name="M:QuizApp.Controllers.QuizController.GetAllQuizzes">
+            <summary>
+            Retrieves all quizzes in the system.
+            </summary>
+            <remarks>
+            This endpoint allows an admin to retrieve a list of all quizzes, including their ID, title, and description.
+            </remarks>
+            <returns>
+            A list of quizzes in JSON format.
+            </returns>
+            <response code="200">Returns the list of quizzes.</response>
+            <response code="404">No quizzes were found.</response>
+            <response code="401">Unauthorized. The user must be logged in.</response>
+            <response code="403">Forbidden. Only admins can access this endpoint.</response>
+            <response code="500">An unexpected error occurred.</response>
+        </member>
         <member name="M:QuizApp.Controllers.UserController.SignUp(QuizApp.DTO.UserSignUpDTO)">
             <summary>
             Registers a new user into the system.
@@ -193,6 +209,17 @@
             <param name="username">The username of the user to retrieve.</param>
             <response code="200">User details retrieved successfully.</response>
             <response code="404">User not found.</response>
+        </member>
+        <member name="M:QuizApp.Controllers.UserController.GetAllUsers">
+            <summary>
+            Retrieves all users from the system.
+            </summary>
+            <remarks>
+            This endpoint is available to administrators and returns a list of all registered users, including their basic details.
+            </remarks>
+            <response code="200">A list of users retrieved successfully.</response>
+            <response code="404">No users found in the system.</response>
+            <response code="500">An unexpected error occurred.</response>
         </member>
         <member name="M:QuizApp.Controllers.UserController.UpdateUser(System.Int32,QuizApp.DTO.UserUpdateDTO)">
             <summary>

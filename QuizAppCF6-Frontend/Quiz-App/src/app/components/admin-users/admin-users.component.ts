@@ -75,4 +75,8 @@ export class AdminUsersComponent implements OnInit {
       }
     });
   }
+
+  navigateToRegister() {
+    this.router.navigate(['/register']); // Navigate to Register Page
+  }
 }

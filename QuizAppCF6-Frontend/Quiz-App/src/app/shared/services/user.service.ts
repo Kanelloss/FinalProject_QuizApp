@@ -109,4 +109,5 @@ export class UserService {
     console.log('Data sent to backend:', user); // Debug τα δεδομένα
     return this.http.put(`${apiUrl}/${id}`, user);
   }
+  
 }

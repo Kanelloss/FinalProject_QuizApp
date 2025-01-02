@@ -1,0 +1,243 @@
+.admin-container {
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .admin-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #ff8e2b;
+    margin-bottom: 1.5rem;
+  }
+  
+  .quizzes-table {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 2fr;
+    background-color: #3a6073;
+    color: white;
+    padding: 1rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .quiz-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 2fr;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+  }
+  
+  .quiz-row:nth-child(even) {
+    background-color: #f7f9fc;
+  }
+  
+  .quiz-row:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  
+  .quiz-row span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .edit-btn {
+    background-color: #3a6073;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 1rem;
+  }
+  
+  .edit-btn:hover {
+    background-color: #28526a;
+  }
+  
+  .delete-btn {
+    background-color: #ff8e2b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-btn:hover {
+    background-color: #cc731f;
+  }
+
+  .add-quiz {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .add-quiz-btn {
+    background-color: #3a6073;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .add-quiz-btn:hover {
+    background-color: #cc731f;
+  }
+
+  /* New Style for Edit Questions Button */
+.edit-questions-btn {
+  background-color: #3a6073;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-questions-btn:hover {
+  background-color: #28526a;
+}
+
+/* Adjusted Actions Section for Three Buttons */
+.actions {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 0.3rem;
+}
+
+.add-quiz-btn {
+  background-color: #28526a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-quiz-btn:hover {
+  background-color: #ff8e2b;
+  color: white;
+}
+
+.edit-btn,
+.delete-btn,
+.edit-questions-btn {
+  font-size: 0.9rem; /* Μικρότερη γραμματοσειρά */
+  padding: 0.3rem 0.5rem; /* Μειωμένο padding */
+  border-radius: px; /* Μικρότερες γωνίες */
+}
+
+
+.edit-btn {
+  background-color: #3a6073;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+  
+   /* Adjust for smaller screens */
+   @media (max-width: 768px) {
+    .admin-container h2 {
+      text-align: center;
+      font-size: 1.5rem; /* Μείωση από 2rem */
+      color: #ff8e2b;
+      margin-bottom: 1rem;
+    }
+    
+    .table-header {
+      font-size: 0.9rem; /* Μείωση από το default */
+    }
+    
+    .quiz-row span {
+      font-size: 0.7rem; /* Μείωση από το default */
+    }
+
+    .edit-btn, .delete-btn {
+      font-size: 0.75rem; /* Μείωση της γραμματοσειράς */
+      padding: 0.4rem 0.8rem; /* Μείωση padding */
+      border-radius: 4px; /* Ελαφρώς μικρότερα κουμπιά */
+    }
+    
+    .edit-btn:hover, .delete-btn:hover {
+      transform: scale(1.05); /* Ελαφριά αύξηση στο hover */
+    }
+    
+    .add-quiz-btn {
+      font-size: 0.85rem; /* Μείωση της γραμματοσειράς */
+      padding: 0.5rem 1rem; /* Μείωση padding */
+    }
+    
+    .add-quiz-btn:hover {
+      transform: scale(1.05); /* Ελαφριά αύξηση στο hover */
+    }
+  }
+
+ /* Responsive Rules for Small Screens */
+@media (max-width: 480px) {
+  .table-header {
+    display: none; /* Απόκρυψη του header για μικρές οθόνες */
+  }
+
+  .quiz-row {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+    background-color: #f7f9fc;
+  }
+
+  .quiz-row span {
+    font-size: 0.9rem; /* Μείωση γραμματοσειράς */
+    margin-bottom: 0.5rem;
+    position: relative; /* Χρειάζεται για το pseudo-element */
+  }
+
+  .quiz-row span::before {
+    content: attr(data-label); /* Εμφανίζει το data-label */
+    font-weight: bold;
+    color: #3a6073; /* Χρώμα τίτλων */
+    margin-right: 0.5rem;
+    display: inline-block;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+
+  .edit-btn, .delete-btn {
+    font-size: 0.75rem; /* Μικρότερη γραμματοσειρά */
+    padding: 0.4rem 0.8rem; /* Μείωση padding */
+  }
+}
+
+
+  

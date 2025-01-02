@@ -12,6 +12,7 @@ import { QuizComponent } from './components/quiz/quiz.component';
 import { ResultsComponent } from './components/results/results.component';
 import { AdminUsersComponent } from './components/admin-users/admin-users.component';
 import { EditUserComponent } from './components/admin/edit-user/edit-user.component';
+import { AdminQuizzesComponent } from './components/admin-quizzes/admin-quizzes.component';
 
 export const routes: Routes = [
     { path: '', component: WelcomeComponent },
@@ -24,6 +25,7 @@ export const routes: Routes = [
     { path: 'results', component: ResultsComponent, canActivate: [authGuard] },
     { path: 'admin/users', component: AdminUsersComponent, canActivate: [authGuard] },
     { path: 'admin/users/edit/:id', component: EditUserComponent, canActivate: [authGuard]},
+    { path: 'admin/quizzes', component: AdminQuizzesComponent, canActivate: [authGuard]},
     { path: '**', redirectTo: 'welcome' }
 ];
 

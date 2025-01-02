@@ -13,6 +13,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class NavbarComponent {
   menuOpen = false;
+  adminDropdownOpen = false; // Για το dropdown του Admin Panel
   userService = inject(UserService);
   router = inject(Router);
   dialog = inject(MatDialog);
@@ -60,6 +61,15 @@ onResize(event: Event) {
 
   isAdmin(): boolean {
     return this.userService.isAdmin();
+  }
+
+  toggleAdminDropdown() {
+    this.adminDropdownOpen = !this.adminDropdownOpen;
+  }
+
+  navigateAndCloseDropdown(route: string) {
+    this.router.navigate([route]);
+    this.adminDropdownOpen = false; // Κλείσιμο του dropdown
   }
   
 

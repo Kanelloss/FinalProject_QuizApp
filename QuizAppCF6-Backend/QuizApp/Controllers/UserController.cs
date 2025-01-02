@@ -193,6 +193,42 @@ namespace QuizApp.Controllers
             return Ok(user);
         }
 
+        /// <summary>
+        /// Retrieves all users from the system.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint is available to administrators and returns a list of all registered users, including their basic details.
+        /// </remarks>
+        /// <response code="200">A list of users retrieved successfully.</response>
+        /// <response code="404">No users found in the system.</response>
+        /// <response code="500">An unexpected error occurred.</response>
+        [HttpGet("getall")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> GetAllUsers()
+        {
+            // Retrieve user information from JWT
+            var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+
+            try
+            {
+                var users = await _userService.GetAllUsersAsync();
+                if (users == null || !users.Any())
+                {
+                    _logger.LogWarning("No users found. Requested by Admin ID {AdminId}.", currentUserId);
+                    return NotFound(new { Message = "No users found." });
+                }
+
+                _logger.LogInformation("All users retrieved successfully by Admin ID {AdminId}.", currentUserId);
+                return Ok(users);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Unexpected error occurred while retrieving users. Requested by Admin ID {AdminId}.", currentUserId);
+                return StatusCode(500, new { Message = "An unexpected error occurred." });
+            }
+        }
+
+
 
         /// <summary>
         /// Updates user details.
@@ -341,6 +377,9 @@ namespace QuizApp.Controllers
                 return StatusCode(500, new { Message = "An error occurred while retrieving quiz history.", Details = ex.Message });
             }
         }
+
+        
+
 
 
         //[Authorize]

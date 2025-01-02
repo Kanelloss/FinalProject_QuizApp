@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using QuizApp.DTO;
 using QuizApp.Services;
 using Serilog;
@@ -433,6 +434,46 @@ namespace QuizApp.Controllers
                 return StatusCode(500, new { Message = "An error occurred while retrieving high scores.", Details = ex.Message });
             }
         }
+
+        /// <summary>
+        /// Retrieves all quizzes in the system.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint allows an admin to retrieve a list of all quizzes, including their ID, title, and description.
+        /// </remarks>
+        /// <returns>
+        /// A list of quizzes in JSON format.
+        /// </returns>
+        /// <response code="200">Returns the list of quizzes.</response>
+        /// <response code="404">No quizzes were found.</response>
+        /// <response code="401">Unauthorized. The user must be logged in.</response>
+        /// <response code="403">Forbidden. Only admins can access this endpoint.</response>
+        /// <response code="500">An unexpected error occurred.</response>
+        [HttpGet("getall")]
+        [Authorize(Roles = "Admin")] // Μόνο ο Admin μπορεί να δει όλα τα quizzes
+        public async Task<IActionResult> GetAllQuizzes()
+        {
+            var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            try
+            {
+                var quizzes = await _quizService.GetAllQuizzesAsync();
+                if (quizzes == null || !quizzes.Any())
+                {
+                    _logger.LogWarning("No quizzes found. Requested by Admin ID {AdminId}.", currentUserId);
+                    return NotFound(new { Message = "No quizzes found." });
+                }
+                _logger.LogInformation("All quizzes retrieved successfully by Admin ID {AdminId}.", currentUserId);
+                return Ok(quizzes);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while retrieving all quizzes.");
+                return StatusCode(500, new { Message = "An unexpected error occurred. Please try again later." });
+            }
+        }
+
+
+
 
 
         //[HttpGet("{quizId}/questions/{id}")]

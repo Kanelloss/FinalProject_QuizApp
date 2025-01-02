@@ -24,8 +24,17 @@
       <a [routerLink]="['/leaderboards']" routerLinkActive="active">Leaderboards</a>
     </li>
     @if (isAdmin()) {
-      <li>
-        <a [routerLink]="['/admin/users']" routerLinkActive="active">Admin Panel</a>
+       <!-- Dropdown for Admin Panel -->
+       <li class="dropdown">
+        <button class="dropdown-button" (click)="toggleAdminDropdown()">Admin Panel</button>
+        <ul class="dropdown-menu" [class.show]="adminDropdownOpen">
+          <li>
+            <a (click)="navigateAndCloseDropdown('/admin/users')" routerLinkActive="active">User Management</a>
+          </li>
+          <li>
+            <a (click)="navigateAndCloseDropdown('/admin/quizzes')" routerLinkActive="active">Quiz Management</a>
+          </li>
+        </ul>
       </li>
     }
     @if (isLoggedIn()) {

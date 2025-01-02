@@ -4,6 +4,7 @@ import { environment } from '../../../environments/environment';
 import { HttpErrorResponse } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs/internal/firstValueFrom';
 import { QuizResult } from '../interfaces/quizresult';
+import { Observable } from 'rxjs';
 
 const apiUrl = `${environment.apiUrl}/Quiz`; // backend URL.
 
@@ -83,4 +84,18 @@ submitQuiz(quizId: number, answers: any) {
     answers
   );
 }
+
+getAllQuizzes(): Observable<any[]> {
+  return this.http.get<any[]>(`${apiUrl}/getall`);
+}
+
+deleteQuiz(quizId: number): Observable<any> {
+  return this.http.delete(`${apiUrl}/${quizId}`);
+}
+
+addQuiz(quiz: { title: string; description: string }): Observable<any> {
+  return this.http.post<any>(`${apiUrl}`, quiz);
+}
+
+
 }
