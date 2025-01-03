@@ -59,13 +59,22 @@
         }
       </div>
   
-      <button
-        type="submit"
-        [disabled]="!form.valid"
-        class=" submit-but w-full bg-blue-600 text-white font-bold py-2 rounded-md hover:bg-blue-700"
-      >
-        Register
-      </button>
+      <!-- Buttons -->
+      <div class="button-container">
+        <button
+          type="button"
+          class="cancel-btn"
+          (click)="onCancel()"
+        >
+          Cancel
+        </button>
+        <button
+          type="submit"
+          [disabled]="!form.valid"
+          class="save-btn"
+        >
+          Register
+        </button>
+      </div>
     </form>
-  </div>
-  
+</div>

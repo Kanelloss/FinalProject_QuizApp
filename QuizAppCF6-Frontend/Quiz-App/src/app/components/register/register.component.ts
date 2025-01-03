@@ -9,6 +9,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { User } from '../../shared/interfaces/user';
 import { MatDialog } from '@angular/material/dialog';
 import { AlertDialogComponent } from '../../shared/components/alert-dialog/alert-dialog.component';
+import { ConfirmDialogComponent } from '../../confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-register',
@@ -44,6 +45,21 @@ export class RegisterComponent {
     role: new FormControl('User', [Validators.required]), // Default: 'User'
   });
 
+  cancelRegister() {
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+      data: {
+        title: 'Cancel Registration',
+        message: 'Are you sure you want to cancel? All changes will be lost.',
+      },
+    });
+
+    dialogRef.afterClosed().subscribe((confirmed) => {
+      if (confirmed) {
+        this.router.navigate(['/home']);
+      }
+    });
+  }
+
   onSubmit() {
     if (this.form.valid) {
       const formValue = this.form.value;
@@ -69,10 +85,26 @@ export class RegisterComponent {
           }, 500);
         },
         error: (error) => {
-          console.error('Registration failed:', error);
-          alert('Failed to register user. Please try again.');
+          this.dialog.open(AlertDialogComponent, {
+            data: { message: 'Failed to register user, please try again.' },
+          });
         },
       });
     }
+  }
+
+  onCancel() {
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+      data: {
+          title: 'Cancel Editing',
+          message: 'Any changes you made will not be saved. Are you sure you want to cancel?',
+      },
+  });
+
+  dialogRef.afterClosed().subscribe((confirmed) => {
+      if (confirmed) {
+          this.router.navigate(['/admin/users']); // Redirect back to user management page
+      }
+  });
   }
 }

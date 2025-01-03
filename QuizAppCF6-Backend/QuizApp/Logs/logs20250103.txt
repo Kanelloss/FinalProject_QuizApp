@@ -1536,3 +1536,63 @@
 [03-01-2025 19:58:53275 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 9 by User ID 11.
 [03-01-2025 19:58:53284 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 11.
 [03-01-2025 19:58:55185 +02:00 QuizApp.Controllers.UserController ] All users retrieved successfully by Admin ID 11.
+[03-01-2025 20:26:18707 +02:00 QuizApp.Controllers.UserController ] User "Kanellos" logged in successfully.
+[03-01-2025 20:26:22496 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 11.
+[03-01-2025 20:26:22532 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 11.
+[03-01-2025 20:26:22544 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 11.
+[03-01-2025 20:26:22554 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 11.
+[03-01-2025 20:26:22563 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 11.
+[03-01-2025 20:26:22572 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 11.
+[03-01-2025 20:26:22584 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 7 by User ID 11.
+[03-01-2025 20:26:22593 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 8 by User ID 11.
+[03-01-2025 20:26:22605 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 9 by User ID 11.
+[03-01-2025 20:26:22615 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 11.
+[03-01-2025 20:26:24870 +02:00 QuizApp.Controllers.UserController ] All users retrieved successfully by Admin ID 11.
+[03-01-2025 20:26:33642 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 20:26:41786 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 20:26:43843 +02:00 QuizApp.Controllers.UserController ] User with ID 11 retrieved successfully by user 11.
+[03-01-2025 20:26:49945 +02:00 QuizApp.Controllers.UserController ] All users retrieved successfully by Admin ID 11.
+[03-01-2025 20:26:55753 +02:00 QuizApp.Controllers.UserController ] All users retrieved successfully by Admin ID 11.
+[03-01-2025 20:33:15855 +02:00 QuizApp.Controllers.UserController ] User "User" logged in successfully.
+[03-01-2025 20:34:22915 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 13.
+[03-01-2025 20:34:22927 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 13.
+[03-01-2025 20:34:22938 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 13.
+[03-01-2025 20:34:22961 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 13.
+[03-01-2025 20:34:22970 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 13.
+[03-01-2025 20:34:22981 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 13.
+[03-01-2025 20:34:22992 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 7 by User ID 13.
+[03-01-2025 20:34:23001 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 8 by User ID 13.
+[03-01-2025 20:34:23022 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 9 by User ID 13.
+[03-01-2025 20:34:23032 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 13.
+[03-01-2025 20:38:42964 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[03-01-2025 20:38:42990 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[03-01-2025 20:38:43002 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[03-01-2025 20:38:43011 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[03-01-2025 20:38:43019 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[03-01-2025 20:38:43028 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[03-01-2025 20:38:43037 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 7 by User ID 0.
+[03-01-2025 20:38:43047 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 8 by User ID 0.
+[03-01-2025 20:38:43055 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 9 by User ID 0.
+[03-01-2025 20:38:43062 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[03-01-2025 20:38:49982 +02:00 QuizApp.Controllers.UserController ] Failed login attempt for user: "Kanellos"
+[03-01-2025 20:38:54623 +02:00 QuizApp.Controllers.UserController ] User "Kanellos" logged in successfully.
+[03-01-2025 20:38:59951 +02:00 QuizApp.Controllers.UserController ] All users retrieved successfully by Admin ID 11.
+[03-01-2025 20:39:05878 +02:00 QuizApp.Controllers.UserController ] User with ID 11 retrieved successfully by user 11.
+[03-01-2025 20:41:39985 +02:00 QuizApp.Controllers.UserController ] User with ID 11 retrieved successfully by user 11.
+[03-01-2025 20:42:26751 +02:00 QuizApp.Controllers.UserController ] User with ID 11 retrieved successfully by user 11.
+[03-01-2025 20:42:33145 +02:00 QuizApp.Controllers.UserController ] User with ID 11 retrieved successfully by user 11.
+[03-01-2025 20:42:34920 +02:00 QuizApp.Controllers.UserController ] All users retrieved successfully by Admin ID 11.
+[03-01-2025 20:47:00965 +02:00 QuizApp.Controllers.UserController ] SignUp failed for username "Kanellos": "Username is already taken."
+[03-01-2025 20:47:07115 +02:00 QuizApp.Controllers.UserController ] User "Kanellos2" registered successfully.
+[03-01-2025 20:48:21672 +02:00 QuizApp.Controllers.UserController ] SignUp failed for username "Kanellos": "Username is already taken."
+[03-01-2025 20:48:27692 +02:00 QuizApp.Controllers.UserController ] User "Kanellos3" registered successfully.
+[03-01-2025 20:48:35327 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.
+[03-01-2025 20:48:35334 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 0.
+[03-01-2025 20:48:35342 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 0.
+[03-01-2025 20:48:35350 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 0.
+[03-01-2025 20:48:35357 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 0.
+[03-01-2025 20:48:35363 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 0.
+[03-01-2025 20:48:35369 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 7 by User ID 0.
+[03-01-2025 20:48:35375 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 8 by User ID 0.
+[03-01-2025 20:48:35381 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 9 by User ID 0.
+[03-01-2025 20:48:35388 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.

@@ -26,7 +26,9 @@
     @if (isAdmin()) {
       <!-- Dropdown for Admin Panel -->
       <li class="dropdown">
-        <button class="dropdown-button" (click)="toggleAdminDropdown()">Admin Panel</button>
+        <button class="dropdown-button" (click)="toggleAdminDropdown()">Admin Panel
+          <span class="dropdown-icon">▼</span>
+        </button>
         <ul class="dropdown-menu" [class.show]="adminDropdownOpen">
           <li>
             <a (click)="navigateAndCloseDropdown('/admin/users')" routerLinkActive="active">User Management</a>
@@ -40,7 +42,9 @@
     @if (isLoggedIn()) {
       <!-- Dropdown for Account -->
       <li class="dropdown">
-        <button class="dropdown-button" (click)="toggleAccountDropdown()">Account</button>
+        <button class="dropdown-button" (click)="toggleAccountDropdown()">Account
+          <span class="dropdown-icon">▼</span>
+        </button>
         <ul class="dropdown-menu" [class.show]="accountDropdownOpen">
           <li>
             <a (click)="editAccount()">Edit Account</a>
