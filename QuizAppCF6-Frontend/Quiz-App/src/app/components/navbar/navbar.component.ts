@@ -9,38 +9,40 @@ import { MatDialog } from '@angular/material/dialog';
   standalone: true,
   imports: [RouterModule],
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
   menuOpen = false;
-  adminDropdownOpen = false; // Για το dropdown του Admin Panel
+  adminDropdownOpen = false;
+  accountDropdownOpen = false;
   userService = inject(UserService);
   router = inject(Router);
   dialog = inject(MatDialog);
-  user = this.userService.user;
 
-toggleMenu() {
-  this.menuOpen = !this.menuOpen;
-}
-
-@HostListener('window:resize', ['$event'])
-onResize(event: Event) {
-  const width = (event.target as Window).innerWidth;
-  if (width > 768 && this.menuOpen) {
-    this.menuOpen = false; // Close menu if screen is resized to larger size
-  }
-}
-
-  isLoggedIn(): boolean {
-    return this.userService.isLoggedIn();
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
   }
 
-  getUsername(): string {
-    return localStorage.getItem('username') || 'Guest';
+  toggleAccountDropdown() {
+    this.accountDropdownOpen = !this.accountDropdownOpen;
+    if (this.accountDropdownOpen) {
+      this.adminDropdownOpen = false; // Κλείσιμο του Admin Dropdown
+    }
   }
 
-  logout(): void {
-    this.userService.logoutUser();
+  toggleAdminDropdown() {
+    this.adminDropdownOpen = !this.adminDropdownOpen;
+    if (this.adminDropdownOpen) {
+      this.accountDropdownOpen = false; // Κλείσιμο του Account Dropdown
+    }
+  }
+
+  editAccount() {
+    const userId = this.userService.getCurrentUserId();
+    if (userId) {
+      this.router.navigate([`/admin/users/edit/${userId}`]);
+      this.accountDropdownOpen = false;
+    }
   }
 
   confirmLogout() {
@@ -59,14 +61,39 @@ onResize(event: Event) {
     });
   }
 
+  isLoggedIn(): boolean {
+    return this.userService.isLoggedIn();
+  }
+
+  getUsername(): string {
+    return localStorage.getItem('username') || 'Guest';
+  }
+
   isAdmin(): boolean {
     return this.userService.isAdmin();
   }
 
-  toggleAdminDropdown() {
-    this.adminDropdownOpen = !this.adminDropdownOpen;
+  @HostListener('document:click', ['$event'])
+  closeDropdownsOnOutsideClick(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    if (
+      !target.closest('.dropdown') &&
+      !target.closest('.hamburger') &&
+      !target.closest('.nav-links')
+    ) {
+      this.accountDropdownOpen = false;
+      this.adminDropdownOpen = false;
+    }
   }
 
+  @HostListener('window:resize', ['$event'])
+  closeMenuOnResize(event: Event) {
+    const width = (event.target as Window).innerWidth;
+    if (width > 768) {
+      this.menuOpen = false; // Κλείσιμο του Menu
+    }
+  }
+  
   navigateAndCloseDropdown(route: string) {
     this.router.navigate([route]);
     this.adminDropdownOpen = false; // Κλείσιμο του dropdown

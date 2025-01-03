@@ -54,27 +54,15 @@ export class UserService {
     return localStorage.getItem('role');
   }
 
-  /**
-   * Ελέγχει αν ο χρήστης είναι admin
-   * @returns boolean
-   */
+  getCurrentUserId(): number {
+    const userId = localStorage.getItem('userId');
+    return userId ? +userId : 0; // Επιστροφή 0 αν δεν υπάρχει userId
+  }
+  
   isAdmin(): boolean {
     return this.getUserRole() === 'Admin';
   }
 
-
-  // /**
-  //  * Ελέγχει αν το email υπάρχει ήδη
-  //  * @param email Το email που θα ελεγχθεί
-  //  * @returns Observable με μήνυμα επιτυχίας ή αποτυχίας
-  //  */
-  // checkDuplicateEmail(email: string): Observable<any> {
-  //   return this.http.get<{ message: string }>(`${apiUrl}/check_duplicate_email/${email}`);
-  // }
-
-  /**
-   * Κάνει logout τον χρήστη
-   */
   logoutUser(): void {
     this.user.set(null);
     localStorage.removeItem('access_token');
@@ -84,15 +72,10 @@ export class UserService {
     this.router.navigate(['login']);
   }
 
-  /**
-   * Ελέγχει αν ο χρήστης είναι logged in
-   * @returns boolean
-   */
   isLoggedIn(): boolean {
     return !!localStorage.getItem('access_token');
   }
 
-   // Μέθοδος για λήψη όλων των χρηστών
    getAllUsers(): Observable<any[]> {
     return this.http.get<any[]>(`${apiUrl}/getall`);
   }

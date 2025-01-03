@@ -18,14 +18,14 @@
     }
     <li>
       <a [routerLink]="userService.isLoggedIn() ? '/home' : '/welcome'"
-      class="nav-link">Home</a>
+         class="nav-link">Home</a>
     </li>
     <li>
       <a [routerLink]="['/leaderboards']" routerLinkActive="active">Leaderboards</a>
     </li>
     @if (isAdmin()) {
-       <!-- Dropdown for Admin Panel -->
-       <li class="dropdown">
+      <!-- Dropdown for Admin Panel -->
+      <li class="dropdown">
         <button class="dropdown-button" (click)="toggleAdminDropdown()">Admin Panel</button>
         <ul class="dropdown-menu" [class.show]="adminDropdownOpen">
           <li>
@@ -38,8 +38,17 @@
       </li>
     }
     @if (isLoggedIn()) {
-      <li>
-        <button (click)="confirmLogout()">Logout</button>
+      <!-- Dropdown for Account -->
+      <li class="dropdown">
+        <button class="dropdown-button" (click)="toggleAccountDropdown()">Account</button>
+        <ul class="dropdown-menu" [class.show]="accountDropdownOpen">
+          <li>
+            <a (click)="editAccount()">Edit Account</a>
+          </li>
+          <li>
+            <a (click)="confirmLogout()">Logout</a>
+          </li>
+        </ul>
       </li>
     }
   </ul>

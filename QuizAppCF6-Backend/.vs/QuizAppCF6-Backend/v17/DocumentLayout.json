@@ -54,8 +54,7 @@
               "RelativeToolTip": "QuizApp\\DTO\\QuestionWithAnswerDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T15:34:09.181Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T15:34:09.181Z"
             },
             {
               "$type": "Document",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "QuizApp\\Services\\IQuizService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T17:43:12.937Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-25T17:43:12.937Z"
             },
             {
               "$type": "Document",
@@ -78,7 +76,7 @@
               "RelativeDocumentMoniker": "QuizApp\\Services\\QuizService.cs",
               "ToolTip": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\Services\\QuizService.cs",
               "RelativeToolTip": "QuizApp\\Services\\QuizService.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACAAAABDAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-25T17:43:11.832Z",
               "EditorCaption": ""
@@ -93,8 +91,7 @@
               "RelativeToolTip": "QuizApp\\Controllers\\QuizController.cs",
               "ViewState": "AQIAABcBAAAAAAAAAAAQwCQBAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T18:37:28.081Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-25T18:37:28.081Z"
             },
             {
               "$type": "Bookmark",
