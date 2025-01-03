@@ -16,6 +16,8 @@ export class AdminQuizzesComponent implements OnInit {
   router = inject(Router);
   dialog = inject(MatDialog);
   quizzes: any[] = [];
+  openDropdownId: number | null = null; // Track which dropdown is open
+
 
   ngOnInit() {
     this.loadQuizzes();
@@ -33,14 +35,34 @@ export class AdminQuizzesComponent implements OnInit {
     });
   }
 
+  toggleEditDropdown(quizId: number) {
+    if (this.openDropdownId === quizId) {
+      this.openDropdownId = null; // Close dropdown if it's already open
+    } else {
+      this.openDropdownId = quizId; // Open the dropdown
+    }
+  }
+
+  editDetails(quizId: number) {
+    console.log('Edit Details for Quiz ID:', quizId);
+    this.router.navigate([`/admin/quizzes/${quizId}/edit-details`]);
+  }
+
+  editQuestions(quizId: number) {
+    console.log('Edit Questions for Quiz ID:', quizId);
+    this.router.navigate([`/admin/quizzes/${quizId}/edit-questions`]);
+  }
+
+
+  isDropdownOpen(quizId: number): boolean {
+    return this.openDropdownId === quizId;
+  }
+
   navigateToAddQuiz() {
     this.router.navigate(['/admin/quizzes/add']); // Navigate to the Add Quiz page
   }
 
-  editQuiz(quizId: number) {
-    console.log('Editing quiz with ID:', quizId);
-    // Redirect to Edit Quiz Page
-  }
+
 
   deleteQuiz(quizId: number) {
     const dialogRef = this.dialog.open(ConfirmDialogComponent, {

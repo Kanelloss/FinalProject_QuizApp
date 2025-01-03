@@ -1,0 +1,116 @@
+<div class="add-quiz-container">
+    <h2>Add New Quiz</h2>
+  
+    <form [formGroup]="form" (ngSubmit)="submitQuiz()">
+      <!-- Quiz Title -->
+      <mat-form-field appearance="fill">
+        <mat-label>Quiz Title</mat-label>
+        <input matInput formControlName="title" placeholder="Enter quiz title" />
+        <div
+          class="validation-error"
+          *ngIf="form.get('title')?.hasError('required') && form.get('title')?.touched"
+        >
+          Quiz title is required.
+        </div>
+      </mat-form-field>
+  
+      <!-- Quiz Description -->
+      <mat-form-field appearance="fill">
+        <mat-label>Quiz Description</mat-label>
+        <textarea
+          matInput
+          formControlName="description"
+          placeholder="Enter quiz description"
+          rows="3"
+        ></textarea>
+        <div
+          class="validation-error"
+          *ngIf="form.get('description')?.hasError('required') && form.get('description')?.touched"
+        >
+          Quiz description is required.
+        </div>
+      </mat-form-field>
+  
+      <!-- Questions -->
+      <div formArrayName="questions">
+        <div
+          class="question-box"
+          *ngFor="let question of questions.controls; let i = index"
+          [formGroupName]="i"
+        >
+          <h3>Question {{ i + 1 }}</h3>
+  
+          <!-- Question Text -->
+          <mat-form-field appearance="fill">
+            <mat-label>Question Text</mat-label>
+            <input
+              matInput
+              formControlName="text"
+              placeholder="Enter question text"
+            />
+            <div
+              class="validation-error"
+              *ngIf="question.get('text')?.hasError('required') && question.get('text')?.touched"
+            >
+              Question text is required.
+            </div>
+          </mat-form-field>
+  
+          <!-- Options -->
+          <div formArrayName="options">
+            <div
+              *ngFor="let option of getOptions(i).controls; let j = index"
+            >
+              <mat-form-field appearance="fill">
+                <mat-label>Option {{ j + 1 }}</mat-label>
+                <input matInput [formControlName]="j" placeholder="Enter option text" />
+                <div
+                  class="validation-error"
+                  *ngIf="option.hasError('required') && option.touched"
+                >
+                  Option {{ j + 1 }} is required.
+                </div>
+              </mat-form-field>
+            </div>
+          </div>
+  
+          <!-- Correct Answer -->
+          <mat-form-field appearance="fill">
+            <mat-label>Correct Answer</mat-label>
+            <input
+              matInput
+              formControlName="correctAnswer"
+              placeholder="Enter correct answer"
+            />
+            <div
+              class="validation-error"
+              *ngIf="question.get('correctAnswer')?.hasError('required') && question.get('correctAnswer')?.touched"
+            >
+              Correct answer is required.
+            </div>
+          </mat-form-field>
+  
+          <!-- Category -->
+          <mat-form-field appearance="fill">
+            <mat-label>Category</mat-label>
+            <input
+              matInput
+              formControlName="category"
+              placeholder="Enter category"
+            />
+            <div
+              class="validation-error"
+              *ngIf="question.get('category')?.hasError('required') && question.get('category')?.touched"
+            >
+              Category is required.
+            </div>
+          </mat-form-field>
+        </div>
+      </div>
+  
+      <button mat-raised-button color="primary" [disabled]="form.invalid">
+        Submit Quiz
+      </button>
+    </form>
+  </div>
+  

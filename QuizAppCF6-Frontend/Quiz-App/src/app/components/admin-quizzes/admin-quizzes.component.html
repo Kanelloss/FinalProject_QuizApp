@@ -15,7 +15,18 @@
           <span data-label="Title:">{{ quiz.title }}</span>
           <span data-label="Description:">{{ quiz.description }}</span>
           <span class="actions">
-            <button class="edit-btn" (click)="editQuiz(quiz.id)">Edit</button>
+            <!-- Dropdown for Edit -->
+          <div class="dropdown">
+            <button class="dropdown-button edit-btn" (click)="toggleEditDropdown(quiz.id)">Edit</button>
+            <ul class="dropdown-menu" [class.show]="isDropdownOpen(quiz.id)">
+              <li>
+                <a (click)="editDetails(quiz.id)">Edit Details</a>
+              </li>
+              <li>
+                <a (click)="editQuestions(quiz.id)">Edit Questions</a>
+              </li>
+            </ul>
+          </div>
             <button class="delete-btn" (click)="deleteQuiz(quiz.id)">Delete</button>
           </span>
         </div>

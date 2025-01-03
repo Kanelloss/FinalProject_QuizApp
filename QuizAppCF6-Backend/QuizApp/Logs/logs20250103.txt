@@ -1,0 +1,98 @@
+[03-01-2025 12:41:15391 +02:00 QuizApp.Controllers.UserController ] User "Kanellos" logged in successfully.
+[03-01-2025 12:41:20787 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 11.
+[03-01-2025 12:41:20837 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 2 by User ID 11.
+[03-01-2025 12:41:20849 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 3 by User ID 11.
+[03-01-2025 12:41:20858 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 4 by User ID 11.
+[03-01-2025 12:41:20866 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 11.
+[03-01-2025 12:41:20876 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 6 by User ID 11.
+[03-01-2025 12:41:20887 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 7 by User ID 11.
+[03-01-2025 12:41:20897 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 8 by User ID 11.
+[03-01-2025 12:41:20905 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 9 not found. Requested by User ID 11.
+[03-01-2025 12:41:20914 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 11.
+[03-01-2025 12:41:24937 +02:00 QuizApp.Controllers.UserController ] All users retrieved successfully by Admin ID 11.
+[03-01-2025 12:41:26114 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:41:29524 +02:00 QuizApp.Controllers.UserController ] All users retrieved successfully by Admin ID 11.
+[03-01-2025 12:41:35907 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:42:48090 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:42:55839 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:43:13592 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:43:14163 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:45:06734 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:45:29747 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:45:37952 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:46:07117 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:47:04239 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:47:21542 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:47:30640 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:47:42717 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:47:57103 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:48:06096 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:48:08960 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:48:12830 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:48:31888 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:48:38985 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:48:55657 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:49:28135 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:49:32504 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:49:35403 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:49:37936 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:49:41044 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:49:44465 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:51:37095 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:51:41843 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:51:47289 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:51:53221 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:52:10529 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:53:21615 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:53:30927 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:53:46075 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:53:52022 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:54:06528 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:54:10447 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:54:18183 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:54:23207 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:54:27516 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:54:37132 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:54:41185 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:55:01894 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:55:13251 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:55:16999 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:55:21548 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:55:25815 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:55:37949 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:55:47340 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:55:51336 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:55:55679 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 12:56:14644 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 13:22:56775 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 13:23:09159 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 13:35:48174 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 9 not found. Requested by User ID 11.
+[03-01-2025 13:37:45566 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 13:53:29501 +02:00 QuizApp.Controllers.UserController ] All users retrieved successfully by Admin ID 11.
+[03-01-2025 13:53:48809 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 14:30:36906 +02:00 QuizApp.Controllers.UserController ] All users retrieved successfully by Admin ID 11.
+[03-01-2025 14:30:38577 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 14:38:18929 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 14:38:26674 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 14:38:37654 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 14:40:41747 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 14:41:23999 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 14:42:20796 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 14:43:05260 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 14:43:52734 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 14:44:04695 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 14:44:12661 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 14:45:13724 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 14:45:25669 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 14:50:08729 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 9 created successfully by User ID "11".
+[03-01-2025 14:50:10114 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 14:52:48699 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 14:54:52111 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 14:55:35237 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 15:02:54744 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 15:02:57638 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 15:03:12652 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 15:03:14610 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 15:04:03721 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
+[03-01-2025 15:04:12158 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 created successfully by User ID "11".
+[03-01-2025 15:04:13689 +02:00 QuizApp.Controllers.QuizController ] All quizzes retrieved successfully by Admin ID 11.
