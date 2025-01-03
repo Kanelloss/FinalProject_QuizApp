@@ -280,29 +280,17 @@ namespace QuizApp.Controllers
             {
                 _logger.LogInformation("User with ID {UserId} requested question {Index} from quiz {QuizId}.", userId, index, quizId);
 
-                var quiz = await _quizService.GetQuizByIdAsync(quizId);
-                if (quiz == null)
-                {
-                    _logger.LogWarning("Quiz with ID {QuizId} not found for User ID {UserId}.", quizId, userId);
-                    return NotFound(new { Message = $"Quiz with ID {quizId} not found." });
-                }
+                var question = await _quizService.GetQuestionWithAnswerAsync(quizId, index);
 
-                if (index < 0 || index >= quiz.Questions!.Count)
+                if (question == null)
                 {
-                    _logger.LogWarning("Invalid question index {Index} requested by User ID {UserId} for Quiz ID {QuizId}.", index, userId, quizId);
-                    return BadRequest(new { Message = "Invalid question index." });
+                    _logger.LogWarning("Question {Index} in Quiz ID {QuizId} not found for User ID {UserId}.", index, quizId, userId);
+                    return NotFound(new { Message = $"Question {index} in Quiz ID {quizId} not found." });
                 }
-
-                var question = quiz.Questions.ElementAt(index);
 
                 _logger.LogInformation("Question {Index} from Quiz ID {QuizId} returned successfully to User ID {UserId}.", index, quizId, userId);
 
-                return Ok(new
-                {
-                    QuestionId = question.Id,
-                    Text = question.Text,
-                    Options = question.Options
-                });
+                return Ok(question);
             }
             catch (Exception ex)
             {
@@ -310,6 +298,7 @@ namespace QuizApp.Controllers
                 return StatusCode(500, new { Message = "An unexpected error occurred. Please try again later." });
             }
         }
+
 
 
         /// <summary>

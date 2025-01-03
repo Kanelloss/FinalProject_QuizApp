@@ -81,6 +81,21 @@ export class AddQuizComponent implements OnInit {
     return this.questions.at(questionIndex).get('options') as FormArray;
   }
 
+  cancelAdd() {
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+        data: {
+            title: 'Cancel Adding Quiz',
+            message: 'Any changes you made will not be saved. Are you sure you want to cancel?',
+        },
+    });
+
+    dialogRef.afterClosed().subscribe((confirmed) => {
+        if (confirmed) {
+            this.router.navigate(['/admin/quizzes']); // Redirect back to quiz management page
+        }
+    });
+}
+
   submitQuiz() {
     if (this.form.invalid) {
       alert('Please fill in all required fields.');
@@ -100,6 +115,7 @@ export class AddQuizComponent implements OnInit {
   
         this.quizService.addQuiz(quizData).subscribe({
           next: () => {
+            localStorage.removeItem('quizForm'); // Καθαρισμός του localStorage
             const successDialog = this.dialog.open(AlertDialogComponent, {
               data: { message: 'Quiz created successfully!' },
             });
@@ -108,7 +124,7 @@ export class AddQuizComponent implements OnInit {
             setTimeout(() => {
               successDialog.close();
               this.router.navigate(['/admin/quizzes']);
-            }, 1500);
+            }, 900);
           },
           error: (error) => {
             console.error('Error adding quiz:', error);

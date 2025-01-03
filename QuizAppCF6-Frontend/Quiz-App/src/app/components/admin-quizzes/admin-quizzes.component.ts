@@ -43,24 +43,17 @@ export class AdminQuizzesComponent implements OnInit {
     }
   }
 
-  editDetails(quizId: number) {
-    console.log('Edit Details for Quiz ID:', quizId);
-    this.router.navigate([`/admin/quizzes/${quizId}/edit-details`]);
-  }
-
-  editQuestions(quizId: number) {
-    console.log('Edit Questions for Quiz ID:', quizId);
-    this.router.navigate([`/admin/quizzes/${quizId}/edit-questions`]);
-  }
 
 
-  isDropdownOpen(quizId: number): boolean {
-    return this.openDropdownId === quizId;
-  }
-
-  navigateToAddQuiz() {
+  addQuiz() {
     this.router.navigate(['/admin/quizzes/add']); // Navigate to the Add Quiz page
   }
+
+  editQuiz(id : number) {
+    this.router.navigate([`/admin/quizzes/edit/${id}`])
+  }
+
+  
 
 
 

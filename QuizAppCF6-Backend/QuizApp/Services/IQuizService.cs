@@ -9,7 +9,7 @@ namespace QuizApp.Services
         Task<QuizReadOnlyDTO?> GetQuizByIdAsync(int id);
         Task<bool> UpdateQuizAsync(int id, QuizUpdateDTO dto);
         Task<bool> DeleteQuizAsync(int id);
-        Task<QuestionReadOnlyDTO?> GetQuestionByIndexAsync(int quizId, int index); // Επιστροφή ερώτησης βάσει index
+        Task<QuestionWithAnswerDTO?> GetQuestionWithAnswerAsync(int quizId, int index); // Επιστροφή ερώτησης βάσει index
         Task<bool> UpdateQuestionAsync(int questionId, QuestionUpdateDTO dto);
         Task<QuizResultDTO?> EvaluateQuizAsync(int quizId, List<AnswerDTO> answers, int userId);
         Task<IEnumerable<QuizBasicDTO>> GetAllQuizzesAsync();

@@ -97,5 +97,22 @@ addQuiz(quiz: { title: string; description: string }): Observable<any> {
   return this.http.post<any>(`${apiUrl}`, quiz);
 }
 
+getQuizById(id: number): Observable<any> {
+  return this.http.get<any>(`${apiUrl}/${id}`);
+}
+
+updateQuiz(id: number, quizData: any): Observable<any> {
+  return this.http.put<any>(`${apiUrl}/${id}`, quizData);
+}
+
+updateQuestion(questionId: number, questionData: any): Observable<any> {
+  return this.http.put<any>(`${apiUrl}/questions/${questionId}`, questionData);
+}
+
+getQuestionByIndex(quizId: number, questionIndex: number): Observable<any> {
+  return this.http.get<any>(`${apiUrl}/${quizId}/questions/${questionIndex}`);
+}
+
+
 
 }

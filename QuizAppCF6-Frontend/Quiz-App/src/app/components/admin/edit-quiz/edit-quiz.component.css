@@ -1,5 +1,4 @@
-/* Add Quiz Container */
-.add-quiz-container {
+.edit-quiz-container {
     max-width: 800px;
     margin: 2rem auto;
     padding: 2rem;
@@ -9,7 +8,6 @@
     font-family: 'Poppins', sans-serif;
   }
   
-  /* Header Styling */
   h2 {
     font-size: 2rem;
     color: #ff8e2b;
@@ -17,7 +15,6 @@
     margin-bottom: 1.5rem;
   }
   
-  /* Form Field Styling */
   mat-form-field {
     width: 100%;
     margin-bottom: 1rem;
@@ -34,7 +31,6 @@
     font-weight: 500;
   }
   
-  /* Question Box Styling */
   .question-box {
     margin-top: 2rem;
     padding: 1.5rem;
@@ -43,16 +39,8 @@
     background-color: #f7f9fc;
   }
   
-  .question-box h3 {
-    font-size: 1.5rem;
-    color: #3a6073;
-    margin-bottom: 1rem;
-  }
-  
- /* Submit Button Styling */
-button {
-    width: 75%; /* Αλλάζουμε το πλάτος σε 75% */
-    margin: 0 auto; /* Στοιχίζεται στο κέντρο */
+  button {
+    width: 100%;
     display: flex;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
@@ -64,7 +52,6 @@ button {
     transition: background-color 0.3s ease;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #3a6073;
-    margin-top: 1.5rem; /* Add spacing from the form */
   }
   
   button[disabled] {
@@ -74,70 +61,32 @@ button {
 
   button:not([disabled]) {
     background-color: #3a6073;
+    color: white;
   }
   
   button:hover:not([disabled]) {
-    background-color: #365869;
+    background-color: #28526a;
   }
 
   .button-container {
     display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
+    justify-content: space-between; /* Ensure buttons are spaced evenly */
+    margin-top: 1.5rem;
 }
 
 button {
-    width: 45%; /* Adjust width for consistent button size */
+    width: 48%; /* Adjust button width to fit neatly */
 }
 
 .cancel-btn {
-  background-color: #ff8e2b!important;
-  color: white!important;
+    background-color: #ff8e2b!important;
+    color: white!important;
 }
 
 .cancel-btn:hover {
-  background-color: #f18729!important;
-  color: white!important;
+    background-color: #f18729!important;
+    color: white!important;
 }
 
 
-  
-  /* Responsive Styling */
-  @media (max-width: 768px) {
-    .add-quiz-container {
-      padding: 1rem;
-    }
-  
-    h2 {
-      font-size: 1.8rem;
-    }
-  
-    .question-box h3 {
-      font-size: 1.25rem;
-    }
-  
-    button {
-      font-size: 0.875rem;
-      padding: 0.5rem 1rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .add-quiz-container {
-      padding: 0.5rem;
-    }
-  
-    h2 {
-      font-size: 1.5rem;
-    }
-  
-    .question-box h3 {
-      font-size: 1.2rem;
-    }
-  
-    button {
-      font-size: 0.8rem;
-      padding: 0.4rem 0.8rem;
-    }
-  }
   

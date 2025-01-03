@@ -130,18 +130,19 @@ namespace QuizApp.Services
         }
 
 
-        public async Task<QuestionReadOnlyDTO?> GetQuestionByIndexAsync(int quizId, int index)
+        public async Task<QuestionWithAnswerDTO?> GetQuestionWithAnswerAsync(int quizId, int index)
         {
             var quiz = await _quizRepository.GetQuizWithQuestionsAsync(quizId);
             if (quiz == null || index < 0 || index >= quiz.Questions.Count) return null;
 
             var question = quiz.Questions.ElementAt(index);   
 
-            return new QuestionReadOnlyDTO
+            return new QuestionWithAnswerDTO
             {
                 Id = question.Id,
                 Text = question.Text,
                 Options = question.Options.Split(',').ToList(),
+                CorrectAnswer = question.CorrectAnswer,
                 Category = question.Category
             };
         }

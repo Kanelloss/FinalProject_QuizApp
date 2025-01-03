@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatRadioModule } from '@angular/material/radio';
 import { AlertDialogComponent } from '../../../shared/components/alert-dialog/alert-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { ConfirmDialogComponent } from '../../../confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-edit-user',
@@ -115,6 +116,17 @@ export class EditUserComponent implements OnInit {
   
 
   onCancel() {
-    this.router.navigate(['/admin/users']);
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+      data: {
+          title: 'Cancel Editing',
+          message: 'Any changes you made will not be saved. Are you sure you want to cancel?',
+      },
+  });
+
+  dialogRef.afterClosed().subscribe((confirmed) => {
+      if (confirmed) {
+          this.router.navigate(['/admin/users']); // Redirect back to user management page
+      }
+  });
   }
 }
