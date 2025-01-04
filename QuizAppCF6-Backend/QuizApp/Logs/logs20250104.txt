@@ -209,3 +209,11 @@
 [04-01-2025 13:45:29081 +02:00 QuizApp.Controllers.UserController ] User with ID 23 retrieved successfully by user 1.
 [04-01-2025 13:45:38303 +02:00 QuizApp.Controllers.UserController ] User with ID 23 updated successfully by User ID 1.
 [04-01-2025 13:45:38842 +02:00 QuizApp.Controllers.UserController ] All users retrieved successfully by Admin ID 1.
+[04-01-2025 13:54:59291 +02:00 QuizApp.Controllers.UserController ] User "Admin" logged in successfully.
+[04-01-2025 13:59:05974 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 4 successfully started by User ID 1.
+[04-01-2025 13:59:32938 +02:00 QuizApp.Controllers.QuizController ] Quiz ID 4 successfully submitted by User ID 1. Score: 90.
+[04-01-2025 13:59:41253 +02:00 QuizApp.Controllers.UserController ] All users retrieved successfully by Admin ID 1.
+[04-01-2025 13:59:42378 +02:00 QuizApp.Controllers.UserController ] User with ID 1 retrieved successfully by user 1.
+[04-01-2025 13:59:45098 +02:00 QuizApp.Controllers.UserController ] All users retrieved successfully by Admin ID 1.
+[04-01-2025 13:59:50865 +02:00 QuizApp.Controllers.UserController ] User with ID 21 successfully deleted by User ID 1.
+[04-01-2025 13:59:50876 +02:00 QuizApp.Controllers.UserController ] All users retrieved successfully by Admin ID 1.
