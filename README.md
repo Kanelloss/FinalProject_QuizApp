@@ -79,11 +79,11 @@ Accessible at `https://localhost:5000/swagger/index.html` after installation.
    
 4. Configure the database connection string:
 
-   Open the `appsettings.json` file in the backend project folder.
+   - Open the `appsettings.json` file in the backend project folder.
 
-   Update the connection string with your database credentials.
+   - Update the connection string with your database credentials.
 
-   The database will be created automatically when the backend runs for the first time (Model-First Approach).
+   - The database will be created automatically when the backend runs for the first time (Model-First Approach).
 
 ### Running the Application
 1. Start the backend server:
