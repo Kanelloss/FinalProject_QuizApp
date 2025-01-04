@@ -217,3 +217,4 @@
 [04-01-2025 13:59:45098 +02:00 QuizApp.Controllers.UserController ] All users retrieved successfully by Admin ID 1.
 [04-01-2025 13:59:50865 +02:00 QuizApp.Controllers.UserController ] User with ID 21 successfully deleted by User ID 1.
 [04-01-2025 13:59:50876 +02:00 QuizApp.Controllers.UserController ] All users retrieved successfully by Admin ID 1.
+[04-01-2025 14:08:17824 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 1 by User ID 0.

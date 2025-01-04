@@ -52,6 +52,8 @@ BrainZap is a full-stack web application designed to provide an interactive quiz
 ![Swagger API Screenshot1](./readme-img/swagger-quiz.png)
 ![Swagger API Screenshot2](./readme-img/swagger-user.png)
 
+Accessible at `https://localhost:5000/swagger/index.html` after installation.
+
 ## Getting Started
 
 ### Prerequisites
@@ -66,20 +68,29 @@ BrainZap is a full-stack web application designed to provide an interactive quiz
 
 2. Navigate to the backend folder and restore dependencies:
    
-   cd Backend
+   cd QuizAppCF6-Backend/QuizApp
+   
    dotnet restore
    
 3. Navigate to the frontend folder and install dependencies:
  
-   cd Frontend
+   cd QuizAppCF6-Frontend/Quiz-App
    npm install
    
 4. Configure the database connection string in `appsettings.json`.
+
+   Open the appsettings.json file in the backend project folder.
+
+   Update the connection string with your database credentials.
+
+   The database will be created automatically when the backend runs for the first time (Model-First Approach).
 
 ### Running the Application
 1. Start the backend server:
    
    dotnet run
+
+   The backend server will run by default at `http://localhost:5000`.
    
 2. Start the Angular frontend:
    
