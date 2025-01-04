@@ -62,7 +62,7 @@ BrainZap is a full-stack web application designed to provide an interactive quiz
 ### Installation
 1. Clone the repository:
    
-   git clone https://github.com/your-repository.git
+   git clone https://github.com/Kanelloss/FinalProject_QuizApp.git
 
 2. Navigate to the backend folder and restore dependencies:
    
