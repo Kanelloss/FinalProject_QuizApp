@@ -29,7 +29,9 @@ BrainZap is a full-stack web application designed to provide an interactive quiz
 
 ### Frontend
 - **Angular 18:** For building the dynamic and reactive user interface.
-- **Angular Material & Tailwind CSS:** For elegant and responsive designs.
+- **Angular Material, Bootstrap 5 & Tailwind CSS:** For elegant and responsive designs.
+- **RxJS:** Facilitates reactive programming and observable-based state management.
+- **JWT Decode:** Decodes and manages JSON Web Tokens on the client side.
 - **RxJS:** Facilitates reactive programming and observable-based state management.
 - **JWT Decode:** Decodes and manages JSON Web Tokens on the client side.
 
@@ -40,9 +42,9 @@ BrainZap is a full-stack web application designed to provide an interactive quiz
 - **BCrypt:** Ensures secure password hashing.
 - **Newtonsoft.Json:** Handles JSON serialization and deserialization.
 - **Swashbuckle (Swagger):** Provides interactive API documentation for testing and exploration.
+- **Serilog:** Enables advanced logging to the console and files for better debugging and monitoring.
 
 ### Additional Tools
-- **Chart.js:** Visualizes quiz statistics with interactive charts and graphs.
 - **Swagger Documentation:** A developer-friendly interface to test and explore the API (as shown below).
 
 ![Swagger Screenshot](swagger-image-url.png)
@@ -56,33 +58,36 @@ BrainZap is a full-stack web application designed to provide an interactive quiz
 
 ### Installation
 1. Clone the repository:
-   ```bash
+   
    git clone https://github.com/your-repository.git
-   ```
+
 2. Navigate to the backend folder and restore dependencies:
-   ```bash
+   
    cd Backend
    dotnet restore
-   ```
+   
 3. Navigate to the frontend folder and install dependencies:
-   ```bash
+ 
    cd Frontend
    npm install
-   ```
+   
 4. Configure the database connection string in `appsettings.json`.
 
 ### Running the Application
 1. Start the backend server:
-   ```bash
+   
    dotnet run
-   ```
+   
 2. Start the Angular frontend:
-   ```bash
+   
    ng serve
-   ```
+   
 3. Access the application in your browser at `http://localhost:4200`.
 
 ## Screenshots
+
+### Landing Page
+![Welcome Page Screenshot](./readme-img/welcome-page.png)
 
 ### Home Page
 ![Home Page Screenshot](home-page-image-url.png)
@@ -95,9 +100,3 @@ BrainZap is a full-stack web application designed to provide an interactive quiz
 
 ### Swagger API
 ![Swagger API Screenshot](swagger-api-image-url.png)
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-## Contributions
-Feel free to contribute to this project by submitting pull requests or reporting issues.
