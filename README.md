@@ -3,6 +3,8 @@
 
 Sharpen your knowledge, challenge your friends, and climb the leaderboard with **💡BrainZap** – an engaging platform that combines fun, competition, and learning.
 
+![Welcome Page Screenshot](./readme-img/welcome-page.png)
+
 ## Overview
 
 BrainZap is a full-stack web application designed to provide an interactive quiz experience for users. Users can take quizzes on various topics, compete with others on leaderboards, and learn in an enjoyable manner. Admins have advanced features to manage users and quizzes efficiently.
