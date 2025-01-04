@@ -77,9 +77,9 @@ Accessible at `https://localhost:5000/swagger/index.html` after installation.
    cd QuizAppCF6-Frontend/Quiz-App
    npm install
    
-4. Configure the database connection string in `appsettings.json`.
+4. Configure the database connection string:
 
-   Open the appsettings.json file in the backend project folder.
+   Open the `appsettings.json` file in the backend project folder.
 
    Update the connection string with your database credentials.
 
