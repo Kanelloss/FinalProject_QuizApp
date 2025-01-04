@@ -49,7 +49,8 @@ BrainZap is a full-stack web application designed to provide an interactive quiz
 ### Additional Tools
 - **Swagger Documentation:** A developer-friendly interface to test and explore the API (as shown below).
 
-![Swagger Screenshot](swagger-image-url.png)
+![Swagger API Screenshot1](./readme-img/swagger-quiz.png)
+![Swagger API Screenshot2](./readme-img/swagger-user.png)
 
 ## Getting Started
 
