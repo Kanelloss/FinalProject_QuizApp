@@ -92,13 +92,28 @@ BrainZap is a full-stack web application designed to provide an interactive quiz
 ![Welcome Page Screenshot](./readme-img/welcome-page.png)
 
 ### Home Page
-![Home Page Screenshot](home-page-image-url.png)
+![Home Page Screenshot](./readme-img/home-page.png)
+
+### Quiz
+![Quiz Screenshot1](./readme-img/confirm-dialog.png)
+![Quiz Screenshot2](./readme-img/food-quiz.png)
+![Quiz Screenshot3](./readme-img/submit-quiz.png)
+![Quiz Screenshot4](./readme-img/quiz-results.png)
+![Quiz Screenshot5](./readme-img/quiz-results2.png)
 
 ### Leaderboard
-![Leaderboard Screenshot](leaderboard-image-url.png)
+![Leaderboard Screenshot](./readme-img/leaderboards.png)
+
+### User Management (Admin) with confirm dialog messages
+![User Management Screenshot1](./readme-img/user-management.png)
+![User Management Screenshot2](./readme-img/add-new-user.png)
+![User Management Screenshot3](./readme-img/edit-user.png)
+![User Management Screenshot3](./readme-img/user-update-success.png)
+![User Management Screenshot4](./readme-img/delete-user.png)
+![User Management Screenshot4](./readme-img/delete-user-success.png)
 
 ### Quiz Management (Admin)
-![Quiz Management Screenshot](quiz-management-image-url.png)
+![Quiz Management Screenshot1](quiz-management-image-url.png)
 
 ### Swagger API
 ![Swagger API Screenshot](swagger-api-image-url.png)
