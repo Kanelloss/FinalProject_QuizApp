@@ -119,10 +119,6 @@ BrainZap is a full-stack web application designed to provide an interactive quiz
 ![Quiz Management Screenshot1](./readme-img/edit-quiz.png)
 ![Quiz Management Screenshot1](./readme-img/delete-quiz.png)
 
-### Swagger API
-![Swagger API Screenshot1](./readme-img/swagger-quiz.png)
-![Swagger API Screenshot2](./readme-img/swagger-user.png)
-
 ### Serilog Backend Logging
 ![Serilog Screenshot](./readme-img/serilog.png)
 
