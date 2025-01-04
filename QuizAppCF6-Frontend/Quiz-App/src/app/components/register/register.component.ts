@@ -96,7 +96,7 @@ export class RegisterComponent {
   onCancel() {
     const dialogRef = this.dialog.open(ConfirmDialogComponent, {
       data: {
-          title: 'Cancel Editing',
+          title: 'Cancel Registration',
           message: 'Any changes you made will not be saved. Are you sure you want to cancel?',
       },
   });
