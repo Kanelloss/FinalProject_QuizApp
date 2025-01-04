@@ -3,7 +3,7 @@
 
 Sharpen your knowledge, challenge your friends, and climb the leaderboard with **💡BrainZap** – an engaging platform that combines fun, competition, and learning.
 
-![Welcome Page Screenshot](./readme-img/welcome-page2.png)
+![Welcome Page Screenshot](./readme-img/welcome-page.png)
 
 ## Overview
 
