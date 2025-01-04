@@ -118,7 +118,6 @@ Accessible at `https://localhost:5000/swagger/index.html` after installation.
 
 ### User Management (Admin) with confirm dialog messages
 ![User Management Screenshot1](./readme-img/user-management.png)
-![User Management Screenshot2](./readme-img/add-new-user.png)
 ![User Management Screenshot3](./readme-img/edit-user.png)
 ![User Management Screenshot3](./readme-img/user-update-success.png)
 ![User Management Screenshot4](./readme-img/delete-user.png)
