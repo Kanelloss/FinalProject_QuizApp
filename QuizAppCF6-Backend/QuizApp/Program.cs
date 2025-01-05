@@ -76,9 +76,12 @@ namespace QuizApp
                     .AllowAnyOrigin());
             });
 
+
+            // if we want only angular to be able to access the backend
+
             //builder.Services.AddCors(options => {
             //    options.AddPolicy("AngularClient",
-            //        b => b.WithOrigins("http://localhost:4200") // Assuming Angular runs on localhost:4200
+            //        b => b.WithOrigins("http://localhost:4200")
             //              .AllowAnyMethod()
             //              .AllowAnyHeader());
             //});
@@ -113,10 +116,6 @@ namespace QuizApp
                 // Apply AuthorizeOperationFilter for securing endpoints
                 options.OperationFilter<AuthorizeOperationFilter>();
             });
-
-          
-
-
 
             var app = builder.Build();
 

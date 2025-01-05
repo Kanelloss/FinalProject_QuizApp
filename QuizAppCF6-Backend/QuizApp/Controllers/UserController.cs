@@ -80,6 +80,7 @@ namespace QuizApp.Controllers
         /// </remarks>
         /// <param name="dto">The user's login credentials.</param>
         /// <response code="200">Login successful, JWT token returned.</response>
+        /// <response code="400">Invalid input provided.</response>
         /// <response code="401">Invalid username or password.</response>
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] UserLoginDTO dto)
@@ -102,7 +103,7 @@ namespace QuizApp.Controllers
 
             _logger.LogInformation("User {Username} logged in successfully.", dto.Username);
 
-            // Επιστροφή token μέσω DTO
+            // Return token through DTO
             JwtTokenDTO token = new()
             {
                 Token = userToken
@@ -117,6 +118,7 @@ namespace QuizApp.Controllers
         /// </summary>
         /// <remarks>
         /// This endpoint returns a user's details, including their username, email, and role, by their unique ID.
+        /// Admin can get all users. User can get only his details.
         /// </remarks>
         /// <param name="id">The ID of the user to retrieve.</param>
         /// <response code="200">User details retrieved successfully.</response>
@@ -130,7 +132,7 @@ namespace QuizApp.Controllers
             var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
             var currentUserRole = User.FindFirst(ClaimTypes.Role)?.Value;
 
-            // Checks if Role is Admin or User is finding himself.
+            // Checks if Role is Admin or User is attempting to get "himself".
             if (currentUserRole != "Admin" && currentUserId != id)
             {
                 _logger.LogWarning("Unauthorized access attempt by user {UserId} with role {Role}. Attempted to access user {TargetId}.",
@@ -158,7 +160,7 @@ namespace QuizApp.Controllers
         /// <param name="username">The username of the user to retrieve.</param>
         /// <response code="200">User details retrieved successfully.</response>
         /// <response code="404">User not found.</response>
-        [Authorize] // Basic authorization to allow authenticated users
+        [Authorize]
         [HttpGet("by-username/{username}")]
         public async Task<IActionResult> GetUserByUsername(string username)
         {
@@ -179,7 +181,6 @@ namespace QuizApp.Controllers
                     AttemptedAt = DateTime.UtcNow
                 });
             }
-
 
             // Retrieve the user by username
             var user = await _userService.GetUserByUsernameAsync(username);
@@ -227,8 +228,6 @@ namespace QuizApp.Controllers
                 return StatusCode(500, new { Message = "An unexpected error occurred." });
             }
         }
-
-
 
         /// <summary>
         /// Updates user details.
@@ -377,38 +376,5 @@ namespace QuizApp.Controllers
                 return StatusCode(500, new { Message = "An error occurred while retrieving quiz history.", Details = ex.Message });
             }
         }
-
-        
-
-
-
-        //[Authorize]
-        //[HttpGet("protected")]
-        //public IActionResult TestProtectedEndpoint()
-        //{
-        //    return Ok(new { Message = "You have accessed a protected endpoint!" });
-        //}
-
-        //[HttpGet("{userId}/history-and-highscores")]
-        //[Authorize]
-        //public async Task<IActionResult> GetHistoryAndHighScores(int userId)
-        //{
-        //    try
-        //    {
-        //        var result = await _quizScoreService.GetUserHistoryAndHighScoresAsync(userId);
-        //        if (result == null || !result.Any())
-        //        {
-        //            return NotFound(new { Message = "No quiz history found for the user." });
-        //        }
-        //        return Ok(result);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return StatusCode(500, new { Message = "An error occurred while retrieving quiz history.", Details = ex.Message });
-        //    }
-        //}
-
-
-
     }
 }

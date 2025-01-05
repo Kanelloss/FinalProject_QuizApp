@@ -12,18 +12,18 @@ namespace QuizApp.Repositories
         {
         }
 
-        // Εξειδικευμένες μέθοδοι του IQuizRepository
+        
         public async Task<Quiz?> GetQuizWithQuestionsAsync(int quizId)
         {
             return await _dbSet
-                .Include(q => q.Questions) // Φόρτωση των ερωτήσεων
+                .Include(q => q.Questions)
                 .FirstOrDefaultAsync(q => q.Id == quizId);
         }
 
         public async Task<IEnumerable<Quiz>> GetQuizzesByTitleAsync(string title)
         {
             return await _dbSet
-                .Where(q => EF.Functions.Like(q.Title, $"%{title}%")) // Αναζήτηση με βάση τον τίτλο
+                .Where(q => EF.Functions.Like(q.Title, $"%{title}%"))
                 .Include(q => q.Questions)
                 .ToListAsync();
         }

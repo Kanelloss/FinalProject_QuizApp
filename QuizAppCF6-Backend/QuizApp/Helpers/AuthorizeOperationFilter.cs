@@ -9,7 +9,7 @@ namespace QuizApp.Helpers
     {
         public void Apply(OpenApiOperation operation, OperationFilterContext context)
         {
-            // Ελέγχει αν υπάρχουν [Authorize] attributes στον controller ή τη μέθοδο
+            // Checks if there are [Authorize] attributes in controller or method
             var authAttributes = context.MethodInfo
                 .DeclaringType?
                 .GetCustomAttributes(true)
@@ -19,7 +19,7 @@ namespace QuizApp.Helpers
 
             if (authAttributes != null && authAttributes.Any())
             {
-                // Προσθέτει αποκρίσεις 401 (Unauthorized) και 403 (Forbidden)
+                // Adds responses 401 (Unauthorized) και 403 (Forbidden)
                 if (!operation.Responses.ContainsKey("401"))
                 {
                     operation.Responses.Add("401", new OpenApiResponse { Description = "Unauthorized. You need to authenticate in order to access this endpoint." });
@@ -30,7 +30,7 @@ namespace QuizApp.Helpers
                     operation.Responses.Add("403", new OpenApiResponse { Description = "Forbidden. You do not have permission to access this resource." });
                 }
 
-                // Ορίζει το security schema για το JWT
+                // Defines security schema for JWT
                 var jwtSecurityScheme = new OpenApiSecurityScheme
                 {
                     Description = "JWT Authorization header using the Bearer scheme. Example: 'Bearer {token}'",
@@ -49,7 +49,7 @@ namespace QuizApp.Helpers
                 {
                     new OpenApiSecurityRequirement
                     {
-                        [jwtSecurityScheme] = Array.Empty<string>() // Χωρίς συγκεκριμένους ρόλους
+                        [jwtSecurityScheme] = Array.Empty<string>() // No specific roles
                     }
                 };
             }

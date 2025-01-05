@@ -24,11 +24,11 @@ export class HomeComponent {
     { id: 5, name: 'Technology', icon: 'memory' },
     { id: 6, name: 'Gaming', icon: 'sports_esports' },
     { id: 7, name: 'Dictionary', icon: 'menu_book' },
-    { id: 8, name: 'Entertainment', icon: 'theater_comedy' },
+    { id: 8, name: 'Sports', icon: 'sports_soccer' },
     { id: 9, name: 'Food & Drink', icon: 'restaurant_menu' },
-    { id: 10, name: 'Sports', icon: 'sports_soccer' },
-    { id: 10, name: 'Movies', icon: 'movie' },
-    { id: 10, name: 'Music', icon: 'music_note' },
+    { id: 10, name: 'Zoology', icon: 'pets' },
+    { id: 11, name: 'Cinema', icon: 'movie' },
+    { id: 12, name: 'Music', icon: 'music_note' },
   ];
   // Add here manually if more quizzes are added.
 

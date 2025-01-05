@@ -75,11 +75,10 @@ public static class HttpRequestExtensions
 
         if (connection.RemoteIpAddress is null || connection.LocalIpAddress is null)
         {
-            // Εάν οι διευθύνσεις είναι null, θεωρούμε ότι είναι τοπικό.
             return true;
         }
 
-        // Ελέγχει αν η διεύθυνση είναι το loopback (127.0.0.1 ή ::1)
+        // Checks if address is loopback (127.0.0.1 ή ::1)
         if (connection.RemoteIpAddress.Equals(connection.LocalIpAddress) ||
             IPAddress.IsLoopback(connection.RemoteIpAddress))
         {

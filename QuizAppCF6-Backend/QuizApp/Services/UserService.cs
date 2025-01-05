@@ -24,7 +24,7 @@ namespace QuizApp.Services
             _logger = new LoggerFactory().AddSerilog().CreateLogger<UserService>();
             _context = context; // Assign the context
         }
-
+        // Register a new user
         public async Task<bool> RegisterUserAsync(UserSignUpDTO dto)
         {
             // Check if username already exists
@@ -60,7 +60,7 @@ namespace QuizApp.Services
             return await _userRepository.SaveChangesAsync();
         }
 
-
+        // Authenticate user credentials
         public async Task<UserReadOnlyDTO?> AuthenticateUserAsync(UserLoginDTO dto)
         {
             var user = await _userRepository.GetUserAsync(dto.Username!, dto.Password!);
@@ -76,6 +76,7 @@ namespace QuizApp.Services
             };
         }
 
+        // Get user by id
         public async Task<UserReadOnlyDTO?> GetUserByIdAsync(int id)
         {
             var user = await _userRepository.GetByIdAsync(id);
@@ -91,13 +92,13 @@ namespace QuizApp.Services
             };
         }
 
+        // Get a user by username
         public async Task<UserReadOnlyDTO?> GetUserByUsernameAsync(string username)
         {
-            // Αναζήτηση χρήστη από το repository
             var user = await _userRepository.GetUserByUsernameAsync(username);
             if (user == null) return null;
 
-            // Map από entity σε DTO
+            //  Map User entity to UserReadOnlyDTO
             return new UserReadOnlyDTO
             {
                 Id = user.Id,
@@ -107,6 +108,7 @@ namespace QuizApp.Services
             };
         }
 
+        // Get all users
         public async Task<IEnumerable<UserReadOnlyDTO>> GetAllUsersAsync()
         {
             var users = await _userRepository.GetAllAsync();
@@ -119,7 +121,7 @@ namespace QuizApp.Services
             }).ToList();
         }
 
-
+        // Update user details by id
         public async Task<bool> UpdateUserAsync(int userId, UserUpdateDTO dto)
         {
             var user = await _userRepository.GetByIdAsync(userId);
@@ -165,6 +167,7 @@ namespace QuizApp.Services
             return await _userRepository.UpdateUserAsync(user);
         }
 
+        // Delete user by id
         public async Task<bool> DeleteUserAsync(int userId, int currentUserId, string currentUserRole)
         {
             // Αν ο χρήστης δεν είναι admin και προσπαθεί να διαγράψει άλλον χρήστη
@@ -176,20 +179,17 @@ namespace QuizApp.Services
             var result = await _userRepository.DeleteAsync(userId);
             if (!result)
             {
-                //_logger.LogWarning("Failed to delete User ID: {UserId} by User ID: {CurrentUserId}", userId, currentUserId);
                 return false; // User not found or delete failed
             }
-            //_logger.LogInformation("User ID: {UserId} successfully deleted by User ID: {CurrentUserId}", userId, currentUserId);
             return true;
         }
 
-
+        // Create a user token
         public string CreateUserToken(int userId, string username, string email, UserRole? userRole, string appSecurityKey)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(appSecurityKey));
             var signingCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
-            // Claims: Οι πληροφορίες του χρήστη
             var claimsInfo = new List<Claim>
     {
         new Claim(ClaimTypes.Name, username),
@@ -198,7 +198,7 @@ namespace QuizApp.Services
         new Claim(ClaimTypes.Role, userRole.ToString()!)
     };
 
-            // Δημιουργία JWT Token
+            // Create JWT Token
             var jwtSecurityToken = new JwtSecurityToken(
                 issuer: "http://localhost",
                 audience: "http://localhost",

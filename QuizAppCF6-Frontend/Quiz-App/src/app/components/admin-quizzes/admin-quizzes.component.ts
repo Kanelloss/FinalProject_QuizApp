@@ -30,7 +30,6 @@ export class AdminQuizzesComponent implements OnInit {
       },
       error: (error) => {
         console.error('Error fetching quizzes:', error);
-        alert('Failed to load quizzes. Please try again later.');
       },
     });
   }

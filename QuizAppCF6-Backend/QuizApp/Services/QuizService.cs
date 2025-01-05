@@ -23,7 +23,7 @@ namespace QuizApp.Services
             _questionRepository = questionRepository;
         }
 
-        // Δημιουργία Quiz
+        // Create a new quiz 
         public async Task<QuizReadOnlyDTO> CreateQuizAsync(QuizCreateDTO dto)
         {
             var quiz = new Quiz
@@ -58,7 +58,7 @@ namespace QuizApp.Services
             };
         }
 
-        // Ανάκτηση Quiz με ID
+        // Get a quiz by id
         public async Task<QuizReadOnlyDTO?> GetQuizByIdAsync(int id)
         {
             var quiz = await _quizRepository.GetQuizWithQuestionsAsync(id);
@@ -79,7 +79,7 @@ namespace QuizApp.Services
             };
         }
 
-        // Ενημέρωση Quiz
+        // Update quiz by id
         public async Task<bool> UpdateQuizAsync(int id, QuizUpdateDTO dto)
         {
             var quiz = await _quizRepository.GetByIdAsync(id);
@@ -101,7 +101,7 @@ namespace QuizApp.Services
             return result;
         }
 
-        // Διαγραφή Quiz
+        // Delete quiz by id
         public async Task<bool> DeleteQuizAsync(int id)
         {
             var result = await _quizRepository.DeleteAsync(id);
@@ -110,7 +110,7 @@ namespace QuizApp.Services
             return result;
         }
 
-        // Νέο quiz.
+        // Start a new Quiz
         public async Task<QuizStartDTO?> StartQuizAsync(int quizId)
         {
             var quiz = await _quizRepository.GetQuizWithQuestionsAsync(quizId);
@@ -129,7 +129,7 @@ namespace QuizApp.Services
             };
         }
 
-
+        // Return a question based on index including its answer
         public async Task<QuestionWithAnswerDTO?> GetQuestionWithAnswerAsync(int quizId, int index)
         {
             var quiz = await _quizRepository.GetQuizWithQuestionsAsync(quizId);
@@ -147,23 +147,23 @@ namespace QuizApp.Services
             };
         }
 
+        // Update a specific question by id
         public async Task<bool> UpdateQuestionAsync(int questionId, QuestionUpdateDTO dto)
         {
-            // Ανάκτηση ερώτησης
             var question = await _questionRepository.GetByIdAsync(questionId);
             if (question == null)
             {
                 _logger.LogWarning("Question with ID {QuestionId} not found.", questionId);
-                return false; // Ερώτηση δεν βρέθηκε
+                return false;
             }
 
-            // Ενημέρωση πεδίων αν υπάρχουν νέες τιμές
+            // Update fields if there are new values
             question.Text = dto.Text ?? question.Text;
             question.Options = dto.Options != null ? string.Join(",", dto.Options) : question.Options; // Serialize List<string> to CSV
             question.CorrectAnswer = dto.CorrectAnswer ?? question.CorrectAnswer;
             question.Category = dto.Category ?? question.Category;
 
-            // Αποθήκευση αλλαγών
+            // Save changes
             var result = await _questionRepository.UpdateAsync(question);
             if (result)
             {
@@ -173,7 +173,7 @@ namespace QuizApp.Services
         }
 
 
-
+        // Compare the answers the user has given with the correct answers and give a result
         public async Task<QuizResultDTO?> EvaluateQuizAsync(int quizId, List<AnswerDTO> answers, int userId)
         {
             var quiz = await _quizRepository.GetQuizWithQuestionsAsync(quizId);
@@ -203,12 +203,12 @@ namespace QuizApp.Services
                 });
             }
 
-            // Δημιουργία εγγραφής QuizScore
+            // Create record in QuizScore table
             var quizScore = new QuizScore
             {
                 UserId = userId,
                 QuizId = quizId,
-                Score = (int)((double)score / quiz.Questions.Count * 100), // Υπολογισμός ποσοστού
+                Score = (int)((double)score / quiz.Questions.Count * 100), // Calculate percentage
                 InsertedAt = DateTime.UtcNow
             };
 
@@ -224,9 +224,10 @@ namespace QuizApp.Services
             };
         }
 
+        // Get all available quizzes from the DB.
         public async Task<IEnumerable<QuizBasicDTO>> GetAllQuizzesAsync()
         {
-            var quizzes = await _quizRepository.GetAllAsync(); // Ανάκτηση quizzes
+            var quizzes = await _quizRepository.GetAllAsync();
             return quizzes.Select(quiz => new QuizBasicDTO
             {
                 Id = quiz.Id,

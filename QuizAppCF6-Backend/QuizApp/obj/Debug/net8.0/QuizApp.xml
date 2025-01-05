@@ -51,7 +51,6 @@
             </summary>
             <remarks>
             This endpoint allows an Admin to delete an existing quiz.  
-            Only Admin users are authorized to perform this action.
             </remarks>
             <param name="id">The ID of the quiz to delete.</param>
             <returns>
@@ -115,7 +114,7 @@
             ```json
             {
               "answers": [
-                { "questionId": 0, "selectedOption": "H2O1" },
+                { "questionId": 0, "selectedOption": "H2O" },
                 { "questionId": 1, "selectedOption": "100°C" },
                 { "questionId": 2, "selectedOption": "Carbon Dioxide" },
                 { "questionId": 3, "selectedOption": "Au" }
@@ -186,6 +185,7 @@
             </remarks>
             <param name="dto">The user's login credentials.</param>
             <response code="200">Login successful, JWT token returned.</response>
+            <response code="400">Invalid input provided.</response>
             <response code="401">Invalid username or password.</response>
         </member>
         <member name="M:QuizApp.Controllers.UserController.GetUserById(System.Int32)">
@@ -194,6 +194,7 @@
             </summary>
             <remarks>
             This endpoint returns a user's details, including their username, email, and role, by their unique ID.
+            Admin can get all users. User can get only his details.
             </remarks>
             <param name="id">The ID of the user to retrieve.</param>
             <response code="200">User details retrieved successfully.</response>

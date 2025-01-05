@@ -103,52 +103,5 @@ namespace QuizApp.Data
                 .OnDelete(DeleteBehavior.Cascade);
             });
         }
-
-        //public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
-        //{
-        //    var entries = ChangeTracker.Entries()
-        //        .Where(e => e.State == EntityState.Added || e.State == EntityState.Modified);
-
-        //    foreach (var entry in entries)
-        //    {
-        //        if (entry.Entity is Quiz quiz)
-        //        {
-        //            if (entry.State == EntityState.Modified)
-        //                quiz.ModifiedAt = DateTime.UtcNow;
-
-        //            if (entry.State == EntityState.Added)
-        //                quiz.InsertedAt = DateTime.UtcNow;
-        //        }
-
-        //        if (entry.Entity is Question question)
-        //        {
-        //            if (entry.State == EntityState.Modified)
-        //                question.ModifiedAt = DateTime.UtcNow;
-
-        //            if (entry.State == EntityState.Added)
-        //                question.InsertedAt = DateTime.UtcNow;
-        //        }
-
-        //        if (entry.Entity is QuizScore score)
-        //        {
-        //            if (entry.State == EntityState.Modified)
-        //                score.ModifiedAt = DateTime.UtcNow;
-
-        //            if (entry.State == EntityState.Added)
-        //                score.InsertedAt = DateTime.UtcNow;
-        //        }
-
-        //        if (entry.Entity is User user)
-        //        {
-        //            if (entry.State == EntityState.Modified)
-        //                user.ModifiedAt = DateTime.UtcNow;
-
-        //            if (entry.State == EntityState.Added)
-        //                user.InsertedAt = DateTime.UtcNow;
-        //        }
-        //    }
-
-        //    return await base.SaveChangesAsync(cancellationToken);
-        //}
     }
 }

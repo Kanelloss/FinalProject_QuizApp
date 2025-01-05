@@ -93,9 +93,6 @@ namespace QuizApp.Controllers
             }
         }
 
-
-
-
         /// <summary>
         /// Modifies the details of an existing quiz.
         /// </summary>
@@ -109,7 +106,7 @@ namespace QuizApp.Controllers
         /// <response code="400">If the provided data is invalid.</response>
         /// <response code="404">If the quiz with the specified ID was not found.</response>
         [HttpPut("{id}")]
-        [Authorize(Roles = "Admin")] // Μόνο ο Admin μπορεί να ενημερώσει quiz
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UpdateQuiz(int id, [FromBody] QuizUpdateDTO dto)
         {
             if (!ModelState.IsValid)
@@ -133,7 +130,6 @@ namespace QuizApp.Controllers
         /// </summary>
         /// <remarks>
         /// This endpoint allows an Admin to delete an existing quiz.  
-        /// Only Admin users are authorized to perform this action.
         /// </remarks>
         /// <param name="id">The ID of the quiz to delete.</param>
         /// <returns>
@@ -146,11 +142,11 @@ namespace QuizApp.Controllers
         [Authorize(Roles = "Admin")] // Only admin can delete a quiz
         public async Task<IActionResult> DeleteQuiz(int id)
         {
-            // Find admin who deleted quiz
             var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
 
             try
             {
+                // Retrieve user information from JWT
                 var result = await _quizService.DeleteQuizAsync(id);
 
                 if (!result)
@@ -299,8 +295,6 @@ namespace QuizApp.Controllers
             }
         }
 
-
-
         /// <summary>
         /// Submits the user's answers for a specific quiz and evaluates the score.
         /// </summary>
@@ -311,7 +305,7 @@ namespace QuizApp.Controllers
         /// ```json
         /// {
         ///   "answers": [
-        ///     { "questionId": 0, "selectedOption": "H2O1" },
+        ///     { "questionId": 0, "selectedOption": "H2O" },
         ///     { "questionId": 1, "selectedOption": "100°C" },
         ///     { "questionId": 2, "selectedOption": "Carbon Dioxide" },
         ///     { "questionId": 3, "selectedOption": "Au" }
@@ -387,12 +381,11 @@ namespace QuizApp.Controllers
         [HttpGet("{quizId}/alltimehighscores")]
         public async Task<IActionResult> GetAllTimeHighScores(int quizId, [FromQuery] int topN = 10)
         {
-            // Διατήρηση του currentUserId για logging ή άλλες χρήσεις
+            // Extract id from JWT
             var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
 
             try
             {
-                // Ανάκτηση quiz details
                 var quiz = await _quizService.GetQuizByIdAsync(quizId);
                 if (quiz == null)
                 {
@@ -400,21 +393,18 @@ namespace QuizApp.Controllers
                     return NotFound(new { Message = $"Quiz with ID {quizId} not found." });
                 }
 
-                // Ανάκτηση σκορ
                 var highScores = await _quizScoreService.GetAllTimeHighScoresByQuizAsync(quizId, topN);
                 if (highScores == null || !highScores.Any())
                 {
                     _logger.LogWarning("No high scores found for quiz ID {QuizId}. Requested by User ID {UserId}.", quizId, currentUserId);
                     return NotFound(new { Message = "No high scores found for the specified quiz." });
                 }
-
                 _logger.LogInformation("High scores retrieved successfully for quiz ID {QuizId} by User ID {UserId}.", quizId, currentUserId);
-
-                // Επιστροφή quiz title και high scores
+       
                 return Ok(new
                 {
-                    QuizTitle = quiz.Title, // Τίτλος του quiz
-                    HighScores = highScores // Σκορ
+                    QuizTitle = quiz.Title, 
+                    HighScores = highScores
                 });
             }
             catch (Exception ex)
@@ -439,7 +429,7 @@ namespace QuizApp.Controllers
         /// <response code="403">Forbidden. Only admins can access this endpoint.</response>
         /// <response code="500">An unexpected error occurred.</response>
         [HttpGet("getall")]
-        [Authorize(Roles = "Admin")] // Μόνο ο Admin μπορεί να δει όλα τα quizzes
+        [Authorize(Roles = "Admin")] 
         public async Task<IActionResult> GetAllQuizzes()
         {
             var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
@@ -460,35 +450,5 @@ namespace QuizApp.Controllers
                 return StatusCode(500, new { Message = "An unexpected error occurred. Please try again later." });
             }
         }
-
-
-
-
-
-        //[HttpGet("{quizId}/questions/{id}")]
-        //[Authorize]
-        //public async Task<IActionResult> GetQuestionById(int quizId, int id)
-        //{
-        //    var question = await _quizService.GetQuestionByIdAsync(quizId, id);
-        //    if (question == null)
-        //    {
-        //        return NotFound(new { Message = $"Question with ID {id} not found in quiz {quizId}." });
-        //    }
-
-        //    return Ok(question);
-        //}
-
-        //[HttpPost("{quizId}/submit")]
-        //[Authorize]
-        //public async Task<IActionResult> SubmitQuiz(int quizId, [FromBody] SubmitQuizDTO dto)
-        //{
-        //    var result = await _quizService.EvaluateQuizAsync(quizId, dto.Answers);
-        //    if (result == null)
-        //    {
-        //        return BadRequest(new { Message = "Quiz evaluation failed. Ensure the answers are valid." });
-        //    }
-
-        //    return Ok(result);
-        //}
     }
 }
