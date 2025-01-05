@@ -1,14 +1,14 @@
-/* Overall Page Styling */
-body {
-    background: linear-gradient(135deg, #3A7BD5, #3A6073); /* Gradient από μπλε σε σκούρο */
-    font-family: 'Poppins', sans-serif; /* Μοντέρνα γραμματοσειρά */
+
+  body {
+    background: linear-gradient(135deg, #3A7BD5, #3A6073); 
+    font-family: 'Poppins', sans-serif;
     color: #ffffff;
   }
   
   /* Form Container */
   form {
     background: #ffffff;
-    border-radius: 16px; /* Στρογγυλεμένες γωνίες παντού */
+    border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 2rem;
     width: 100%;
@@ -22,12 +22,11 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   }
   
-  /* Form Header */
   form h1 {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    color: #3A6073; /* Να ταιριάζει με το navbar */
+    color: #3A6073; 
   }
   
   form h6 {
@@ -36,7 +35,6 @@ body {
     margin-bottom: 2rem;
   }
   
-  /* Material Form Fields */
   mat-form-field {
     width: 100%;
     margin-bottom: 1.5rem;
@@ -57,9 +55,8 @@ body {
     color: #3A6073 !important;
   }
   
-  /* Button Styling */
   button {
-    background: #3A6073; /* Ίδιο χρώμα με το navbar */
+    background: #3A6073;
     color: #ffffff;
     font-size: 1rem;
     font-weight: bold;
@@ -71,7 +68,7 @@ body {
   }
   
   button:hover {
-    background: #5A738E; /* Διακριτικό hover */
+    background: #5A738E;
     transform: scale(1.05);
   }
   
@@ -80,7 +77,6 @@ body {
     cursor: not-allowed;
   }
   
-  /* Links */
   a {
     color: #3A6073;
     text-decoration: none;
@@ -91,7 +87,6 @@ body {
     text-decoration: underline;
   }
   
-  /* Error and Success Messages */
   .bg-red-100 {
     background: #FF6B6B !important;
     color: #ffffff !important;
@@ -107,15 +102,5 @@ body {
   .pointer:hover {
     cursor: pointer;
   }
-
-  /* a {
-    color: #3A6073;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-    color: #802e20;
-  } */
   
   

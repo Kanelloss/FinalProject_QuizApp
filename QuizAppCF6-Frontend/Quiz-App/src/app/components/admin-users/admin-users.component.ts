@@ -2,7 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { UserService } from '../../shared/services/user.service';
 import { MatTableModule } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog'; 
-import { ConfirmDialogComponent } from '../../confirm-dialog/confirm-dialog.component';
+import { ConfirmDialogComponent } from '../../shared/components/confirm-dialog/confirm-dialog.component';
 import { AlertDialogComponent } from '../../shared/components/alert-dialog/alert-dialog.component';
 import { Router } from '@angular/router';
 
@@ -52,7 +52,7 @@ export class AdminUsersComponent implements OnInit {
       if (confirmed) {
         this.userService.deleteUser(userId).subscribe({
           next: () => {
-            // Open the alert dialog for success
+            // Open alert dialog for success
             this.dialog.open(AlertDialogComponent, {
               data: {
                 title: 'Success',
@@ -63,7 +63,7 @@ export class AdminUsersComponent implements OnInit {
           },
           error: (error) => {
             console.error('Error deleting user:', error);
-            // Open the alert dialog for error
+            // Open alert dialog for error
             this.dialog.open(AlertDialogComponent, {
               data: {
                 title: 'Error',
@@ -77,6 +77,6 @@ export class AdminUsersComponent implements OnInit {
   }
 
   navigateToRegister() {
-    this.router.navigate(['/register']); // Navigate to Register Page
+    this.router.navigate(['/register']);
   }
 }

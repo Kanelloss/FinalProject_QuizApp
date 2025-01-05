@@ -4,7 +4,7 @@ export interface Quiz {
     id: number;
     title: string;
     description: string;
-    questions: Question[];  // ?
+    questions: Question[];
     insertedAt: string;
     modifiedAt: string;
   }

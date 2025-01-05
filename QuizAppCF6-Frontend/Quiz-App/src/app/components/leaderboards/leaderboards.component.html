@@ -16,12 +16,10 @@
         </mat-select>
       </mat-form-field>
        
-    <!-- Κατάσταση φόρτωσης -->
     @if (quizService.isLoading()) {
       <p>Loading scores...</p>
     } @else {
       @if (quizService.highScores().length > 0) {
-        <!-- <h2>{{ quizService.categories()[0].name }}</h2>  toDo -- add dynamic title-->
         <table class="leaderboards-table">
           <thead>
             <tr>

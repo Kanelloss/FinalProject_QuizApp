@@ -23,7 +23,7 @@ BrainZap is a full-stack web application designed to provide an interactive quiz
 - **Authorization:** Admin-only access to user and quiz management functionalities.
 
 ### Additional Features
-- **Responsive UI:** A modern and responsive interface built with Angular Material and Tailwind CSS.
+- **Responsive UI:** A modern and responsive interface built with Angular Material, Bootstrap 5 and Tailwind CSS.
 - **Swagger API Documentation:** Comprehensive API documentation for developers.
 - **Secure Operations:** Features like secure password hashing with BCrypt and proper data validations.
 
@@ -32,8 +32,6 @@ BrainZap is a full-stack web application designed to provide an interactive quiz
 ### Frontend
 - **Angular 18:** For building the dynamic and reactive user interface.
 - **Angular Material, Bootstrap 5 & Tailwind CSS:** For elegant and responsive designs.
-- **RxJS:** Facilitates reactive programming and observable-based state management.
-- **JWT Decode:** Decodes and manages JSON Web Tokens on the client side.
 - **RxJS:** Facilitates reactive programming and observable-based state management.
 - **JWT Decode:** Decodes and manages JSON Web Tokens on the client side.
 

@@ -6,7 +6,8 @@ import { environment } from '../../../environments/environment';
 import { Router } from '@angular/router';
 import { jwtDecode } from 'jwt-decode';
 
-const apiUrl = `${environment.apiUrl}/User`; // backend URL.
+const apiUrl = `${environment.apiUrl}/User`; // backend URL
+
 @Injectable({
   providedIn: 'root'
 })
@@ -14,7 +15,7 @@ export class UserService {
   http: HttpClient = inject(HttpClient);
   router = inject(Router);
   
-  user = signal<LoggedInUser | null>(null) // initialize value with null.
+  user = signal<LoggedInUser | null>(null)
 
   constructor() {
     const accessToken = localStorage.getItem('access_token');
@@ -31,6 +32,7 @@ export class UserService {
     })
   }
 
+  // Extract user details from token
    private setUserFromToken(token: string) {
     const decodedToken: any = jwtDecode(token);
     this.user.set({
@@ -41,28 +43,33 @@ export class UserService {
     });
    }
 
+   // Login User
   loginUser(credentials: Credentials) {
     return this.http.post<{token:string}>(`${apiUrl}/login`, credentials)
   }
-
- 
+  
+  // Register a user
   registerUser(user: User) {
     return this.http.post(`${apiUrl}/signup`, user);
   }
 
+  // Get user role for authorization purposes
   getUserRole(): string | null {
     return localStorage.getItem('role');
   }
 
+  // Checks if a user is admin
+  isAdmin(): boolean {
+    return this.getUserRole() === 'Admin';
+  }
+
+  // Get logged in user's id
   getCurrentUserId(): number {
     const userId = localStorage.getItem('userId');
     return userId ? +userId : 0; // Επιστροφή 0 αν δεν υπάρχει userId
   }
   
-  isAdmin(): boolean {
-    return this.getUserRole() === 'Admin';
-  }
-
+  // Logout user and delete all saved user data from local storage
   logoutUser(): void {
     this.user.set(null);
     localStorage.removeItem('access_token');
@@ -72,25 +79,29 @@ export class UserService {
     this.router.navigate(['login']);
   }
 
+  // Check if a user is logged in
   isLoggedIn(): boolean {
     return !!localStorage.getItem('access_token');
   }
 
+  // Get all users, admin only
    getAllUsers(): Observable<any[]> {
     return this.http.get<any[]>(`${apiUrl}/getall`);
   }
 
+  // Delete a user by id, admin only 
   deleteUser(userId: number): Observable<any> {
     return this.http.delete(`${apiUrl}/${userId}`);
   }
 
+  // Get a user by id, admin only (user can get only his account details, not other users')
   getUserById(id: number): Observable<any> {
     return this.http.get<any>(`${apiUrl}/${id}`);
   }
 
+  // Update a user by id, admin only
   updateUser(id: number, user: any) {
     console.log('Data sent to backend:', user); // Debug τα δεδομένα
     return this.http.put(`${apiUrl}/${id}`, user);
   }
-  
 }

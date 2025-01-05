@@ -1,5 +1,5 @@
 .custom-alert-button {
-  background-color: #28526a; /* Match the blue tone */
+  background-color: #28526a;
   color: white!important;
   border: none;
   border-radius: 5px;
@@ -11,7 +11,7 @@
 }
 
 .custom-alert-button:hover {
-  background-color: #ff8e2b; /* Match the hover orange */
+  background-color: #ff8e2b;
   color: white;
 }
 

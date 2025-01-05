@@ -1,4 +1,3 @@
-/* Overall page styling */
 body {
   margin: 0;
   padding: 0;
@@ -23,7 +22,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transform: translateY(0); /* Smooth entry */
+  transform: translateY(0);
   transition: transform 0.4s ease-out;
 }
 
@@ -58,7 +57,7 @@ body {
 
 .quiz-options {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.9375rem;
 }
 
@@ -114,9 +113,9 @@ body {
 
 .prev-button,
 .next-button {
-  padding: 0.75rem 1.25rem; /* Maintain height, reduce length */
-  font-size: 0.875rem; /* Adjust font size */
-  width: 40%; /* Reduce length of the buttons */
+  padding: 0.75rem 1.25rem; 
+  font-size: 0.875rem; 
+  width: 40%;
 }
 
 .prev-button {
@@ -180,9 +179,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-
-
-/* Adding media queries for responsiveness */
 @media (max-width: 768px) {
   .quiz-container {
     padding: 1.25rem;

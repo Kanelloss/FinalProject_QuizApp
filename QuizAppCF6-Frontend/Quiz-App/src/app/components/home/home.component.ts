@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { ConfirmDialogComponent } from '../../confirm-dialog/confirm-dialog.component';
+import { ConfirmDialogComponent } from '../../shared/components/confirm-dialog/confirm-dialog.component';
 import { firstValueFrom } from 'rxjs';
 
 @Component({
@@ -26,7 +26,11 @@ export class HomeComponent {
     { id: 7, name: 'Dictionary', icon: 'menu_book' },
     { id: 8, name: 'Entertainment', icon: 'theater_comedy' },
     { id: 9, name: 'Food & Drink', icon: 'restaurant_menu' },
+    { id: 10, name: 'Sports', icon: 'sports_soccer' },
+    { id: 10, name: 'Movies', icon: 'movie' },
+    { id: 10, name: 'Music', icon: 'music_note' },
   ];
+  // Add here manually if more quizzes are added.
 
   dialog = inject(MatDialog);
   router = inject(Router);
@@ -40,9 +44,9 @@ export class HomeComponent {
       },
     });
 
-    const result = await firstValueFrom(dialogRef.afterClosed()); // Χρήση firstValueFrom αντί για toPromise
+    const result = await firstValueFrom(dialogRef.afterClosed());
     if (result) {
-      this.router.navigate([`/quiz/${category.id}/start`]); // Πλοήγηση στο σωστό endpoint
+      this.router.navigate([`/quiz/${category.id}/start`]);
     }
   }
 }

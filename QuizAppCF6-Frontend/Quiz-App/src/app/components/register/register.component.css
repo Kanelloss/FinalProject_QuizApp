@@ -1,6 +1,5 @@
-/* Container styling */
 .h-screen {
-  background-color: #f7f9fc; /* Light gray background for contrast */
+  background-color: #f7f9fc;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +7,7 @@
 }
 
 form {
-  max-width: 500px; /* Align form width to Edit User */
+  max-width: 500px; 
   width: 100%;
   background-color: white;
   padding: 2rem;
@@ -17,10 +16,9 @@ form {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Header styling */
 h1 {
   font-size: 2rem;
-  color: #ff8e2b; /* Match the orange tone */
+  color: #ff8e2b;
   text-align: center;
   margin-bottom: 0.5rem;
 }
@@ -30,13 +28,12 @@ h6 {
   font-style: italic;
   font-weight: 500;
   font-size: 1.2rem;
-  color: #3a6073; /* Dark blue for subtitle */
+  color: #3a6073; 
   margin-bottom: 2rem;
 }
 
-/* Form field styling */
 mat-form-field {
-  width: 100%; /* Ensure fields span the form width */
+  width: 100%; 
 }
 
 .mat-input-element {
@@ -47,7 +44,6 @@ mat-form-field.mat-form-field {
   font-size: 1rem;
 }
 
-/* Validation error styling */
 .validation-error {
   font-size: 0.875rem;
   color: #d10c0c;
@@ -55,7 +51,6 @@ mat-form-field.mat-form-field {
   font-weight: 500;
 }
 
-/* Radio group styling */
 mat-radio-group {
   display: flex;
   gap: 1rem;
@@ -69,7 +64,7 @@ mat-radio-button {
 }
 
 mat-radio-button.mat-radio-checked {
-  color: #ff8e2b; /* Match the orange tone when selected */
+  color: #ff8e2b;
 }
 
 mat-radio-button:hover {
@@ -77,15 +72,13 @@ mat-radio-button:hover {
   border-radius: 4px;
 }
 
-  /* Button container */
   .button-container {
     display: flex;
     justify-content: space-between;
     gap: 3rem;
-    width: 100%; /* Align buttons to the form width */
+    width: 100%;
   }
   
-  /* Button styling */
   button {
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
@@ -95,7 +88,7 @@ mat-radio-button:hover {
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1; /* Equal button width */
+    flex: 1; 
   }
   
   button.cancel-btn {
@@ -107,37 +100,30 @@ mat-radio-button:hover {
     background-color: #ee862a;
   }
   
-  /* Αχνο κουμπί όταν δεν είναι έγκυρο */
-button.save-btn:disabled {
-  background-color: #e0e0e0; /* Απαλό γκρι */
-  color: #b0b0b0; /* Απαλό γκρι για το κείμενο */
+ button.save-btn:disabled {
+  background-color: #e0e0e0; 
+  color: #b0b0b0; 
   cursor: not-allowed;
-  box-shadow: none; /* Αφαίρεση σκιάς */
-}
+  box-shadow: none;
+ }
 
-/* Ενεργό κουμπί */
-button.save-btn {
-  background-color: #3a6073; /* Σκούρο μπλε */
+ button.save-btn {
+  background-color: #3a6073; 
   color: white;
-}
+ }
 
-button.save-btn:hover:enabled {
-  background-color: #28526a; /* Ελαφρώς πιο σκούρο */
-}
+ button.save-btn:hover:enabled {
+  background-color: #28526a;
+ }
 
+ @media (max-width: 768px) {
+   form {
+     padding: 1rem;
+     max-width: 90%;
+   }
 
-
-
-
-/* Adjust for smaller screens */
-@media (max-width: 768px) {
-  form {
-    padding: 1rem;
-    max-width: 90%; /* Reduce form width for smaller screens */
-  }
-
-  button {
-    font-size: 0.875rem;
-    padding: 0.625rem 1.25rem;
-  }
-}
+   button {
+     font-size: 0.875rem;
+     padding: 0.625rem 1.25rem;
+   }
+ }

@@ -8,7 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatRadioModule } from '@angular/material/radio';
 import { AlertDialogComponent } from '../../../shared/components/alert-dialog/alert-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
-import { ConfirmDialogComponent } from '../../../confirm-dialog/confirm-dialog.component';
+import { ConfirmDialogComponent } from '../../../shared/components/confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-edit-user',
@@ -78,7 +78,7 @@ export class EditUserComponent implements OnInit {
           this.showSuccessDialog('User updated successfully!');
           setTimeout(() => {
             this.router.navigate(['/admin/users']);
-          }, 500); // Add a 0.5-second delay
+          }, 900);
         },
         error: (error) => {
           if (error.error && error.error.errors) {

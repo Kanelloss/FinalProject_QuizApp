@@ -5,7 +5,8 @@
         Your score: 
         <strong>
           @if (score !== null && totalQuestions !== null) {
-            {{ score }} / {{ totalQuestions * 10 }}
+            <!-- {{ score }} / {{ totalQuestions * 10 }} -->
+              {{ score }} / 100
           } @else {
             Loading...
           }

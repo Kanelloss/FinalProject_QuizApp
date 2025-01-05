@@ -1,7 +1,7 @@
 import { Component, HostListener, inject } from '@angular/core';
 import { UserService } from '../../shared/services/user.service';
 import { RouterModule, Router } from '@angular/router';
-import { ConfirmDialogComponent } from '../../confirm-dialog/confirm-dialog.component';
+import { ConfirmDialogComponent } from '../../shared/components/confirm-dialog/confirm-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
@@ -26,14 +26,14 @@ export class NavbarComponent {
   toggleAccountDropdown() {
     this.accountDropdownOpen = !this.accountDropdownOpen;
     if (this.accountDropdownOpen) {
-      this.adminDropdownOpen = false; // Κλείσιμο του Admin Dropdown
+      this.adminDropdownOpen = false;
     }
   }
 
   toggleAdminDropdown() {
     this.adminDropdownOpen = !this.adminDropdownOpen;
     if (this.adminDropdownOpen) {
-      this.accountDropdownOpen = false; // Κλείσιμο του Account Dropdown
+      this.accountDropdownOpen = false;
     }
   }
 
@@ -90,13 +90,13 @@ export class NavbarComponent {
   closeMenuOnResize(event: Event) {
     const width = (event.target as Window).innerWidth;
     if (width > 768) {
-      this.menuOpen = false; // Κλείσιμο του Menu
+      this.menuOpen = false;
     }
   }
   
   navigateAndCloseDropdown(route: string) {
     this.router.navigate([route]);
-    this.adminDropdownOpen = false; // Κλείσιμο του dropdown
+    this.adminDropdownOpen = false;
   }
   
 

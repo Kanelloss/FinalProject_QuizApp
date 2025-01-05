@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class AuthInterceptorService implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler) {
-      const authToken = localStorage.getItem('access_token'); // Τράβα το token από το localStorage
+      const authToken = localStorage.getItem('access_token'); // Pull token from local storage
       if (!authToken) {
           console.log('[AuthInterceptor] No token found.');
           return next.handle(req);

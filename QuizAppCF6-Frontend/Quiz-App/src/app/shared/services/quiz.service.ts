@@ -6,7 +6,7 @@ import { firstValueFrom } from 'rxjs/internal/firstValueFrom';
 import { QuizResult } from '../interfaces/quizresult';
 import { Observable } from 'rxjs';
 
-const apiUrl = `${environment.apiUrl}/Quiz`; // backend URL.
+const apiUrl = `${environment.apiUrl}/Quiz`; // backend URL
 
 @Injectable({
   providedIn: 'root',
@@ -18,10 +18,11 @@ export class QuizService {
   highScores = signal<{ username: string; score: number; achievedAt: string }[]>([]);
   isLoading = signal(false);
 
+  // Fetch all available quizzes to add in the leaderboards table.
   async fetchAvailableQuizzes() {
     console.log(`[QuizService] Fetching available quizzes...`);
     const availableQuizzes = [];
-    let quizzesNumber = 9;
+    let quizzesNumber = 10;   // Manually change if a quiz is added/deleted to include in leaderboards.
 
     for (let quizId = 1; quizId <= quizzesNumber; quizId++) {
       try {
@@ -45,6 +46,7 @@ export class QuizService {
     console.log(`[QuizService] Final categories:`, this.categories());
   }
 
+  // Fetch a quiz's data by its id.
   async fetchQuizData(quizId: number) {
     this.isLoading.set(true);
     console.log(`[QuizService] Fetching quiz data for ID: ${quizId}`);
@@ -66,53 +68,53 @@ export class QuizService {
     }
   }
 
-  /**
-     * Ξεκινάει ένα νέο Quiz μέσω του API
-     */
+  // Start a quiz (using id)
   startQuiz(quizId: number) {
     return firstValueFrom(
       this.http.get<{ message: string; quiz: any }>(`${apiUrl}/${quizId}/start`, {})
     );
   }
 
-/**
- * Υποβάλλει τις απαντήσεις του Quiz
- */
-submitQuiz(quizId: number, answers: any) {
-  return this.http.post<{ message: string; result: { score: number; correctAnswers: number; totalQuestions: number; questionResults: any[] } }>(
-    `${apiUrl}/${quizId}/submit`,
-    answers
-  );
-}
+    // Submit a quiz (using id)
+  submitQuiz(quizId: number, answers: any) {
+    return this.http.post<{ message: string; result: { score: number; correctAnswers: number; totalQuestions: number; questionResults: any[] } }>(
+      `${apiUrl}/${quizId}/submit`,
+      answers
+    );
+  }
 
-getAllQuizzes(): Observable<any[]> {
-  return this.http.get<any[]>(`${apiUrl}/getall`);
-}
+  // Get all quizzes and their descriptions
+  getAllQuizzes(): Observable<any[]> {
+    return this.http.get<any[]>(`${apiUrl}/getall`);
+  }
 
-deleteQuiz(quizId: number): Observable<any> {
-  return this.http.delete(`${apiUrl}/${quizId}`);
-}
+  // Delete a quiz by id, admin only.
+  deleteQuiz(quizId: number): Observable<any> {
+    return this.http.delete(`${apiUrl}/${quizId}`);
+  }
 
-addQuiz(quiz: { title: string; description: string }): Observable<any> {
-  return this.http.post<any>(`${apiUrl}`, quiz);
-}
+  // Add new quiz, admin only.
+  addQuiz(quiz: { title: string; description: string }): Observable<any> {
+    return this.http.post<any>(`${apiUrl}`, quiz);
+  }
 
-getQuizById(id: number): Observable<any> {
-  return this.http.get<any>(`${apiUrl}/${id}`);
-}
+  // Get a quiz by its id.
+  getQuizById(id: number): Observable<any> {
+    return this.http.get<any>(`${apiUrl}/${id}`);
+  }
 
-updateQuiz(id: number, quizData: any): Observable<any> {
-  return this.http.put<any>(`${apiUrl}/${id}`, quizData);
-}
+  // Update quiz details using id, admin only.
+  updateQuiz(id: number, quizData: any): Observable<any> {
+    return this.http.put<any>(`${apiUrl}/${id}`, quizData);
+  }
 
-updateQuestion(questionId: number, questionData: any): Observable<any> {
-  return this.http.put<any>(`${apiUrl}/questions/${questionId}`, questionData);
-}
+  // Update a question using id, admin only.
+  updateQuestion(questionId: number, questionData: any): Observable<any> {
+    return this.http.put<any>(`${apiUrl}/questions/${questionId}`, questionData);
+  }
 
-getQuestionByIndex(quizId: number, questionIndex: number): Observable<any> {
-  return this.http.get<any>(`${apiUrl}/${quizId}/questions/${questionIndex}`);
-}
-
-
-
+  // Get a specific quiz's question using index (starts with 0)
+  getQuestionByIndex(quizId: number, questionIndex: number): Observable<any> {
+    return this.http.get<any>(`${apiUrl}/${quizId}/questions/${questionIndex}`);
+  }
 }

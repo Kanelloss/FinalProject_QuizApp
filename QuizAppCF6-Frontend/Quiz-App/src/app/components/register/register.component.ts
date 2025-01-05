@@ -9,7 +9,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { User } from '../../shared/interfaces/user';
 import { MatDialog } from '@angular/material/dialog';
 import { AlertDialogComponent } from '../../shared/components/alert-dialog/alert-dialog.component';
-import { ConfirmDialogComponent } from '../../confirm-dialog/confirm-dialog.component';
+import { ConfirmDialogComponent } from '../../shared/components/confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-register',
@@ -45,26 +45,10 @@ export class RegisterComponent {
     role: new FormControl('User', [Validators.required]), // Default: 'User'
   });
 
-  cancelRegister() {
-    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
-      data: {
-        title: 'Cancel Registration',
-        message: 'Are you sure you want to cancel? All changes will be lost.',
-      },
-    });
-
-    dialogRef.afterClosed().subscribe((confirmed) => {
-      if (confirmed) {
-        this.router.navigate(['/home']);
-      }
-    });
-  }
-
   onSubmit() {
     if (this.form.valid) {
       const formValue = this.form.value;
 
-      // Δημιουργούμε το αντικείμενο User
       const user: User = {
         username: formValue.username as string,
         password: formValue.password as string,
@@ -74,12 +58,9 @@ export class RegisterComponent {
 
       this.userService.registerUser(user).subscribe({
         next: () => {
-          // Εμφάνιση του AlertDialogComponent
           this.dialog.open(AlertDialogComponent, {
             data: { message: 'User registered successfully' },
           });
-  
-          // Κατεύθυνση στο login μετά από 0.5 δευτερόλεπτα
           setTimeout(() => {
             this.router.navigate(['/login']);
           }, 500);
@@ -103,7 +84,7 @@ export class RegisterComponent {
 
   dialogRef.afterClosed().subscribe((confirmed) => {
       if (confirmed) {
-          this.router.navigate(['/admin/users']); // Redirect back to user management page
+          this.router.navigate(['/admin/users']);
       }
   });
   }

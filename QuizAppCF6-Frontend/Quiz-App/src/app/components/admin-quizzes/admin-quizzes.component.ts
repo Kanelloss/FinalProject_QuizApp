@@ -2,7 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { QuizService } from '../../shared/services/quiz.service';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
-import { ConfirmDialogComponent } from '../../confirm-dialog/confirm-dialog.component';
+import { ConfirmDialogComponent } from '../../shared/components/confirm-dialog/confirm-dialog.component';
 import { AlertDialogComponent } from '../../shared/components/alert-dialog/alert-dialog.component';
 
 @Component({
@@ -39,23 +39,19 @@ export class AdminQuizzesComponent implements OnInit {
     if (this.openDropdownId === quizId) {
       this.openDropdownId = null; // Close dropdown if it's already open
     } else {
-      this.openDropdownId = quizId; // Open the dropdown
+      this.openDropdownId = quizId; // Open dropdown menu
     }
   }
 
 
 
   addQuiz() {
-    this.router.navigate(['/admin/quizzes/add']); // Navigate to the Add Quiz page
+    this.router.navigate(['/admin/quizzes/add']);
   }
 
   editQuiz(id : number) {
     this.router.navigate([`/admin/quizzes/edit/${id}`])
   }
-
-  
-
-
 
   deleteQuiz(quizId: number) {
     const dialogRef = this.dialog.open(ConfirmDialogComponent, {
@@ -72,7 +68,7 @@ export class AdminQuizzesComponent implements OnInit {
             const successDialog = this.dialog.open(AlertDialogComponent, {
               data: { message: 'Quiz deleted successfully!' },
             });
-            setTimeout(() => successDialog.close(), 1500);
+            setTimeout(() => successDialog.close(), 900);
             this.loadQuizzes(); // Reload the quizzes after deletion
           },
           error: (error) => {
@@ -80,7 +76,7 @@ export class AdminQuizzesComponent implements OnInit {
             const errorDialog = this.dialog.open(AlertDialogComponent, {
               data: { message: 'Failed to delete quiz. Please try again.' },
             });
-            setTimeout(() => errorDialog.close(), 1500);
+            setTimeout(() => errorDialog.close(), 900);
           },
         });
       }

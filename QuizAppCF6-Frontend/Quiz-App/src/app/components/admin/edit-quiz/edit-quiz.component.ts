@@ -16,7 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { NgFor, NgIf } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { AlertDialogComponent } from '../../../shared/components/alert-dialog/alert-dialog.component';
-import { ConfirmDialogComponent } from '../../../confirm-dialog/confirm-dialog.component';
+import { ConfirmDialogComponent } from '../../../shared/components/confirm-dialog/confirm-dialog.component';
 import { forkJoin } from 'rxjs';
 
 @Component({
@@ -66,7 +66,7 @@ export class EditQuizComponent implements OnInit {
 
   createQuestionGroup(): FormGroup {
     return this.fb.group({
-      id: new FormControl(''), // ID για την ερώτηση
+      id: new FormControl(''),
       text: new FormControl('', Validators.required),
       options: this.fb.array(
         Array(4).fill(null).map(() => new FormControl('', Validators.required))
@@ -132,9 +132,6 @@ export class EditQuizComponent implements OnInit {
     });
 }
 
-  
-  
-
   updateQuiz() {
     if (this.form.invalid) {
       alert('Please fill in all required fields.');
@@ -181,7 +178,7 @@ export class EditQuizComponent implements OnInit {
             setTimeout(() => {
               successDialog.close();
               this.router.navigate(['/admin/quizzes']);
-            }, 1500);
+            }, 900);
           },
           error: (error) => {
             console.error('Error updating quiz or questions:', error);

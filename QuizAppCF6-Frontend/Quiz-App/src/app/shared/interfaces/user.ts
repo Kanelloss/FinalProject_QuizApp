@@ -3,7 +3,7 @@ export interface User {
   username: string;
   email: string;
   password: string; 
-  UserRole: 'Admin' | 'User'; // Admin ή User
+  UserRole: 'Admin' | 'User';
 }
 
 export interface Credentials {

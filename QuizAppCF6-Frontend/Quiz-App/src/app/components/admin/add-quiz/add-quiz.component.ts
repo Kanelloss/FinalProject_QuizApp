@@ -14,7 +14,7 @@ import { NgFor, NgIf } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
-import { ConfirmDialogComponent } from '../../../confirm-dialog/confirm-dialog.component';
+import { ConfirmDialogComponent } from '../../../shared/components/confirm-dialog/confirm-dialog.component';
 import { AlertDialogComponent } from '../../../shared/components/alert-dialog/alert-dialog.component';
 
 @Component({
@@ -41,19 +41,18 @@ export class AddQuizComponent implements OnInit {
   ngOnInit() {
     this.initializeForm();
   
-    // Επαναφορά αποθηκευμένων δεδομένων (αν υπάρχουν)
+    // Restore saved data (if there are any)
     const savedData = localStorage.getItem('quizForm');
     if (savedData) {
-      this.form.patchValue(JSON.parse(savedData)); // Εφαρμόζουμε τα αποθηκευμένα δεδομένα
+      this.form.patchValue(JSON.parse(savedData));
     }
   
-    // Αποθήκευση αλλαγών της φόρμας στο localStorage
+    // Save to local storage
     this.form.valueChanges.subscribe((value) => {
       localStorage.setItem('quizForm', JSON.stringify(value));
     });
   }
   
-
   initializeForm() {
     this.form = this.fb.group({
       title: new FormControl('', Validators.required),
@@ -115,12 +114,12 @@ export class AddQuizComponent implements OnInit {
   
         this.quizService.addQuiz(quizData).subscribe({
           next: () => {
-            localStorage.removeItem('quizForm'); // Καθαρισμός του localStorage
+            localStorage.removeItem('quizForm'); // Clear local storage.
             const successDialog = this.dialog.open(AlertDialogComponent, {
               data: { message: 'Quiz created successfully!' },
             });
   
-            // Redirect after a short delay
+            // Redirect after a short delay so the message can be visible.
             setTimeout(() => {
               successDialog.close();
               this.router.navigate(['/admin/quizzes']);

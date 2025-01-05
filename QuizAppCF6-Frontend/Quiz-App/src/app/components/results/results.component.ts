@@ -13,7 +13,7 @@ export class ResultsComponent {
   totalQuestions: number | null = null;
   questionResults: any[] = [];
   quizId: number | null = null;
-  questions: any[] = []; // Add this to the component
+  questions: any[] = [];
   hasResults = false;
 
   constructor(private router: Router) {
@@ -23,18 +23,18 @@ export class ResultsComponent {
       totalQuestions: number;
       questionResults: any[];
       quizId: number;
-      questions: any[]; // Add this to the component
+      questions: any[];
     };
 
     if (state) {
       this.score = state.score;
       this.totalQuestions = state.totalQuestions;
       this.questionResults = state.questionResults;
-      this.quizId = state.quizId; // Αναθέτουμε το quizId
-      this.questions = state?.questions || []; // Add this line.
+      this.quizId = state.quizId;
+      this.questions = state?.questions || [];
       this.hasResults = true;
     } else {
-      // Redirect back to home if no data
+      // Redirect to home if there are no data
       this.router.navigate(['/home']);
     }
   }

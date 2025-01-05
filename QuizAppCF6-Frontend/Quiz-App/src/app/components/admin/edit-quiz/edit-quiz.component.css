@@ -70,12 +70,12 @@
 
   .button-container {
     display: flex;
-    justify-content: space-between; /* Ensure buttons are spaced evenly */
+    justify-content: space-between; 
     margin-top: 1.5rem;
 }
 
 button {
-    width: 48%; /* Adjust button width to fit neatly */
+    width: 48%; 
 }
 
 .cancel-btn {

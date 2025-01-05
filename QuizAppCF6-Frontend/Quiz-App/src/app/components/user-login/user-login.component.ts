@@ -26,10 +26,6 @@ import { LoggedInUser } from '../../shared/interfaces/user';
 })
 export class UserLoginComponent {
   hide = true;
-  // form!: FormGroup;
-  // fb = inject(FormBuilder);
-
-
   userService = inject(UserService);
   router = inject(Router);
   invalidLogin = false;
@@ -37,7 +33,6 @@ export class UserLoginComponent {
    errorMessage: string | null = null; // Κεντρικό μήνυμα λαθών
    successMessage: string | null = null; // Για μηνύματα επιτυχίας
 
-  // Δημιουργία Reactive Form
   form = new FormGroup({
     username: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required])
@@ -50,47 +45,47 @@ export class UserLoginComponent {
         const access_token = response.token;
         console.log('Login successful!');
         localStorage.setItem('access_token', access_token);
-        console.log(access_token);
-
+  
         const decodedToken: LoggedInUser | any = jwtDecode(access_token);
-
-      // Extract relevant fields
-      const userId = decodedToken["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"];
-      const username = decodedToken["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"];
-      const email = decodedToken["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"];
-      const role = decodedToken["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
-      // Log
-      console.log(`Decoded Info: ID: ${userId}, Username: ${username}, Email: ${email}, Role: ${role}`);
-
-      // store useful info in localStorage
-      localStorage.setItem('userId', userId);
-      localStorage.setItem('username', username);
-      localStorage.setItem('role', role);
-
-       // Ορισμός μηνύματος επιτυχίας
-       this.successMessage = 'Successful login!';
-       this.errorMessage = null;
-
-       setTimeout(() => {
-        this.router.navigate(['home']).then((success) => {
-          console.log('Redirected to home successfully:', success);
-        }).catch((err) => {
-          console.error('Failed to redirect:', err);
-        });
-      }, 1000);
-      
+  
+        // Extract relevant fields
+        const userId = decodedToken["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"];
+        const username = decodedToken["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"];
+        const email = decodedToken["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"];
+        const role = decodedToken["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
         
+        // Log
+        console.log(`Decoded Info: ID: ${userId}, Username: ${username}, Email: ${email}, Role: ${role}`);
+  
+        // Store useful info in localStorage
+        localStorage.setItem('userId', userId);
+        localStorage.setItem('username', username);
+        localStorage.setItem('role', role);
+  
+        this.successMessage = 'Successful login!';
+        this.errorMessage = null;
+  
+        setTimeout(() => {
+          this.router.navigate(['home']).then((success) => {
+            console.log('Redirected to home successfully:', success);
+          }).catch((err) => {
+            console.error('Failed to redirect:', err);
+          });
+        }, 1000);
       },
       error: (error) => {
         console.error('Login failed:', error);
-
-       // Αν επιστραφεί 400, εμφανίζουμε το μήνυμα "Invalid credentials."
-       if (error.status === 400) {
-        this.errorMessage = 'Invalid credentials.';
-      } else {
-        this.errorMessage = 'Unexpected error occurred.';
-      }
-    },
-  });
-}
+  
+        // Check for error code: 400 & 401
+        if (error.status === 401 || error.status === 400) {
+          this.errorMessage = error.error?.message || 'Invalid credentials.';
+        } else {
+          this.errorMessage = 'Unexpected error occurred.';
+        }
+  
+        // Delete success message
+        this.successMessage = null;
+      },
+    });
+  }
 }

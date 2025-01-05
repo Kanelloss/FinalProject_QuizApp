@@ -111,47 +111,45 @@
     text-transform: capitalize;
   }
 
-  /* Adjust for smaller screens */
   @media (max-width: 768px) {
     .admin-container h2 {
       text-align: center;
-      font-size: 1.5rem; /* Μείωση από 2rem */
+      font-size: 1.5rem;
       color: #ff8e2b;
       margin-bottom: 1rem;
     }
     
     .table-header {
-      font-size: 0.9rem; /* Μείωση από το default */
+      font-size: 0.9rem;
     }
     
     .user-row span {
-      font-size: 0.85rem; /* Μείωση από το default */
+      font-size: 0.85rem;
     }
 
     .edit-btn, .delete-btn {
-      font-size: 0.75rem; /* Μείωση της γραμματοσειράς */
-      padding: 0.4rem 0.8rem; /* Μείωση padding */
-      border-radius: 4px; /* Ελαφρώς μικρότερα κουμπιά */
+      font-size: 0.75rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
     }
     
     .edit-btn:hover, .delete-btn:hover {
-      transform: scale(1.05); /* Ελαφριά αύξηση στο hover */
+      transform: scale(1.05);
     }
     
     .add-user-btn {
-      font-size: 0.85rem; /* Μείωση της γραμματοσειράς */
-      padding: 0.5rem 1rem; /* Μείωση padding */
+      font-size: 0.85rem;
+      padding: 0.5rem 1rem;
     }
     
     .add-user-btn:hover {
-      transform: scale(1.05); /* Ελαφριά αύξηση στο hover */
+      transform: scale(1.05);
     }
   }
 
- /* Responsive Rules for Small Screens */
 @media (max-width: 480px) {
   .table-header {
-    display: none; /* Απόκρυψη του header για μικρές οθόνες */
+    display: none;
   }
 
   .user-row {
@@ -164,15 +162,15 @@
   }
 
   .user-row span {
-    font-size: 0.85rem; /* Μείωση γραμματοσειράς */
+    font-size: 0.85rem;
     margin-bottom: 0.5rem;
-    position: relative; /* Χρειάζεται για το pseudo-element */
+    position: relative;
   }
 
   .user-row span::before {
-    content: attr(data-label); /* Εμφανίζει το data-label */
+    content: attr(data-label);
     font-weight: bold;
-    color: #3a6073; /* Χρώμα τίτλων */
+    color: #3a6073;
     margin-right: 0.5rem;
     display: inline-block;
   }
@@ -184,8 +182,8 @@
   }
 
   .edit-btn, .delete-btn {
-    font-size: 0.75rem; /* Μικρότερη γραμματοσειρά */
-    padding: 0.4rem 0.8rem; /* Μείωση padding */
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
   }
 }
 

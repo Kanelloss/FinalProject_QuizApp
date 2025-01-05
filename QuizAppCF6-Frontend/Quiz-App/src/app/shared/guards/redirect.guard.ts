@@ -7,7 +7,7 @@ export const redirectGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
 
   if (userService.isLoggedIn()) {
-    return router.navigate(['home']); // Αν ο χρήστης είναι συνδεδεμένος, ανακατεύθυνση στο home
+    return router.navigate(['home']); // If user is logged in, redirect to home page
   }
-  return true; // Επιτρέπουμε την πρόσβαση αν δεν είναι συνδεδεμένος
+  return true;
 };

@@ -1,4 +1,3 @@
-/* Overall container styling */
 .edit-user-container {
     display: flex;
     flex-direction: column;
@@ -25,7 +24,6 @@
     margin-bottom: 2rem;
   }
   
-  /* Form styling */
   form {
     display: flex;
     flex-direction: column;
@@ -39,7 +37,6 @@
     max-width: 500px;
   }
   
-  /* Labels and input styling */
   mat-form-field {
     width: 100%;
   }
@@ -52,7 +49,6 @@
     font-size: 1rem;
   }
   
-  /* Validation error styling */
   .validation-error {
     font-size: 0.875rem;
     color: #d10c0c;
@@ -60,7 +56,6 @@
     font-weight: 500;
   }
   
-  /* Radio group styling */
   mat-radio-group {
     display: flex;
     gap: 1rem;
@@ -73,16 +68,13 @@
     color: #3a6073;
   }
 
-  
-  /* Button container */
   .button-container {
     display: flex;
     justify-content: space-between;
     gap: 3rem;
-    width: 100%; /* Align buttons to the form width */
+    width: 100%;
   }
   
-  /* Button styling */
   button {
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
@@ -92,7 +84,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1; /* Equal button width */
+    flex: 1;
   }
   
   button.cancel-btn {
@@ -104,24 +96,22 @@
     background-color: #ee862a;
   }
   
-  /* Αχνο κουμπί όταν δεν είναι έγκυρο */
-button.save-btn:disabled {
-  background-color: #e0e0e0; /* Απαλό γκρι */
-  color: #b0b0b0; /* Απαλό γκρι για το κείμενο */
-  cursor: not-allowed;
-  box-shadow: none; /* Αφαίρεση σκιάς */
-}
+  button.save-btn:disabled {
+    background-color: #e0e0e0;
+    color: #b0b0b0; 
+    cursor: not-allowed;
+    box-shadow: none; 
+  }
 
-/* Ενεργό κουμπί */
-button.save-btn {
-  background-color: #3a6073; /* Σκούρο μπλε */
-  color: white;
-}
+
+  button.save-btn {
+    background-color: #3a6073;
+    color: white;
+  }
 
 button.save-btn:hover:enabled {
-  background-color: #28526a; /* Ελαφρώς πιο σκούρο */
+  background-color: #28526a;
 }
-
 
   .role-select {
     margin-top: -2rem;
@@ -132,7 +122,6 @@ button.save-btn:hover:enabled {
     margin-bottom: -1rem;
   }
   
-  /* Adjust for smaller screens */
   @media (max-width: 768px) {
     .edit-user-container {
       padding: 1rem;

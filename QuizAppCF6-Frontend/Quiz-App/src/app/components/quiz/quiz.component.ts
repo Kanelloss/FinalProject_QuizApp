@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { QuizService } from '../../shared/services/quiz.service';
 import { MatDialog } from '@angular/material/dialog';
-import { ConfirmDialogComponent } from '../../confirm-dialog/confirm-dialog.component';
+import { ConfirmDialogComponent } from '../../shared/components/confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-quiz',
@@ -19,7 +19,7 @@ export class QuizComponent {
   quiz: any = null;
   currentIndex = 0;
   selectedAnswers: (string | null)[] = [];
-  isQuizStarted = true; // Flag to track if the quiz is ongoing
+  isQuizStarted = true; // Flag to track if quiz is ongoing
 
   get currentQuestion() {
     return this.quiz?.questions[this.currentIndex];
@@ -65,16 +65,15 @@ export class QuizComponent {
           const questionResults = response.result.questionResults;
     
           console.log('Submission result:', response);
-          this.isQuizStarted = false; // Mark the quiz as completed
+          this.isQuizStarted = false; // Quiz marked as completed
     
-          // Redirect to Results Page
           this.router.navigate(['/results'], {
             state: {
               score: score,
               totalQuestions: totalQuestions,
               questionResults: questionResults,
-              quizId: this.quiz.quizId, // Προσθήκη quizId
-              questions: this.quiz.questions // Pass all questions here.
+              quizId: this.quiz.quizId,
+              questions: this.quiz.questions
             },
           });
         },

@@ -105,7 +105,6 @@
   background-color: #cc731f;
 }
 
-/* New Style for Edit Questions Button */
 .edit-questions-btn {
 background-color: #3a6073;
 color: white;
@@ -120,7 +119,6 @@ transition: background-color 0.3s ease;
 background-color: #28526a;
 }
 
-/* Adjusted Actions Section for Three Buttons */
 .actions {
 display: flex;
 justify-content: space-evenly;
@@ -147,11 +145,10 @@ color: white;
 .edit-btn,
 .delete-btn,
 .edit-questions-btn {
-font-size: rem; /* Μικρότερη γραμματοσειρά */
-padding: 0.5rem 1.4rem; /* Μειωμένο padding */
-border-radius: px; /* Μικρότερες γωνίες */
+font-size: rem;
+padding: 0.5rem 1.4rem; 
+border-radius: px; 
 }
-
 
 .edit-btn {
 background-color: #3a6073;
@@ -172,7 +169,6 @@ padding: 0.5rem 0;
 z-index: 10;
 }
 
-
 .dropdown-menu.show {
 display: block;
 }
@@ -186,40 +182,40 @@ cursor: pointer;
 background-color: #ff8e2b;
 }
 
- /* Adjust for smaller screens */
+
  @media (max-width: 768px) {
   .admin-container h2 {
     text-align: center;
-    font-size: 1.5rem; /* Μείωση από 2rem */
+    font-size: 1.5rem; 
     color: #ff8e2b;
     margin-bottom: 1rem;
   }
   
   .table-header {
-    font-size: 0.9rem; /* Μείωση από το default */
+    font-size: 0.9rem; 
   }
   
   .quiz-row span {
-    font-size: 0.7rem; /* Μείωση από το default */
+    font-size: 0.7rem; 
   }
 
   .edit-btn, .delete-btn {
-    font-size: 0.75rem; /* Μείωση της γραμματοσειράς */
-    padding: 0.4rem 0.8rem; /* Μείωση padding */
-    border-radius: 4px; /* Ελαφρώς μικρότερα κουμπιά */
+    font-size: 0.75rem; 
+    padding: 0.4rem 0.8rem; 
+    border-radius: 4px; 
   }
   
   .edit-btn:hover, .delete-btn:hover {
-    transform: scale(1.05); /* Ελαφριά αύξηση στο hover */
+    transform: scale(1.05); 
   }
   
   .add-quiz-btn {
-    font-size: 0.85rem; /* Μείωση της γραμματοσειράς */
-    padding: 0.5rem 1rem; /* Μείωση padding */
+    font-size: 0.85rem; 
+    padding: 0.5rem 1rem; 
   }
   
   .add-quiz-btn:hover {
-    transform: scale(1.05); /* Ελαφριά αύξηση στο hover */
+    transform: scale(1.05); 
   }
 
   .dropdown-menu {
@@ -244,10 +240,9 @@ background-color: #ff8e2b;
   }
 }
 
-/* Responsive Rules for Small Screens */
 @media (max-width: 480px) {
 .table-header {
-  display: none; /* Απόκρυψη του header για μικρές οθόνες */
+  display: none;
 }
 
 .quiz-row {
@@ -260,15 +255,15 @@ background-color: #ff8e2b;
 }
 
 .quiz-row span {
-  font-size: 0.9rem; /* Μείωση γραμματοσειράς */
+  font-size: 0.9rem; 
   margin-bottom: 0.5rem;
-  position: relative; /* Χρειάζεται για το pseudo-element */
+  position: relative; 
 }
 
 .quiz-row span::before {
-  content: attr(data-label); /* Εμφανίζει το data-label */
+  content: attr(data-label); 
   font-weight: bold;
-  color: #3a6073; /* Χρώμα τίτλων */
+  color: #3a6073; 
   margin-right: 0.5rem;
   display: inline-block;
 }
@@ -280,8 +275,8 @@ background-color: #ff8e2b;
 }
 
 .edit-btn, .delete-btn {
-  font-size: 0.75rem; /* Μικρότερη γραμματοσειρά */
-  padding: 0.4rem 0.8rem; /* Μείωση padding */
+  font-size: 0.75rem;
+  padding: 0.4rem 0.8rem; 
 }
 
 .dropdown-menu {
@@ -304,6 +299,7 @@ background-color: #ff8e2b;
 .dropdown-menu  li  a {
   font-size: 0.8rem;
 }
+
 }
 
 

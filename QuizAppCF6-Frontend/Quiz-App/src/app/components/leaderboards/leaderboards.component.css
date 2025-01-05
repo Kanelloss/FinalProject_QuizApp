@@ -37,31 +37,30 @@
     color: white;
   }
 
-/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
   .leaderboards-container {
       padding: 1rem;
   }
 
   .leaderboards-container h1 {
-      font-size: 1.5rem!important; /* Μειώνεται από 2rem */
+      font-size: 1.5rem!important; 
   }
 
   .leaderboards-container p {
-      font-size: 0.9rem!important; /* Μειώνεται από 1rem */
+      font-size: 0.9rem!important; 
   }
 
   .leaderboards-table th {
-      font-size: 0.9rem!important; /* Μειώνεται ελαφρώς */
+      font-size: 0.9rem!important;
   }
 
   .leaderboards-table td {
-      font-size: 0.8rem!important; /* Μειώνεται ελαφρώς */
+      font-size: 0.8rem!important;
       padding: 0.5rem!important;
   }
 
   .mat-form-field {
-      font-size: 0.9rem!important; /* Μειώνεται από 1rem */
+      font-size: 0.9rem!important;
   }
 
   .mat-select {
