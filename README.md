@@ -83,6 +83,10 @@ Accessible at `https://localhost:5000/swagger/index.html` after installation.
 
    - The database will be created automatically when the backend runs for the first time (Model-First Approach).
 
+5. Populate the database:
+
+   - Open the `QuizApp.sql` file and run it to populate the DB. 
+
 ### Running the Application
 1. Start the backend server:
    
