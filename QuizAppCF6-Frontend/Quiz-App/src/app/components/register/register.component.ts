@@ -48,14 +48,14 @@ export class RegisterComponent {
   onSubmit() {
     if (this.form.valid) {
       const formValue = this.form.value;
-
+  
       const user: User = {
         username: formValue.username as string,
         password: formValue.password as string,
         email: formValue.email as string,
         UserRole: formValue.role as 'Admin' | 'User',
       };
-
+  
       this.userService.registerUser(user).subscribe({
         next: () => {
           this.dialog.open(AlertDialogComponent, {
@@ -66,14 +66,20 @@ export class RegisterComponent {
           }, 500);
         },
         error: (error) => {
-          this.dialog.open(AlertDialogComponent, {
-            data: { message: 'Failed to register user, please try again.' },
-          });
+          if (error.error?.message === 'Username is already taken.') {
+            this.form.get('username')?.setErrors({ duplicate: 'Username is already taken.' });
+          } else if (error.error?.message === 'Email is already taken.') {
+            this.form.get('email')?.setErrors({ duplicate: 'Email is already taken.' });
+          } else {
+            this.dialog.open(AlertDialogComponent, {
+              data: { message: 'Failed to register user, please try again.' },
+            });
+          }
         },
       });
     }
   }
-
+  
   onCancel() {
     const dialogRef = this.dialog.open(ConfirmDialogComponent, {
       data: {

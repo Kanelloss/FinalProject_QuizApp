@@ -43,6 +43,21 @@ export class UserService {
     });
    }
 
+   // Check if JWT has expired
+   isTokenExpired(): boolean {
+    const token = localStorage.getItem('access_token');
+    if (!token) return true;
+  
+    try {
+      const decodedToken: any = jwtDecode(token);
+      const expirationTime = decodedToken.exp * 1000; // exp in seconds
+      return Date.now() > expirationTime;
+    } catch (error) {
+      console.error('Invalid token:', error);
+      return true;
+    }
+  }
+
    // Login User
   loginUser(credentials: Credentials) {
     return this.http.post<{token:string}>(`${apiUrl}/login`, credentials)

@@ -19,6 +19,9 @@
         @if (form.get('username')?.hasError('minlength') && form.get('username')?.touched) {
           <div class="validation-error">Username must be at least 2 characters long.</div>
         }
+        @if (form.get('username')?.hasError('duplicate')) {
+          <div class="validation-error">Username already taken.</div>
+        }
       </mat-form-field>
   
       <!-- validation errors for password -->
@@ -43,6 +46,9 @@
         }
         @if (form.get('email')?.hasError('email') && form.get('email')?.touched) {
           <div class="validation-error">Please enter a valid email address.</div>
+        }
+        @if (form.get('email')?.hasError('duplicate')) {
+          <div class="validation-error">Email already taken.</div>
         }
       </mat-form-field>
   

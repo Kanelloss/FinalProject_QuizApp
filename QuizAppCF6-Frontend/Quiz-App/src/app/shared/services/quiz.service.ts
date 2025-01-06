@@ -22,7 +22,7 @@ export class QuizService {
   async fetchAvailableQuizzes() {
     console.log(`[QuizService] Fetching available quizzes...`);
     const availableQuizzes = [];
-    let quizzesNumber = 10;   // Manually change if a quiz is added/deleted to include in leaderboards.
+    let quizzesNumber = 12;   // Manually change if a quiz is added/deleted to include in leaderboards.
 
     for (let quizId = 1; quizId <= quizzesNumber; quizId++) {
       try {

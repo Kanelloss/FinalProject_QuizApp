@@ -145,8 +145,9 @@ export class EditUserComponent implements OnInit {
         this.userService.deleteUser(this.route.snapshot.params['id']).subscribe({
           next: () => {
             this.showSuccessDialog('User deleted successfully!');
+            this.userService.logoutUser();
             setTimeout(() => {
-              this.router.navigate(['/admin/users']);
+              this.router.navigate(['/welcome']);
             }, 900);
           },
           error: () => {
