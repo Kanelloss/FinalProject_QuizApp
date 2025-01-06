@@ -561,3 +561,17 @@
 [05-01-2025 19:36:37898 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 11 successfully started by User ID 1.
 [05-01-2025 20:11:01339 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 10 successfully started by User ID 1.
 [05-01-2025 20:12:43109 +02:00 QuizApp.Controllers.QuizController ] Quiz ID 10 successfully submitted by User ID 1. Score: 100.
+[05-01-2025 20:33:21055 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 5 successfully started by User ID 1.
+[05-01-2025 20:35:22105 +02:00 QuizApp.Controllers.QuizController ] Quiz ID 5 successfully submitted by User ID 1. Score: 75.
+[05-01-2025 20:36:32348 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 1. Requested by User ID 1.
+[05-01-2025 20:36:32362 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 2. Requested by User ID 1.
+[05-01-2025 20:36:32374 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 3. Requested by User ID 1.
+[05-01-2025 20:36:32386 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 4. Requested by User ID 1.
+[05-01-2025 20:36:32410 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 1.
+[05-01-2025 20:36:32424 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 6. Requested by User ID 1.
+[05-01-2025 20:36:32433 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 7. Requested by User ID 1.
+[05-01-2025 20:36:32441 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 8. Requested by User ID 1.
+[05-01-2025 20:36:32450 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 9. Requested by User ID 1.
+[05-01-2025 20:36:32459 +02:00 QuizApp.Controllers.QuizController ] No high scores found for quiz ID 10. Requested by User ID 1.
+[05-01-2025 20:36:32469 +02:00 QuizApp.Controllers.QuizController ] High scores retrieved successfully for quiz ID 5 by User ID 1.
+[05-01-2025 20:36:38607 +02:00 QuizApp.Controllers.QuizController ] Quiz with ID 8 successfully started by User ID 1.
