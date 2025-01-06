@@ -2,7 +2,15 @@
     <h2>Edit User</h2>
     <h6 class="text-slate-600 text-base">Update user details</h6>
 
+      
+
     <form class="shadow-md rounded-md p-5 bg-white w-full max-w-3xl" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+      <!-- Delete Button -->
+    <button class="delete-btn" type="button" (click)="onDeleteUser()">
+      <mat-icon>delete</mat-icon>
+    </button>
+    
       <!-- Username Field -->
       <mat-form-field appearance="fill" class="w-full">
         <mat-label>Username</mat-label>

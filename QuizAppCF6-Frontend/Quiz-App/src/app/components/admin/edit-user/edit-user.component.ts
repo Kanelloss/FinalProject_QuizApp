@@ -9,6 +9,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { AlertDialogComponent } from '../../../shared/components/alert-dialog/alert-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from '../../../shared/components/confirm-dialog/confirm-dialog.component';
+import { MatIcon, MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-edit-user',
@@ -20,6 +21,7 @@ import { ConfirmDialogComponent } from '../../../shared/components/confirm-dialo
     MatInputModule,
     MatButtonModule,
     MatRadioModule,
+    MatIconModule,
   ],
   templateUrl: './edit-user.component.html',
   styleUrls: ['./edit-user.component.css'],
@@ -128,5 +130,30 @@ export class EditUserComponent implements OnInit {
           this.router.navigate(['/admin/users']); // Redirect back to user management page
       }
   });
+  }
+
+  onDeleteUser() {
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+      data: {
+        title: 'Delete User',
+        message: 'Are you sure you want to delete this account?',
+      },
+    });
+  
+    dialogRef.afterClosed().subscribe((confirmed) => {
+      if (confirmed) {
+        this.userService.deleteUser(this.route.snapshot.params['id']).subscribe({
+          next: () => {
+            this.showSuccessDialog('User deleted successfully!');
+            setTimeout(() => {
+              this.router.navigate(['/admin/users']);
+            }, 900);
+          },
+          error: () => {
+            this.showErrorDialog('Failed to delete user. Please try again.');
+          },
+        });
+      }
+    });
   }
 }
