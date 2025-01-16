@@ -66,26 +66,33 @@ Accessible at `https://localhost:5000/swagger/index.html` after installation.
 
 2. Navigate to the backend folder and restore dependencies:
    
-   cd QuizAppCF6-Backend/QuizApp
+   open QuizAppCF6-Backend.sln in your IDE (e.g. Visual Studio)
+
+   Restore the NuGet packages in the solution by building the project or using the following command in CLI:
    
    dotnet restore
+
+3. Configure the database connection string:
+
+   - Open the `appsettings.json` file in the backend project folder.
+
+   - Update the connection string with your database credentials (if you don't have one, create an empty DB).
+
+   - Run the following commands in *Package Manager Console* to apply migrations: 
+
+   Add-Migration "YourMigrationName"
+
+   Update-Database
+
+4. Populate the database:
    
-3. Navigate to the frontend folder and install dependencies:
+   Open the `QuizApp.sql` file and run it to populate the DB with initial Quizzes and Questions.
+
+5. Navigate to the frontend folder and install dependencies:
  
    cd QuizAppCF6-Frontend/Quiz-App
    npm install
    
-4. Configure the database connection string:
-
-   - Open the `appsettings.json` file in the backend project folder.
-
-   - Update the connection string with your database credentials.
-
-   - The database will be created automatically when the backend runs for the first time (Model-First Approach).
-
-5. Populate the database:
-
-   - Open the `QuizApp.sql` file and run it to populate the DB. 
 
 ### Running the Application
 1. Start the backend server:
