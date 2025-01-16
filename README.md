@@ -93,7 +93,6 @@ Accessible at `https://localhost:5000/swagger/index.html` after installation.
    cd QuizAppCF6-Frontend/Quiz-App
    npm install
    
-
 ### Running the Application
 1. Start the backend server:
    
