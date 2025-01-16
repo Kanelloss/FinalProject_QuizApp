@@ -66,11 +66,11 @@ Accessible at `https://localhost:5000/swagger/index.html` after installation.
 
 2. Navigate to the backend folder and restore dependencies:
    
-   open QuizAppCF6-Backend.sln in your IDE (e.g. Visual Studio)
+   - open QuizAppCF6-Backend.sln in your IDE (e.g. Visual Studio)
 
-   Restore the NuGet packages in the solution by building the project or using the following command in CLI:
+   - Restore the NuGet packages in the solution by building the project or using the following command in CLI:
    
-   dotnet restore
+   - dotnet restore
 
 3. Configure the database connection string:
 
@@ -80,9 +80,9 @@ Accessible at `https://localhost:5000/swagger/index.html` after installation.
 
    - Run the following commands in *Package Manager Console* to apply migrations: 
 
-   Add-Migration "YourMigrationName"
+      Add-Migration "YourMigrationName"
 
-   Update-Database
+      Update-Database
 
 4. Populate the database:
    
