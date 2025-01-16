@@ -86,7 +86,7 @@ Accessible at `https://localhost:5000/swagger/index.html` after installation.
 
 4. Populate the database:
    
-   Open the `QuizApp.sql` file and run it to populate the DB with initial Quizzes and Questions.
+   Open the `QuizApp.sql` file in MSSQL Server and run it to populate the DB with initial Quizzes and Questions.
 
 5. Navigate to the frontend folder and install dependencies:
  
