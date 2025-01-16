@@ -57,7 +57,7 @@ namespace QuizApp
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey)),
-                        RoleClaimType = ClaimTypes.Role // Επιβεβαίωση ότι ελέγχει το Role
+                        RoleClaimType = ClaimTypes.Role
                     };
                 });
 

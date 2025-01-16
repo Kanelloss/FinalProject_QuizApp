@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|c:\\users\\kanel\\desktop\\quizapp cf6\\quizappcf6-backend\\quizapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|solutionrelative:quizapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|c:\\users\\kanel\\desktop\\quizapp cf6\\quizappcf6-backend\\quizapp\\controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6EE4037-A9E0-4D86-BBD4-142FCB5507DA}|QuizApp\\QuizApp.csproj|solutionrelative:quizapp\\controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -35,15 +39,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\Program.cs",
+              "RelativeDocumentMoniker": "QuizApp\\Program.cs",
+              "ToolTip": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\Program.cs",
+              "RelativeToolTip": "QuizApp\\Program.cs",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAAACgAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T15:48:20.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "QuizController.cs",
               "DocumentMoniker": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\Controllers\\QuizController.cs",
               "RelativeDocumentMoniker": "QuizApp\\Controllers\\QuizController.cs",
               "ToolTip": "C:\\Users\\Kanel\\Desktop\\QuizApp CF6\\QuizAppCF6-Backend\\QuizApp\\Controllers\\QuizController.cs",
               "RelativeToolTip": "QuizApp\\Controllers\\QuizController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAdAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T14:29:05.106Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T14:29:05.106Z"
             },
             {
               "$type": "Bookmark",

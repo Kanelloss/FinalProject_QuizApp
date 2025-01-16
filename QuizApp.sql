@@ -1,4 +1,4 @@
-SET IDENTITY_INSERT Quizzes ON;
+ï»¿SET IDENTITY_INSERT Quizzes ON;
 -- Insert Quizzes
 INSERT INTO Quizzes (Id, Title, Description, InsertedAt, ModifiedAt)
 VALUES
@@ -71,12 +71,12 @@ VALUES
 ('What is the heaviest naturally occurring element?', 'Uranium,Plutonium,Lead,Gold', 'Uranium', 'Science', @ScienceQuizId, GETDATE(), GETDATE()),
 ('What is the speed of light in a vacuum?', '299792458 m/s,300000000 m/s,150000000 m/s,299792000 m/s', '299792458 m/s', 'Science', @ScienceQuizId, GETDATE(), GETDATE()),
 ('What type of bond exists between hydrogen and oxygen in a water molecule?', 'Ionic,Covalent,Metallic,Hydrogen', 'Covalent', 'Science', @ScienceQuizId, GETDATE(), GETDATE()),
-('What is the most abundant gas in the Earth’s atmosphere?', 'Oxygen,Nitrogen,Carbon Dioxide,Hydrogen', 'Nitrogen', 'Science', @ScienceQuizId, GETDATE(), GETDATE()),
+('What is the most abundant gas in the Earthâ€™s atmosphere?', 'Oxygen,Nitrogen,Carbon Dioxide,Hydrogen', 'Nitrogen', 'Science', @ScienceQuizId, GETDATE(), GETDATE()),
 ('What is the SI unit of electric current?', 'Volt,Ohm,Ampere,Watt', 'Ampere', 'Science', @ScienceQuizId, GETDATE(), GETDATE()),
 ('Which planet is the hottest in the solar system?', 'Mercury,Mars,Venus,Jupiter', 'Venus', 'Science', @ScienceQuizId, GETDATE(), GETDATE()),
 ('What is the main component of the Sun?', 'Nitrogen,Helium,Oxygen,Hydrogen', 'Hydrogen', 'Science', @ScienceQuizId, GETDATE(), GETDATE()),
 ('What is the primary function of the large intestine?', 'Absorption of nutrients,Digestion of food,Absorption of water,Production of bile', 'Absorption of water', 'Science', @ScienceQuizId, GETDATE(), GETDATE()),
-('What is the second most abundant element in the Earth’s crust?', 'Oxygen,Silicon,Aluminum,Iron', 'Silicon', 'Science', @ScienceQuizId, GETDATE(), GETDATE()),
+('What is the second most abundant element in the Earthâ€™s crust?', 'Oxygen,Silicon,Aluminum,Iron', 'Silicon', 'Science', @ScienceQuizId, GETDATE(), GETDATE()),
 ('What is the boiling point of water at sea level in Celsius?', '90,100,110,120', '100', 'Science', @ScienceQuizId, GETDATE(), GETDATE()),
 ('What type of energy is stored in a stretched spring?', 'Kinetic,Chemical,Thermal,Potential', 'Potential', 'Science', @ScienceQuizId, GETDATE(), GETDATE()),
 ('What is the common name for dihydrogen monoxide?', 'Ammonia,Hydrogen Peroxide,Methane,Water', 'Water', 'Science', @ScienceQuizId, GETDATE(), GETDATE()),
@@ -145,7 +145,7 @@ VALUES
 ('What is the square root of 256?', '14,15,16,17', '16', 'Mathematics', @MathematicsQuizId, GETDATE(), GETDATE()),
 ('What is 5 to the power of 3?', '25,125,15,225', '125', 'Mathematics', @MathematicsQuizId, GETDATE(), GETDATE()),
 ('What is the derivative of sin(x)?', 'sin(x),cos(x),-cos(x),-sin(x)', 'cos(x)', 'Mathematics', @MathematicsQuizId, GETDATE(), GETDATE()),
-('What is the sum of angles in a triangle?', '180°,360°,90°,270°', '180°', 'Mathematics', @MathematicsQuizId, GETDATE(), GETDATE()),
+('What is the sum of angles in a triangle?', '180Â°,360Â°,90Â°,270Â°', '180Â°', 'Mathematics', @MathematicsQuizId, GETDATE(), GETDATE()),
 ('What is the integral of 2x?', 'x^2 + C,2x^2 + C,2x + C,x + C', 'x^2 + C', 'Mathematics', @MathematicsQuizId, GETDATE(), GETDATE()),
 ('What is the smallest prime number?', '1,2,3,0', '2', 'Mathematics', @MathematicsQuizId, GETDATE(), GETDATE()),
 ('What is the mode of the dataset {3, 5, 6, 3, 7}?', '3,5,6,7', '3', 'Mathematics', @MathematicsQuizId, GETDATE(), GETDATE()),
@@ -184,7 +184,7 @@ VALUES
 ('What does HTTP stand for?', 'Hyper Transfer Text Protocol,HyperText Transmission Protocol,HyperText Transfer Protocol,Hyper Transfer Technology Protocol', 'HyperText Transfer Protocol', 'Technology', @TechnologyQuizId, GETDATE(), GETDATE()),
 ('What is the main function of a firewall?', 'Enhance speed,Improve graphics,Prevent unauthorized access,Backup data', 'Prevent unauthorized access', 'Technology', @TechnologyQuizId, GETDATE(), GETDATE()),
 ('Which programming language is often used for web development alongside HTML and CSS?', 'Python,C++,Ruby,JavaScript', 'JavaScript', 'Technology', @TechnologyQuizId, GETDATE(), GETDATE()),
-('What is the name of the world’s most popular search engine?', 'Yahoo,Google,DuckDuckGo,Bing', 'Google', 'Technology', @TechnologyQuizId, GETDATE(), GETDATE());
+('What is the name of the worldâ€™s most popular search engine?', 'Yahoo,Google,DuckDuckGo,Bing', 'Google', 'Technology', @TechnologyQuizId, GETDATE(), GETDATE());
 
 -- Insert Questions for Gaming Quiz
 
@@ -207,7 +207,7 @@ VALUES
 ('What is the main objective in Pac-Man?', 'Defeat the ghosts,Collect coins,Unlock levels,Eat all the dots', 'Eat all the dots', 'Gaming', @GamingQuizId, GETDATE(), GETDATE()),
 ('Which company developed World of Warcraft?', 'Ubisoft,Riot Games,EA Sports,Blizzard Entertainment', 'Blizzard Entertainment', 'Gaming', @GamingQuizId, GETDATE(), GETDATE()),
 ('What is the name of the famous fighting game series featuring characters like Ryu and Ken?', 'Tekken,King of Fighters,Mortal Kombat,Street Fighter', 'Street Fighter', 'Gaming', @GamingQuizId, GETDATE(), GETDATE()),
-('Which game involves exploring randomly generated worlds and crafting tools and structures?', 'Roblox,Minecraft,No Man’s Sky,Terraria', 'Minecraft', 'Gaming', @GamingQuizId, GETDATE(), GETDATE()),
+('Which game involves exploring randomly generated worlds and crafting tools and structures?', 'Roblox,Minecraft,No Manâ€™s Sky,Terraria', 'Minecraft', 'Gaming', @GamingQuizId, GETDATE(), GETDATE()),
 ('What is the name of the protagonist in The Last of Us?', 'Ethan,Arthur,Joel,Marcus', 'Joel', 'Gaming', @GamingQuizId, GETDATE(), GETDATE()),
 ('Which game features the map "Dust II"?', 'Valorant,Call of Duty,Battlefield,Counter-Strike', 'Counter-Strike', 'Gaming', @GamingQuizId, GETDATE(), GETDATE());
 
@@ -306,7 +306,7 @@ VALUES
 ('Which animal is known as the "King of the Jungle"?', 'Tiger,Lion,Jaguar,Elephant', 'Lion', 'Zoology', @ZoologyQuizId, GETDATE(), GETDATE()),
 ('What is the largest species of penguin?', 'King Penguin,Adelie Penguin,Emperor Penguin,Chinstrap Penguin', 'Emperor Penguin', 'Zoology', @ZoologyQuizId, GETDATE(), GETDATE()),
 ('What is the primary characteristic of amphibians?', 'Fly,Live in trees,Have feathers,Live on land and water', 'Live on land and water', 'Zoology', @ZoologyQuizId, GETDATE(), GETDATE()),
-('What is the main purpose of a kangaroo’s tail?', 'Attract mates,Attack,Balance,Defense', 'Balance', 'Zoology', @ZoologyQuizId, GETDATE(), GETDATE()),
+('What is the main purpose of a kangarooâ€™s tail?', 'Attract mates,Attack,Balance,Defense', 'Balance', 'Zoology', @ZoologyQuizId, GETDATE(), GETDATE()),
 ('What is the name of the largest land carnivore?', 'Lion,Polar Bear,Grizzly Bear,Tiger', 'Polar Bear', 'Zoology', @ZoologyQuizId, GETDATE(), GETDATE()),
 ('Which animal is known for its ability to regenerate lost limbs?', 'Lizard,Frog,Starfish,Octopus', 'Starfish', 'Zoology', @ZoologyQuizId, GETDATE(), GETDATE()),
 ('What is the term for animals that eat both plants and meat?', 'Herbivores,Omnivores,Carnivores,Scavengers', 'Omnivores', 'Zoology', @ZoologyQuizId, GETDATE(), GETDATE()),
@@ -352,14 +352,14 @@ VALUES
 ('Which song by Queen begins with "Is this the real life?"?', 'We Will Rock You,Bohemian Rhapsody,Somebody to Love,Don''t Stop Me Now', 'Bohemian Rhapsody', 'Music', @MusicQuizId, GETDATE(), GETDATE()),
 ('What is the best-selling album of all time?', 'Hotel California,The Dark Side of the Moon,Back in Black,Thriller', 'Thriller', 'Music', @MusicQuizId, GETDATE(), GETDATE()),
 ('Which instrument has 88 keys?', 'Violin,Flute,Piano,Guitar', 'Piano', 'Music', @MusicQuizId, GETDATE(), GETDATE()),
-('Which artist released the song "Rolling in the Deep"?', 'Lady Gaga,Adele,Rihanna,Beyoncé', 'Adele', 'Music', @MusicQuizId, GETDATE(), GETDATE()),
+('Which artist released the song "Rolling in the Deep"?', 'Lady Gaga,Adele,Rihanna,BeyoncÃ©', 'Adele', 'Music', @MusicQuizId, GETDATE(), GETDATE()),
 ('Which band is known for the song "Hotel California"?', 'Lynyrd Skynyrd,Fleetwood Mac,The Eagles,The Doors', 'The Eagles', 'Music', @MusicQuizId, GETDATE(), GETDATE()),
 ('Who composed the Four Seasons?', 'Johann Sebastian Bach,Antonio Vivaldi,Ludwig van Beethoven,Wolfgang Amadeus Mozart', 'Antonio Vivaldi', 'Music', @MusicQuizId, GETDATE(), GETDATE()),
-('What is the title of Taylor Swift’s debut album?', 'Fearless,Speak Now,Red,Taylor Swift', 'Taylor Swift', 'Music', @MusicQuizId, GETDATE(), GETDATE()),
+('What is the title of Taylor Swiftâ€™s debut album?', 'Fearless,Speak Now,Red,Taylor Swift', 'Taylor Swift', 'Music', @MusicQuizId, GETDATE(), GETDATE()),
 ('Which artist is known as the Queen of Soul?', 'Tina Turner,Aretha Franklin,Whitney Houston,Diana Ross', 'Aretha Franklin', 'Music', @MusicQuizId, GETDATE(), GETDATE()),
 ('Who performed at the 2020 Super Bowl Halftime Show alongside Shakira?', 'Lady Gaga,Katy Perry,Jennifer Lopez,Rihanna', 'Jennifer Lopez', 'Music', @MusicQuizId, GETDATE(), GETDATE()),
 ('Which song begins with "Ground Control to Major Tom"?', 'Life on Mars,Heroes,Ziggy Stardust,Space Oddity', 'Space Oddity', 'Music', @MusicQuizId, GETDATE(), GETDATE()),
-('Who won the Eurovision Song Contest in 2021?', 'Netta,Måneskin,Duncan Laurence,Loreen', 'Måneskin', 'Music', @MusicQuizId, GETDATE(), GETDATE()),
+('Who won the Eurovision Song Contest in 2021?', 'Netta,MÃ¥neskin,Duncan Laurence,Loreen', 'MÃ¥neskin', 'Music', @MusicQuizId, GETDATE(), GETDATE()),
 ('Which instrument is Yo-Yo Ma famous for playing?', 'Flute,Violin,Cello,Piano', 'Cello', 'Music', @MusicQuizId, GETDATE(), GETDATE()),
 ('Which artist is known for the song "Purple Rain"?', 'Prince,Stevie Wonder,Michael Jackson,David Bowie', 'Prince', 'Music', @MusicQuizId, GETDATE(), GETDATE()),
 ('Which rapper released the album "The Marshall Mathers LP"?', 'Drake,Kanye West,Eminem,Snoop Dogg', 'Eminem', 'Music', @MusicQuizId, GETDATE(), GETDATE());
