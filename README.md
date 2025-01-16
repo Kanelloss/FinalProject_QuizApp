@@ -76,7 +76,7 @@ Accessible at `https://localhost:5000/swagger/index.html` after installation.
 
    - Open the `appsettings.json` file in the backend project folder.
 
-   - Update the connection string with your database credentials (if you don't have one, create an empty DB).
+   - Update the connection string with your database credentials.
 
    - Run the following commands in *Package Manager Console* to apply migrations: 
 
